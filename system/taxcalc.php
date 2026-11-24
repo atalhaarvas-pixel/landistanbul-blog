@@ -4,6 +4,10 @@
  * Built by system/install.php from data/tax-data.json (Yİ-ÜFE, exemptions, non-wage brackets).
  */
 
+function tc_asset($name) {
+    $f = __DIR__ . '/' . $name;
+    return '/' . $name . (is_file($f) ? '?v=' . substr(md5_file($f), 0, 10) : '');
+}
 function tc_path($lang) { return '/tax-calculator/' . ($lang === 'en' ? '' : $lang . '/'); }
 function tc_url($lang) { return 'https://landistanbul.com' . tc_path($lang); }
 function tc_loc($base, $lang) { return $base . ($lang === 'en' ? '' : $lang . '/'); }
@@ -292,7 +296,7 @@ function build_taxcalc_page_html($lang, array $data) {
     $o .= '<script type="application/ld+json">' . json_encode($schema, $J) . "</script>\n";
     $o .= '<link rel="preconnect" href="https://fonts.googleapis.com">' . "\n";
     $o .= '<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;700;900' . ($rtl ? '&family=Cairo:wght@400;600;700;900' : '') . '&display=swap" rel="stylesheet">' . "\n";
-    $o .= '<link rel="stylesheet" href="/site-boost.css?v=2">' . "\n<style>" . tc_css() . "</style>\n</head>\n<body>\n";
+    $o .= '<link rel="stylesheet" href="' . tc_asset('site-boost.css') . '">' . "\n<style>" . tc_css() . "</style>\n</head>\n<body>\n";
 
     // navigation
     $links = [['/', $t['nav'][0], ''], ['/#services', $t['nav'][1], ''], [$val, $t['nav'][2], 'nav-val'], [tc_path($lang), $t['nav'][3], 'active'], [$blog, $t['nav'][4], ''], ['/#contact', $t['nav'][5], 'nav-btn']];
@@ -371,7 +375,7 @@ function build_taxcalc_page_html($lang, array $data) {
 
     $cfg = $sub + ['t' => $t['js'], 'dateLocale' => $t['date_locale'], 'numLocale' => $t['num_locale'], 'yours' => $t['yours'], 'copy' => $t['btn_copy'], 'copied' => $t['copied']];
     $o .= '<script>var TC=' . json_encode($cfg, $J) . ";</script>\n<script>" . tc_js() . "</script>\n";
-    $o .= '<script src="/blog-lead.js?v=3" defer></script>' . "\n" . '<script src="/site-boost.js?v=2" defer></script>' . "\n</body>\n</html>\n";
+    $o .= '<script src="' . tc_asset('blog-lead.js') . '" defer></script>' . "\n" . '<script src="' . tc_asset('site-boost.js') . '" defer></script>' . "\n</body>\n</html>\n";
     return $o;
 }
 

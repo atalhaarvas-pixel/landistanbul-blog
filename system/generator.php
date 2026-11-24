@@ -256,6 +256,12 @@ function blocks_to_html(array $blocks) {
  * Common <head> + nav markup shared by generated pages.
  * $opts: lang, alternates [lang => url], type, published, modified, robots, extra_head
  */
+/** Asset URL with a content hash, so browsers and caches fetch the new file after every change. */
+function li_asset($path) {
+    $f = SITE_ROOT . $path;
+    return $path . (is_file($f) ? '?v=' . substr(md5_file($f), 0, 10) : '');
+}
+
 /** Navigation links in the page language. */
 function li_nav($lang) {
     $sfx = $lang === 'en' ? '' : $lang . '/';
@@ -320,8 +326,8 @@ function page_head($title, $description, $canonical, $ogImage, array $opts = [])
 <?php if ($lang === 'ar'): ?><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
 <?php endif; ?>
 <link rel="stylesheet" href="/blog-style.css">
-<link rel="stylesheet" href="/blog-extra.css?v=3">
-<link rel="stylesheet" href="/site-boost.css?v=2">
+<link rel="stylesheet" href="<?= li_asset('/blog-extra.css') ?>">
+<link rel="stylesheet" href="<?= li_asset('/site-boost.css') ?>">
 <?= $opts['extra_head'] ?? '' ?>
 </head>
 <body class="lang-<?= htmlspecialchars($lang) ?>">
@@ -345,7 +351,7 @@ function page_head($title, $description, $canonical, $ogImage, array $opts = [])
 }
 
 function page_footer() {
-    return '<footer><a class="logo" href="/">LAND ISTANBUL</a><p>© 2026 LAND ISTANBUL. ALL RIGHTS RESERVED.</p></footer><script src="/blog-lead.js?v=3" defer></script><script src="/site-boost.js?v=2" defer></script></body></html>';
+    return '<footer><a class="logo" href="/">LAND ISTANBUL</a><p>© 2026 LAND ISTANBUL. ALL RIGHTS RESERVED.</p></footer><script src="' . li_asset('/blog-lead.js') . '" defer></script><script src="' . li_asset('/site-boost.js') . '" defer></script></body></html>';
 }
 
 /** Lead capture box: segment-specific copy, short form posting to /mail.php, WhatsApp shortcut. */

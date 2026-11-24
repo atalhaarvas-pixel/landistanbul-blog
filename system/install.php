@@ -189,7 +189,10 @@ try {
         $sortJs = "grid.insertBefore(frag, grid.firstChild);\n      /*LI-SORT*/ var all = Array.prototype.slice.call(grid.children); var dt = function(c){ var e = c.querySelector('.blog-date'); var d = e ? Date.parse(e.textContent) : NaN; return isNaN(d) ? 0 : d; }; all.sort(function(x, y){ return dt(y) - dt(x); }); all.forEach(function(c){ grid.appendChild(c); }); grid.style.scrollBehavior = 'auto'; grid.scrollLeft = 0; requestAnimationFrame(function(){ grid.scrollLeft = 0; grid.style.scrollBehavior = ''; });";
         if (strpos($html, '/*LI-SORT*/') === false) $html = str_replace('grid.insertBefore(frag, grid.firstChild);', $sortJs, $html);
         $html = str_replace('>Tüm Yazılar →</a>', '>All Articles →</a>', $html);
-        $html = str_replace(['/site-boost.css?v=1', '/site-boost.js?v=1'], ['/site-boost.css?v=2', '/site-boost.js?v=2'], $html);
+        foreach (['css', 'js'] as $ext) {
+            $v = substr(md5_file($repo . '/system/site-boost.' . $ext), 0, 10);
+            $html = preg_replace('~/site-boost\.' . $ext . '\?v=[A-Za-z0-9]+~', '/site-boost.' . $ext . '?v=' . $v, $html);
+        }
         if ($html !== $orig) { li_write_atomic($indexFile, $html); li_log('homepage patched'); }
     }
 
