@@ -43,6 +43,18 @@ $lang     = li_oneline(li_field('lang', 5));
 $referer  = isset($_SERVER['HTTP_REFERER']) ? li_oneline(substr(strip_tags($_SERVER['HTTP_REFERER']), 0, 300)) : '';
 if ($source === '') $source = $referer;
 
+// Extra details from the valuation form and the tax calculator: every field named p_* (arrays joined).
+$details = [];
+foreach ($_POST as $key => $val) {
+    if (strpos($key, 'p_') !== 0) continue;
+    if (is_array($val)) $val = implode(', ', array_map(function ($v) { return trim(strip_tags((string)$v)); }, $val));
+    $val = trim(strip_tags((string)$val));
+    if ($val === '') continue;
+    $label = ucfirst(str_replace('_', ' ', substr($key, 2)));
+    $details[$label] = function_exists('mb_substr') ? mb_substr($val, 0, 2000) : substr($val, 0, 2000);
+    if (count($details) >= 30) break;
+}
+
 $emailValid = $email !== '' && filter_var($email, FILTER_VALIDATE_EMAIL);
 $phoneDigits = preg_replace('/\D+/', '', $phone);
 
@@ -70,6 +82,7 @@ if (is_dir($privDir)) {
         'message' => $message,
         'source' => $source,
         'lang' => $lang,
+        'details' => $details,
     ];
     $saved = @file_put_contents($privDir . '/leads.jsonl', json_encode($row, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . "\n", FILE_APPEND | LOCK_EX) !== false;
 }
@@ -89,6 +102,10 @@ if ($lang)     $body .= "Language: $lang\n";
 if ($message)  $body .= "Message : $message\n";
 if ($source)   $body .= "Page    : $source\n";
 if ($phoneDigits !== '') $body .= "WhatsApp: https://wa.me/$phoneDigits\n";
+if ($details) {
+    $body .= "\nDetails:\n";
+    foreach ($details as $k => $v) $body .= "  $k: $v\n";
+}
 $body .= "-------------------------------------------\n";
 $body .= "Sent from: landistanbul.com\n";
 

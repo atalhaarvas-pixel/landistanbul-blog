@@ -73,8 +73,19 @@ Look at the hero image and one infographic with the Read tool. Mark the topic `[
    ids in `pages`. Read the first 20 lines of `blog/<slug>/index.html` to confirm the page exists.
 4. If the status did not change, the Composer hook did not run: report it instead of retrying in a loop.
 
-## 7. Leads
+## 7. Tax calculator data (monthly / yearly)
+
+`data/tax-data.json` feeds the tax calculator (`/tax-calculator/`, rebuilt by the installer):
+- **Monthly, after TÜİK publishes (around the 3rd):** add the previous month's Yİ-ÜFE (2003=100) to `yiufe`
+  and the previous month's average USD/TRY and EUR/TRY (TCMB) to `usdtry` / `eurtry`; set `updated`.
+  Check at least two sources (e.g. TÜİK bulletin, hakedis.org, oska.com.tr, dolar724.com).
+- **Every January:** add the new year's annual exemption (`exemptions`) and the NON-WAGE income tax tariff
+  (`brackets`, from the Gelir Vergisi Genel Tebliği) once published in the Resmî Gazete.
+- Today's exchange rate comes from TCMB automatically on every deploy (`/fx-rates.json`).
+
+## 8. Leads
 
 Form leads are emailed to info@landistanbul.com and saved, one JSON per line, in `_private/leads.jsonl`
 (fields: received_at, name, email, phone, interest, budget, message, source, lang). Read it with the Hostinger
-connector and report the new ones. Never put lead data in this repository: it is public.
+connector and report the new ones. Valuation requests have `interest` = "Free property valuation" and the property
+details in `details` (city, district, type, rooms, size, age, features…). Never put lead data in this repository: it is public.

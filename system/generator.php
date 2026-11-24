@@ -17,6 +17,7 @@ define('SITE_URL', 'https://landistanbul.com');
 define('AUTO_DATA_FILE', SITE_ROOT . '/_private/blog-auto.json');
 define('AUTO_PAGES_FILE', SITE_ROOT . '/_private/auto-pages.json');
 define('WHATSAPP_NUMBER', '905468916349');
+if (file_exists(__DIR__ . '/valuation.php')) require_once __DIR__ . '/valuation.php';
 
 /**
  * The original blog posts that live inside index.html's own JS (not managed by this panel).
@@ -306,7 +307,8 @@ function page_head($title, $description, $canonical, $ogImage, array $opts = [])
 <?php if ($lang === 'ar'): ?><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
 <?php endif; ?>
 <link rel="stylesheet" href="/blog-style.css">
-<link rel="stylesheet" href="/blog-extra.css?v=2">
+<link rel="stylesheet" href="/blog-extra.css?v=3">
+<link rel="stylesheet" href="/site-boost.css?v=1">
 <?= $opts['extra_head'] ?? '' ?>
 </head>
 <body class="lang-<?= htmlspecialchars($lang) ?>">
@@ -314,8 +316,8 @@ function page_head($title, $description, $canonical, $ogImage, array $opts = [])
   <a class="logo" href="/">LAND ISTANBUL</a>
   <div class="nav-links">
     <a href="/#home">Home</a>
-    <a href="/#about">About</a>
     <a href="/#services">Services</a>
+    <a href="/free-property-valuation/" class="nav-val">Free Valuation</a>
     <a href="/tax-calculator/">Tax Calculator</a>
     <a href="/blog/">Blogs</a>
     <a href="/#contact" class="nav-btn">Contact Us</a>
@@ -326,8 +328,8 @@ function page_head($title, $description, $canonical, $ogImage, array $opts = [])
 </nav>
 <div id="mobile-menu">
   <a href="/#home">Home</a>
-  <a href="/#about">About</a>
   <a href="/#services">Services</a>
+  <a href="/free-property-valuation/">Free Valuation</a>
   <a href="/tax-calculator/">Tax Calculator</a>
   <a href="/blog/">Blogs</a>
   <a href="/#contact">Contact</a>
@@ -337,7 +339,7 @@ function page_head($title, $description, $canonical, $ogImage, array $opts = [])
 }
 
 function page_footer() {
-    return '<footer><a class="logo" href="/">LAND ISTANBUL</a><p>© 2026 LAND ISTANBUL. ALL RIGHTS RESERVED.</p></footer><script src="/blog-lead.js?v=2" defer></script></body></html>';
+    return '<footer><a class="logo" href="/">LAND ISTANBUL</a><p>© 2026 LAND ISTANBUL. ALL RIGHTS RESERVED.</p></footer><script src="/blog-lead.js?v=3" defer></script><script src="/site-boost.js?v=1" defer></script></body></html>';
 }
 
 /** Lead capture box: segment-specific copy, short form posting to /mail.php, WhatsApp shortcut. */
@@ -351,6 +353,9 @@ function lead_box_html($lang, $segment, $postTitle, $postUrl) {
 
     $h = '<section class="li-lead" id="get-offer" data-segment="' . htmlspecialchars($segment) . '">';
     $h .= '<h3>' . htmlspecialchars($cta[0]) . '</h3><p class="li-lead-sub">' . htmlspecialchars($cta[1]) . '</p>';
+    if ($segment === 'sell' && function_exists('lv_url')) {
+        $h .= '<a class="li-val-link" href="' . htmlspecialchars(str_replace(SITE_URL, '', lv_url($lang))) . '">' . htmlspecialchars(lv_t($lang)['cta_btn']) . ' →</a>';
+    }
     $h .= '<form class="li-lead-form" method="post" action="/mail.php" novalidate'
         . ' data-ok="' . htmlspecialchars($t['f_ok']) . '" data-err="' . htmlspecialchars($t['f_err']) . '"'
         . ' data-need="' . htmlspecialchars($t['f_need']) . '" data-sending="' . htmlspecialchars($t['f_sending']) . '">';
@@ -671,6 +676,11 @@ function update_sitemap(array $dynamicPosts) {
     $auto = li_ctx()['auto'];
 
     $entries = "  <url>\n    <loc>" . SITE_URL . "/blog/</loc>\n    <changefreq>daily</changefreq>\n    <priority>0.7</priority>\n  </url>\n";
+    if (function_exists('lv_url')) {
+        foreach (['en', 'ar', 'ru'] as $l) {
+            $entries .= "  <url>\n    <loc>" . lv_url($l) . "</loc>\n    <changefreq>monthly</changefreq>\n    <priority>" . ($l === 'en' ? '0.9' : '0.8') . "</priority>\n  </url>\n";
+        }
+    }
     $seenLang = [];
     foreach ($auto as $p) {
         if ($p['lang'] !== 'en' && empty($seenLang[$p['lang']])) {
@@ -752,4 +762,5 @@ function regenerate_all(array $dynamicPosts) {
     build_blog_index($dynamicPosts);
     update_sitemap($dynamicPosts);
     write_homepage_feed($dynamicPosts, $auto);
+    if (function_exists('write_valuation_pages')) write_valuation_pages();
 }
