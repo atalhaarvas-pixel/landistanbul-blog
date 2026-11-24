@@ -88,6 +88,11 @@ function li_inputs_hash($repo, $site) {
     return md5($h);
 }
 
+/** Cache-busting suffix for an image, from its content. */
+function li_img_v($file) {
+    return is_file($file) ? '?v=' . substr(md5_file($file), 0, 8) : '';
+}
+
 /** Validate one translation entry; returns list of problems. */
 function li_validate_variant(array $v, $lang, $file) {
     $p = [];
@@ -276,8 +281,8 @@ try {
                 'seo_title' => $v['seo_title'] ?? $v['title'],
                 'description' => $v['description'],
                 'excerpt' => $v['excerpt'],
-                'image' => $cover ? '/blog-images/auto/' . basename($cover) : '/og-image.png',
-                'og_image' => $og ? '/blog-images/auto/' . basename($og) : null,
+                'image' => $cover ? '/blog-images/auto/' . basename($cover) . li_img_v($repo . '/' . $cover) : '/og-image.png',
+                'og_image' => $og ? '/blog-images/auto/' . basename($og) . li_img_v($repo . '/' . $og) : null,
                 'imageAlt' => $v['image_alt'] ?? $v['title'],
                 'published' => $g['published'],
                 'updated' => $g['updated'] ?? $g['published'],
