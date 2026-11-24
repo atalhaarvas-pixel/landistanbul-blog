@@ -710,6 +710,30 @@ function cleanup_auto_pages(array $auto) {
     }
 }
 
+/**
+ * Public feed of the newest English posts (admin + automatic) for the homepage's blog section.
+ * Same shape as blog-data.json entries; index.html reads it first and falls back to blog-data.json.
+ */
+function write_homepage_feed(array $dynamicPosts, array $auto, $limit = 6) {
+    $all = [];
+    foreach ($dynamicPosts as $p) {
+        $all[] = ['id' => $p['id'], 'title' => $p['title'], 'excerpt' => $p['excerpt'], 'image' => $p['image'],
+                  'imageAlt' => $p['imageAlt'] ?? $p['title'], 'date' => $p['date']];
+    }
+    foreach ($auto as $p) {
+        if (($p['lang'] ?? '') !== 'en') continue;
+        $all[] = ['id' => $p['id'], 'title' => $p['title'], 'excerpt' => $p['excerpt'], 'image' => $p['image'],
+                  'imageAlt' => $p['imageAlt'] ?? $p['title'], 'date' => $p['date'], 'published' => $p['published']];
+    }
+    usort($all, function ($a, $b) {
+        return li_post_ts($b) <=> li_post_ts($a);
+    });
+    $all = array_slice($all, 0, $limit);
+    foreach ($all as &$p) unset($p['published']);
+    unset($p);
+    file_put_contents(SITE_ROOT . '/blog-feed.json', json_encode($all, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
+}
+
 /** Regenerate everything derived from blog-data.json and blog-auto.json (call after any save/delete). */
 function regenerate_all(array $dynamicPosts) {
     $dynamicIds = array_column($dynamicPosts, 'id');
@@ -727,4 +751,5 @@ function regenerate_all(array $dynamicPosts) {
     cleanup_auto_pages($auto);
     build_blog_index($dynamicPosts);
     update_sitemap($dynamicPosts);
+    write_homepage_feed($dynamicPosts, $auto);
 }

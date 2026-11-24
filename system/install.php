@@ -107,6 +107,22 @@ try {
         }
     }
 
+    // Homepage: read the newest posts (admin + automatic) from /blog-feed.json, falling back to blog-data.json.
+    $indexFile = $site . '/index.html';
+    $origFetch = "fetch('/blog-data.json?v=' + Date.now())";
+    $newFetch = "fetch('/blog-feed.json?v=' + Date.now()).then(function(r){ return r.ok ? r : fetch('/blog-data.json?v=' + Date.now()); })";
+    if (file_exists($indexFile)) {
+        $html = file_get_contents($indexFile);
+        if (strpos($html, $newFetch) === false && strpos($html, $origFetch) !== false) {
+            if (!file_exists($priv . '/backups/index.html.orig')) copy($indexFile, $priv . '/backups/index.html.orig');
+            $patched = str_replace($origFetch, $newFetch, $html);
+            $tmp = $indexFile . '.tmp-' . getmypid();
+            file_put_contents($tmp, $patched);
+            rename($tmp, $indexFile);
+            li_log('homepage blog section now reads /blog-feed.json');
+        }
+    }
+
     $hash = li_inputs_hash($repo, $site);
     $prev = file_exists($priv . '/autoblog-status.json') ? json_decode(file_get_contents($priv . '/autoblog-status.json'), true) : null;
     if (!$force && $prev && ($prev['inputs_hash'] ?? '') === $hash && !empty($prev['ok'])) {
