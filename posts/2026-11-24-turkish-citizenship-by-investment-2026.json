@@ -1,0 +1,397 @@
+{
+  "group": "turkish-citizenship-by-investment-2026",
+  "segment": "citizenship",
+  "published": "2026-11-24",
+  "updated": "2026-11-24",
+  "sources": [
+    {
+      "title": "Serka Law: Turkish Citizenship by Investment in 2026, requirements and routes",
+      "url": "https://serkalaw.com/turkish-citizenship-by-investment/"
+    },
+    {
+      "title": "Property Turkey: Changes to Turkish Citizenship, September 2026 update",
+      "url": "https://www.propertyturkey.com/tr/blog-turkey/turkish-citizenship-changes-september-2026-update"
+    },
+    {
+      "title": "Türkiye Today: Türkiye strips 6,134 foreigners of citizenship as property fraud unfolds (5 August 2026)",
+      "url": "https://www.turkiyetoday.com/nation/turkiye-strips-6134-foreigners-of-citizenship-as-property-fraud-unfolds-3225449"
+    },
+    {
+      "title": "Milliyet Uzmanpara: Secure Payment System mandatory for property sales from 1 December 2026",
+      "url": "https://uzmanpara.milliyet.com.tr/uzmanpara/ev-alip-satacaklar-dikkat-tapu-isleminde-yeni-uygulama-7669478"
+    },
+    {
+      "title": "EY Türkiye: 20-year income tax exemption for people settling in Türkiye (Law No. 7582)",
+      "url": "https://www.ey.com/tr_tr/insights/tax/turkiyeye-yerlesenlere-20-yillik-vergi-istisnasi"
+    }
+  ],
+  "infographics": [
+    {
+      "name": "facts",
+      "type": "facts",
+      "title": {
+        "en": "Turkish citizenship by investment: 2026 at a glance",
+        "ar": "الجنسية التركية عبر الاستثمار: لمحة 2026",
+        "ru": "Главное о гражданстве Турции в 2026"
+      },
+      "items": {
+        "en": [
+          [
+            "$400,000",
+            "minimum value of qualifying property"
+          ],
+          [
+            "3 years",
+            "no-sale annotation on the title deed"
+          ],
+          [
+            "4%",
+            "title deed fee: 2% buyer, 2% seller"
+          ],
+          [
+            "6–12 months",
+            "realistic time from purchase to passport"
+          ],
+          [
+            "0 days",
+            "minimum stay required in Turkey"
+          ],
+          [
+            "1 file",
+            "covers spouse and children under 18"
+          ]
+        ],
+        "ar": [
+          [
+            "400,000 $",
+            "الحد الأدنى لقيمة العقار المؤهل"
+          ],
+          [
+            "3 سنوات",
+            "شرح عدم البيع على سند الطابو"
+          ],
+          [
+            "4%",
+            "رسوم الطابو: 2% على المشتري و2% على البائع"
+          ],
+          [
+            "6–12 شهراً",
+            "المدة الواقعية من الشراء حتى الجواز"
+          ],
+          [
+            "0 يوم",
+            "لا حد أدنى للإقامة في تركيا"
+          ],
+          [
+            "ملف واحد",
+            "يشمل الزوج والأبناء دون 18 عاماً"
+          ]
+        ],
+        "ru": [
+          [
+            "$400 000",
+            "минимальная стоимость подходящей недвижимости"
+          ],
+          [
+            "3 года",
+            "запрет на продажу в тапу"
+          ],
+          [
+            "4%",
+            "пошлина за тапу: 2% покупатель, 2% продавец"
+          ],
+          [
+            "6–12 мес.",
+            "реальный срок от покупки до паспорта"
+          ],
+          [
+            "0 дней",
+            "минимальное проживание в Турции"
+          ],
+          [
+            "1 досье",
+            "супруг(а) и дети до 18 лет"
+          ]
+        ]
+      }
+    },
+    {
+      "name": "steps",
+      "type": "steps",
+      "title": {
+        "en": "From purchase to passport: 9 steps",
+        "ar": "من الشراء إلى الجواز: 9 خطوات",
+        "ru": "От покупки до паспорта: 9 шагов"
+      },
+      "items": {
+        "en": [
+          [
+            "Tax number & bank account",
+            "Needed before any payment"
+          ],
+          [
+            "Eligible property & due diligence",
+            "Title type, seller, liens, price check"
+          ],
+          [
+            "Valuation via Web Tapu",
+            "SPK-licensed firm, valid 12 months"
+          ],
+          [
+            "Currency sale & DAB certificate",
+            "Every transfer goes through the bank"
+          ],
+          [
+            "Title deed + 3-year annotation",
+            "Registered at the land registry"
+          ],
+          [
+            "Certificate of conformity",
+            "Confirms the investment qualifies"
+          ],
+          [
+            "Residence permit",
+            "In person, with fingerprints"
+          ],
+          [
+            "Citizenship application",
+            "Review and security checks"
+          ],
+          [
+            "Presidential decision",
+            "ID cards and passports follow"
+          ]
+        ],
+        "ar": [
+          [
+            "الرقم الضريبي والحساب البنكي",
+            "مطلوبان قبل أي دفعة"
+          ],
+          [
+            "عقار مؤهل وفحص قانوني",
+            "نوع السند، البائع، الرهون، السعر"
+          ],
+          [
+            "التقييم عبر Web Tapu",
+            "شركة مرخّصة من SPK، صالح 12 شهراً"
+          ],
+          [
+            "بيع العملة وشهادة DAB",
+            "كل تحويل يمر عبر البنك"
+          ],
+          [
+            "الطابو مع شرح 3 سنوات",
+            "يُسجَّل في دائرة السجل العقاري"
+          ],
+          [
+            "شهادة المطابقة",
+            "تؤكد أهلية الاستثمار"
+          ],
+          [
+            "تصريح الإقامة",
+            "حضور شخصي وأخذ البصمات"
+          ],
+          [
+            "طلب الجنسية",
+            "مراجعة وتدقيق أمني"
+          ],
+          [
+            "القرار الرئاسي",
+            "ثم بطاقة الهوية وجواز السفر"
+          ]
+        ],
+        "ru": [
+          [
+            "Налоговый номер и счёт в банке",
+            "Нужны до любой оплаты"
+          ],
+          [
+            "Подходящий объект и проверка",
+            "Титул, продавец, обременения, цена"
+          ],
+          [
+            "Оценка через Web Tapu",
+            "Компания с лицензией SPK, 12 месяцев"
+          ],
+          [
+            "Продажа валюты и сертификат DAB",
+            "Каждый перевод через банк"
+          ],
+          [
+            "Тапу и запрет на 3 года",
+            "Регистрация в земельном кадастре"
+          ],
+          [
+            "Сертификат соответствия",
+            "Подтверждает право на гражданство"
+          ],
+          [
+            "Вид на жительство",
+            "Лично, с отпечатками пальцев"
+          ],
+          [
+            "Заявление на гражданство",
+            "Проверка и контроль безопасности"
+          ],
+          [
+            "Указ Президента",
+            "Затем ID-карта и паспорт"
+          ]
+        ]
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "slug": "turkish-citizenship-by-investment-2026",
+      "title": "Turkish Citizenship by Investment in 2026: The $400,000 Property Route, Step by Step",
+      "seo_title": "Turkish Citizenship by Investment 2026: Rules & Steps",
+      "og_title": "Turkish Citizenship by Investment 2026: The Complete Property Guide",
+      "description": "The $400,000 property rule is unchanged, but 2026 brought new valuation, payment and vetting rules. Steps, real costs, timelines and mistakes to avoid.",
+      "excerpt": "The headline number has not moved: buy at least $400,000 of qualifying property, keep it for three years, and your whole family can apply for a Turkish passport. What did change in 2026 is everything around that number: who values the property, how you pay, and how closely the state checks each file. Here is how the process works today.",
+      "image_alt": "Illustration of the Istanbul skyline for a guide to Turkish citizenship by investment in 2026",
+      "keywords": [
+        "Turkish citizenship by investment 2026",
+        "Turkish citizenship $400,000",
+        "buy property in Istanbul for citizenship",
+        "Turkey citizenship by real estate",
+        "Turkish passport by investment"
+      ],
+      "body_html": "<h2>Turkish citizenship by investment at a glance (2026)</h2>\n<figure><img src=\"/blog-images/auto/turkish-citizenship-by-investment-2026-facts-en.jpg\" alt=\"Key facts of Turkish citizenship by investment in 2026: $400,000 minimum, 3-year holding, 4% title deed fee\" loading=\"lazy\" width=\"1200\"></figure>\n<div class=\"li-table-wrap\"><table>\n<thead><tr><th>Item</th><th>Position in 2026</th></tr></thead>\n<tbody>\n<tr><td>Minimum property investment</td><td>USD 400,000 (one property or several combined)</td></tr>\n<tr><td>Holding period</td><td>3 years, recorded as a no-sale annotation on the title deed</td></tr>\n<tr><td>Other routes</td><td>USD 500,000 in a bank deposit, government bonds, investment funds, private pension or fixed capital, or creating 50 jobs</td></tr>\n<tr><td>Family</td><td>Spouse and children under 18 (plus dependent adult children) on the same file</td></tr>\n<tr><td>Language test / residence</td><td>No Turkish language test and no minimum stay</td></tr>\n<tr><td>Final approval</td><td>Presidential decision after security vetting</td></tr>\n<tr><td>Realistic timeline</td><td>Plan for 6–12 months from purchase to passport</td></tr>\n</tbody></table></div>\n<p>The real estate threshold rose from USD 250,000 to USD 400,000 in 2022 and has not changed since. Property remains the most popular route because your money stays in an asset you own, can rent out and can sell after three years.</p>\n\n<h2>Which properties qualify, and which don't</h2>\n<p>Not every property worth USD 400,000 can be used for citizenship. Since a Presidential Decision of December 2023, the rules are tighter:</p>\n<ul>\n<li><strong>Qualifies:</strong> apartments, villas, offices and shops with a full condominium title (<em>kat mülkiyeti</em>) or construction servitude (<em>kat irtifakı</em>), and land with a lawful, licensed building on it.</li>\n<li><strong>Qualifies:</strong> several properties bought together, as long as their combined value reaches USD 400,000. Each of them carries the 3-year annotation.</li>\n<li><strong>Qualifies:</strong> off-plan units, if at least USD 400,000 is paid up front under one notarised sales contract and a 3-year no-transfer, no-cancellation commitment is recorded.</li>\n<li><strong>Does not qualify:</strong> a share of a property, agricultural fields and empty plots without a building.</li>\n<li><strong>Does not qualify:</strong> a property currently registered to a foreigner. You must buy from a Turkish owner or company.</li>\n<li><strong>Does not qualify:</strong> purchases from your own Turkish first-degree relatives or their companies, or a resale where the Turkish seller bought the unit from a foreigner within the last three years.</li>\n</ul>\n<!--CTA-->\n\n<h2>What changed in 2026</h2>\n<p>If you read a guide written in 2024 or 2025, several details are now out of date:</p>\n<ul>\n<li><strong>Valuation is open to more firms (28 September 2026).</strong> Until then only one state-linked company, GEDAŞ, could value citizenship properties. Now any valuation firm licensed by the Capital Markets Board (SPK) can be chosen through the Web Tapu system, and the investment confirmation the land registry builds from the report is valid for 12 months instead of 6.</li>\n<li><strong>No more valuation shortcut for developer sales.</strong> Purchases from listed real estate investment companies (GYO) used to skip the separate appraisal. Buyers now need an up-to-date valuation, which can add review time.</li>\n<li><strong>Every figure must reach USD 400,000 on its own.</strong> The declared sale price, the valuation and each bank transfer, as recorded on the foreign-exchange purchase certificate (DAB), must each meet the threshold. Since 1 October 2026 the Central Bank's 11:00 buying rate on the conversion day is used.</li>\n<li><strong>Secure Payment System from 1 December 2026.</strong> Turkey's Ministry of Trade is making a bank-held secure payment mandatory for property sales: the buyer's money waits in a secure account until the title deed is transferred, then goes to the seller.</li>\n<li><strong>Much stricter vetting.</strong> In August 2026 the Interior Ministry announced that 6,134 people, 1,413 investors and their families, had their citizenship cancelled or withdrawn, most of them over inflated valuations and sham sales. The programme is still open, but files are now examined far more closely.</li>\n<li><strong>A new tax incentive for people who actually move.</strong> Under Law No. 7582, individuals who become Turkish tax residents from 1 January 2026, and had no Turkish residence or tax liability in the previous three years, can have their foreign income exempt from Turkish income tax for 20 years. It is separate from citizenship, but many investor families now weigh the two together.</li>\n</ul>\n<blockquote>The lesson of 2026: the cheapest route to a passport is no longer the one with the lowest price tag, but the one whose paperwork will still hold up in a review years from now.</blockquote>\n\n<h2>The process, step by step</h2>\n<figure><img src=\"/blog-images/auto/turkish-citizenship-by-investment-2026-steps-en.jpg\" alt=\"Nine steps from buying property to receiving a Turkish passport\" loading=\"lazy\" width=\"1200\"></figure>\n<ol class=\"li-steps\">\n<li><strong>Get a tax number and open a Turkish bank account.</strong> Both are needed before you pay. A lawyer with power of attorney can arrange them if you are abroad.</li>\n<li><strong>Choose an eligible property and run due diligence.</strong> Check the title type, the seller, debts or liens on the deed, the building's occupancy permit and whether the price matches the market.</li>\n<li><strong>Order the valuation report through Web Tapu.</strong> An SPK-licensed firm values the property, and the land registry turns the report into the investment confirmation used in your file.</li>\n<li><strong>Convert your currency and pay through the bank.</strong> The bank buys your foreign currency, issues the DAB certificate and sends it to the land registry. Cash is not accepted.</li>\n<li><strong>Transfer the title deed.</strong> The land registry issues the deed in your name with the 3-year no-sale annotation.</li>\n<li><strong>Obtain the certificate of conformity.</strong> It confirms that your investment meets the citizenship conditions.</li>\n<li><strong>Apply for a residence permit.</strong> A short-term permit is issued on the basis of the investment. You attend in person and give fingerprints.</li>\n<li><strong>File the citizenship application.</strong> You attend again with your family, and the file goes to the Directorate General of Population and Citizenship Affairs for review and security checks.</li>\n<li><strong>Presidential decision, ID cards and passports.</strong> Citizenship takes effect on the date of the decision; Turkish ID cards and passports follow.</li>\n</ol>\n\n<h2>How long does it take in 2026?</h2>\n<p>Between 2019 and 2021, decisions often arrived three to four months after filing. In 2026 many files wait well beyond four months, some more than a year, and decisions tend to come in batches. Our advice: budget 6–12 months from purchase to passport, and make your file clean from day one. A well-prepared file is the only part of the timeline you control.</p>\n\n<h2>What it really costs beyond USD 400,000</h2>\n<div class=\"li-table-wrap\"><table>\n<thead><tr><th>Cost</th><th>How it works</th></tr></thead>\n<tbody>\n<tr><td>Title deed fee</td><td>4% of the declared price in total: 2% from the buyer and 2% from the seller by law. The base cannot be lower than the municipal property value.</td></tr>\n<tr><td>Valuation report</td><td>Paid to the licensed valuation firm; required for the citizenship file.</td></tr>\n<tr><td>Earthquake insurance (DASK)</td><td>Compulsory for residences.</td></tr>\n<tr><td>Translation and notary</td><td>Sworn translations of passports and civil documents, notarised powers of attorney.</td></tr>\n<tr><td>Legal fees</td><td>For due diligence and managing the application.</td></tr>\n<tr><td>VAT</td><td>New builds may carry VAT. The exemption applies only to the first sale of a new residence or workplace to a buyer not settled in Turkey who pays with foreign currency brought into the country, and it is clawed back if you sell within three years.</td></tr>\n</tbody></table></div>\n<p><strong>Example:</strong> at the Central Bank's dollar rate of 23 October 2026 (TRY 49.654), a USD 400,000 price equals about TRY 19.86 million. Each side's 2% share is roughly TRY 397,000, about USD 8,000, so around USD 16,000 in total.</p>\n\n<h2>Six mistakes that can cost you the passport</h2>\n<ol>\n<li><strong>Paying an inflated price.</strong> Valuations far above the market were at the heart of the 2026 cancellations. If a \"citizenship package\" looks expensive for what it is, ask why, and read our guide to <a href=\"/blog/how-to-choose-a-reliable-real-estate-agent-in-istanbul-a-foreign-buyer-s-guide/\">choosing a reliable real estate agent in Istanbul</a>.</li>\n<li><strong>Accepting a \"discount\" below the threshold.</strong> Any arrangement where the real price is lower than the declared USD 400,000 puts your citizenship at risk, even years later.</li>\n<li><strong>Buying from a foreign owner.</strong> The unit will not qualify, however good the price.</li>\n<li><strong>Splitting payments the wrong way.</strong> Transfers that don't reach the threshold on the DAB, or cash paid outside the bank, can sink the file.</li>\n<li><strong>Choosing land without a building.</strong> Empty plots and fields no longer qualify for citizenship.</li>\n<li><strong>Selling too early.</strong> The annotation blocks a sale for three years, and selling within five years can still trigger capital gains tax. You can estimate it with our <a href=\"/tax-calculator/\">Turkish capital gains tax calculator</a>.</li>\n</ol>\n\n<h2>Choosing the right property in Istanbul</h2>\n<p>A citizenship purchase is still a property investment, and after three years you will want to rent it out well or sell it well. Three questions help: Will a local buyer want this flat in 2029? Is the price in line with recent sales on the same street? Does the building have its occupancy permit and earthquake-resistant construction?</p>\n<p>Established districts such as Beşiktaş, Şişli and Kadıköy usually resell more easily, while newer areas on the western side of the city offer more space for the same budget. The right choice depends on your priority: resale, rental income or family living. Our overview of <a href=\"/blog/istanbul-real-estate-investment-trends-2026-what-foreign-buyers-need-to-know/\">Istanbul real estate trends in 2026</a> covers where demand is moving.</p>\n\n<h2>How Land Istanbul helps</h2>\n<p>We start with an eligibility check before you reserve anything: title type, seller, price against the market and the valuation outlook. Then we coordinate the valuation, the bank and DAB process, the title deed appointment, and the residence and citizenship applications with licensed partners, and we keep you updated in your language at every step.</p>",
+      "faq": [
+        {
+          "q": "Can my family get Turkish citizenship with one investment?",
+          "a": "Yes. Your spouse and your children under 18 are included in the same application. Adult children can be added only if they are proven to be dependent on you."
+        },
+        {
+          "q": "Do I have to live in Turkey or learn Turkish?",
+          "a": "No. The investment route has no minimum stay and no Turkish language test. You attend in person to give fingerprints at the residence permit and citizenship stages."
+        },
+        {
+          "q": "Can I combine two or more properties to reach $400,000?",
+          "a": "Yes, as long as each property qualifies and the combined value reaches the threshold. All of them carry the three-year no-sale annotation."
+        },
+        {
+          "q": "Can I buy an off-plan apartment for citizenship?",
+          "a": "Yes, if at least $400,000 is paid in advance under one notarised sales contract and a three-year no-transfer and no-cancellation commitment is recorded on the register."
+        },
+        {
+          "q": "Can I rent out the property during the three years?",
+          "a": "Yes. Ordinary leases are allowed. While the annotation is in place you cannot sell the property, promise it for sale or grant a usufruct."
+        },
+        {
+          "q": "Does Turkey allow dual citizenship?",
+          "a": "Turkey allows dual citizenship, but some countries do not. Check the rules of your current country before you apply."
+        },
+        {
+          "q": "How long does Turkish citizenship by investment take in 2026?",
+          "a": "Plan for 6 to 12 months from purchase to passport. Some files are decided faster, while others take longer than a year."
+        }
+      ]
+    },
+    "ar": {
+      "slug": "turkish-citizenship-by-investment-2026",
+      "title": "الجنسية التركية عن طريق الاستثمار في 2026: دليل مسار العقار بقيمة 400 ألف دولار خطوة بخطوة",
+      "seo_title": "الجنسية التركية عبر الاستثمار 2026: الشروط والخطوات والتكاليف",
+      "og_title": "الجنسية التركية عبر الاستثمار العقاري 2026: الدليل الكامل",
+      "description": "شرط العقار بقيمة 400 ألف دولار لم يتغير، لكن 2026 جاءت بقواعد جديدة للتقييم والدفع والتدقيق. الخطوات والتكاليف الحقيقية والمدة والأخطاء التي يجب تجنبها.",
+      "excerpt": "الرقم الأساسي لم يتغير: اشترِ عقاراً مؤهلاً بقيمة 400 ألف دولار على الأقل، واحتفظ به ثلاث سنوات، لتتمكن عائلتك بالكامل من التقدم للحصول على جواز السفر التركي. لكن ما تغيّر في 2026 هو كل ما يحيط بهذا الرقم: من يقيّم العقار، وكيف تدفع، ومدى دقة تدقيق الدولة في كل ملف. إليك كيف تسير العملية اليوم.",
+      "image_alt": "رسم توضيحي لأفق إسطنبول لدليل الجنسية التركية عبر الاستثمار في 2026",
+      "keywords": [
+        "الجنسية التركية عن طريق الاستثمار 2026",
+        "الجنسية التركية مقابل شراء عقار",
+        "شراء عقار في إسطنبول للحصول على الجنسية",
+        "الجواز التركي عبر الاستثمار",
+        "شروط الجنسية التركية 400 ألف دولار"
+      ],
+      "body_html": "<h2>الجنسية التركية عبر الاستثمار في لمحة (2026)</h2>\n<figure><img src=\"/blog-images/auto/turkish-citizenship-by-investment-2026-facts-ar.jpg\" alt=\"أهم أرقام الجنسية التركية عبر الاستثمار في 2026: 400 ألف دولار، 3 سنوات، رسوم طابو 4%\" loading=\"lazy\" width=\"1200\"></figure>\n<div class=\"li-table-wrap\"><table>\n<thead><tr><th>البند</th><th>الوضع في 2026</th></tr></thead>\n<tbody>\n<tr><td>الحد الأدنى للاستثمار العقاري</td><td>400,000 دولار أمريكي (عقار واحد أو عدة عقارات مجتمعة)</td></tr>\n<tr><td>مدة الاحتفاظ</td><td>3 سنوات، تُسجَّل كشرح عدم بيع على سند الملكية (الطابو)</td></tr>\n<tr><td>المسارات الأخرى</td><td>500,000 دولار في وديعة بنكية أو سندات حكومية أو صناديق استثمار أو نظام التقاعد الخاص أو استثمار رأسمالي ثابت، أو توظيف 50 شخصاً</td></tr>\n<tr><td>العائلة</td><td>الزوج أو الزوجة والأبناء دون 18 عاماً (والأبناء البالغون المعالون) في الملف نفسه</td></tr>\n<tr><td>اختبار اللغة / الإقامة</td><td>لا يوجد اختبار للغة التركية ولا حد أدنى لمدة الإقامة</td></tr>\n<tr><td>الموافقة النهائية</td><td>بقرار رئاسي بعد التدقيق الأمني</td></tr>\n<tr><td>المدة الواقعية</td><td>خطّط لفترة من 6 إلى 12 شهراً من الشراء حتى جواز السفر</td></tr>\n</tbody></table></div>\n<p>ارتفع الحد الأدنى للمسار العقاري من 250 ألف دولار إلى 400 ألف دولار في عام 2022 ولم يتغير منذ ذلك الحين. ويبقى العقار المسار الأكثر طلباً لأن أموالك تبقى في أصل تملكه، يمكنك تأجيره ثم بيعه بعد ثلاث سنوات.</p>\n\n<h2>ما العقارات المؤهلة للجنسية وما غير المؤهلة؟</h2>\n<p>ليس كل عقار تبلغ قيمته 400 ألف دولار صالحاً للجنسية. فمنذ القرار الرئاسي الصادر في ديسمبر 2023 أصبحت القواعد أكثر صرامة:</p>\n<ul>\n<li><strong>مؤهل:</strong> الشقق والفلل والمكاتب والمحلات ذات سند ملكية طابقية كاملة (kat mülkiyeti) أو حق ارتفاق إنشائي (kat irtifakı)، والأراضي المقام عليها مبنى قانوني مرخّص.</li>\n<li><strong>مؤهل:</strong> عدة عقارات تُشترى معاً طالما أن مجموع قيمتها يبلغ 400 ألف دولار، على أن يُسجَّل شرح السنوات الثلاث على كل منها.</li>\n<li><strong>مؤهل:</strong> الوحدات قيد الإنشاء، إذا دُفع 400 ألف دولار على الأقل مقدماً بموجب عقد بيع واحد موثّق لدى كاتب العدل، وسُجّل التزام بعدم النقل أو الفسخ لمدة ثلاث سنوات.</li>\n<li><strong>غير مؤهل:</strong> الحصة في عقار، والأراضي الزراعية، والأراضي الفارغة غير المبنية.</li>\n<li><strong>غير مؤهل:</strong> العقار المسجّل حالياً باسم أجنبي؛ يجب أن تشتري من مالك أو شركة تركية.</li>\n<li><strong>غير مؤهل:</strong> الشراء من أقاربك الأتراك من الدرجة الأولى أو من شركاتهم، أو إعادة البيع إذا كان البائع التركي قد اشترى الوحدة من أجنبي خلال السنوات الثلاث الأخيرة.</li>\n</ul>\n<!--CTA-->\n\n<h2>ما الذي تغيّر في 2026؟</h2>\n<p>إذا قرأت دليلاً كُتب في 2024 أو 2025، فإن عدة تفاصيل فيه لم تعد دقيقة:</p>\n<ul>\n<li><strong>فتح باب التقييم أمام شركات أكثر (28 سبتمبر 2026).</strong> حتى ذلك التاريخ كانت شركة واحدة مرتبطة بالدولة هي GEDAŞ تقيّم عقارات الجنسية. أما الآن فيمكن اختيار أي شركة تقييم مرخّصة من هيئة أسواق المال (SPK) عبر نظام Web Tapu، وأصبحت وثيقة تأكيد الاستثمار التي تصدرها دائرة الطابو استناداً إلى التقرير صالحة لمدة 12 شهراً بدلاً من 6 أشهر.</li>\n<li><strong>انتهاء الإعفاء من التقييم في مبيعات شركات التطوير.</strong> كانت المشتريات من شركات الاستثمار العقاري المدرجة (GYO) معفاة سابقاً من تقرير التقييم المستقل، أما الآن فيلزم تقييم حديث، ما قد يطيل مدة المراجعة.</li>\n<li><strong>كل رقم يجب أن يبلغ 400 ألف دولار بمفرده.</strong> سعر البيع المصرّح به والتقييم وكل تحويل بنكي كما تسجّله شهادة شراء العملة الأجنبية (DAB) يجب أن يستوفي الحد الأدنى كلٌّ على حدة. ومنذ 1 أكتوبر 2026 يُعتمد سعر شراء البنك المركزي المعلن الساعة 11:00 في يوم التحويل.</li>\n<li><strong>نظام الدفع الآمن اعتباراً من 1 ديسمبر 2026.</strong> تجعل وزارة التجارة التركية الدفع الآمن عبر البنوك إلزامياً في مبيعات العقارات: تبقى أموال المشتري في حساب آمن حتى نقل سند الملكية، ثم تُحوَّل إلى البائع.</li>\n<li><strong>تدقيق أكثر صرامة بكثير.</strong> في أغسطس 2026 أعلنت وزارة الداخلية إلغاء أو سحب جنسية 6,134 شخصاً، هم 1,413 مستثمراً مع عائلاتهم، معظمهم بسبب تقييمات مضخّمة وعمليات بيع صورية. البرنامج ما زال مفتوحاً، لكن الملفات تُفحص الآن بدقة أكبر بكثير.</li>\n<li><strong>حافز ضريبي جديد لمن ينتقل فعلاً للعيش في تركيا.</strong> بموجب القانون رقم 7582، يمكن للأفراد الذين يصبحون مقيمين ضريبياً في تركيا اعتباراً من 1 يناير 2026، ولم تكن لهم إقامة أو التزام ضريبي في تركيا خلال السنوات الثلاث السابقة، إعفاء دخلهم الأجنبي من ضريبة الدخل التركية لمدة 20 عاماً. هذا الحافز منفصل عن الجنسية، لكن كثيراً من العائلات المستثمرة باتت تدرس الأمرين معاً.</li>\n</ul>\n<blockquote>درس عام 2026: الطريق الأرخص إلى الجواز لم يعد صاحب السعر الأدنى، بل ذاك الذي تصمد أوراقه أمام أي مراجعة بعد سنوات.</blockquote>\n\n<h2>خطوات الحصول على الجنسية بالترتيب</h2>\n<figure><img src=\"/blog-images/auto/turkish-citizenship-by-investment-2026-steps-ar.jpg\" alt=\"تسع خطوات من شراء العقار حتى استلام جواز السفر التركي\" loading=\"lazy\" width=\"1200\"></figure>\n<ol class=\"li-steps\">\n<li><strong>استخرج رقماً ضريبياً وافتح حساباً بنكياً في تركيا.</strong> كلاهما مطلوب قبل الدفع، ويمكن لمحامٍ بموجب وكالة إنجازهما إذا كنت خارج تركيا.</li>\n<li><strong>اختر عقاراً مؤهلاً وأجرِ الفحص القانوني.</strong> تحقّق من نوع السند، والبائع، والديون أو الرهون المسجّلة على الطابو، ورخصة إشغال المبنى، ومدى توافق السعر مع السوق.</li>\n<li><strong>اطلب تقرير التقييم عبر Web Tapu.</strong> تقيّم العقار شركة مرخّصة من SPK، وتحوّل دائرة الطابو التقرير إلى وثيقة تأكيد الاستثمار المستخدمة في ملفك.</li>\n<li><strong>حوّل العملة وادفع عبر البنك.</strong> يشتري البنك عملتك الأجنبية ويصدر شهادة DAB ويرسلها إلى دائرة الطابو. الدفع النقدي غير مقبول.</li>\n<li><strong>انقل سند الملكية.</strong> تصدر دائرة السجل العقاري الطابو باسمك مع شرح عدم البيع لمدة ثلاث سنوات.</li>\n<li><strong>احصل على شهادة المطابقة.</strong> تؤكد أن استثمارك يستوفي شروط الجنسية.</li>\n<li><strong>قدّم طلب الإقامة.</strong> تصدر إقامة قصيرة الأمد على أساس الاستثمار، وتحضر شخصياً لأخذ البصمات.</li>\n<li><strong>قدّم طلب الجنسية.</strong> تحضر مجدداً مع عائلتك، ويُحال الملف إلى المديرية العامة لشؤون السكان والمواطنة للمراجعة والتدقيق الأمني.</li>\n<li><strong>القرار الرئاسي وبطاقات الهوية وجوازات السفر.</strong> تسري الجنسية من تاريخ القرار، ثم تصدر بطاقات الهوية وجوازات السفر التركية.</li>\n</ol>\n\n<h2>كم تستغرق العملية في 2026؟</h2>\n<p>بين عامي 2019 و2021 كانت القرارات تصدر غالباً بعد ثلاثة إلى أربعة أشهر من تقديم الملف. أما في 2026 فكثير من الملفات تنتظر أكثر من أربعة أشهر بكثير، وبعضها أكثر من عام، وغالباً ما تصدر القرارات على دفعات. نصيحتنا: خصّص من 6 إلى 12 شهراً من الشراء حتى استلام الجواز، واحرص على أن يكون ملفك سليماً من اليوم الأول؛ فالملف المُعدّ جيداً هو الجزء الوحيد من الجدول الزمني الذي تتحكم به.</p>\n\n<h2>التكلفة الحقيقية إلى جانب 400 ألف دولار</h2>\n<div class=\"li-table-wrap\"><table>\n<thead><tr><th>البند</th><th>كيف يُحتسب</th></tr></thead>\n<tbody>\n<tr><td>رسوم الطابو</td><td>4% من السعر المصرّح به إجمالاً: 2% على المشتري و2% على البائع بحسب القانون، ولا يجوز أن يقل الأساس عن القيمة العقارية لدى البلدية.</td></tr>\n<tr><td>تقرير التقييم</td><td>يُدفع لشركة التقييم المرخّصة، وهو مطلوب لملف الجنسية.</td></tr>\n<tr><td>تأمين الزلازل (DASK)</td><td>إلزامي للمساكن.</td></tr>\n<tr><td>الترجمة وكاتب العدل</td><td>ترجمات محلّفة لجوازات السفر والوثائق المدنية، ووكالات موثّقة.</td></tr>\n<tr><td>أتعاب المحاماة</td><td>للفحص القانوني وإدارة الطلب.</td></tr>\n<tr><td>ضريبة القيمة المضافة</td><td>قد تُفرض على العقارات الجديدة. يقتصر الإعفاء على أول بيع لمسكن أو مكان عمل جديد لمشترٍ غير مقيم في تركيا يدفع بعملة أجنبية محوّلة إلى البلاد، ويُسترد الإعفاء إذا بعت خلال ثلاث سنوات.</td></tr>\n</tbody></table></div>\n<p><strong>مثال:</strong> وفق سعر صرف الدولار لدى البنك المركزي في 23 أكتوبر 2026 (49.654 ليرة)، يعادل سعر 400 ألف دولار نحو 19.86 مليون ليرة تركية. وتبلغ حصة كل طرف (2%) نحو 397 ألف ليرة، أي قرابة 8 آلاف دولار، ونحو 16 ألف دولار للطرفين معاً.</p>\n\n<h2>ستة أخطاء قد تكلّفك الجواز</h2>\n<ol>\n<li><strong>دفع سعر مضخّم.</strong> كانت التقييمات المرتفعة كثيراً عن السوق في صلب إلغاءات 2026. إذا بدت \"باقة الجنسية\" باهظة مقارنة بما تحصل عليه، فاسأل عن السبب.</li>\n<li><strong>قبول \"خصم\" يجعل السعر الحقيقي دون الحد الأدنى.</strong> أي ترتيب يكون فيه السعر الفعلي أقل من 400 ألف دولار المصرّح بها يعرّض جنسيتك للخطر، ولو بعد سنوات.</li>\n<li><strong>الشراء من مالك أجنبي.</strong> لن تكون الوحدة مؤهلة مهما كان السعر مغرياً.</li>\n<li><strong>تقسيم الدفعات بشكل خاطئ.</strong> التحويلات التي لا تبلغ الحد الأدنى في شهادة DAB، أو المبالغ النقدية المدفوعة خارج البنك، قد تُسقط الملف.</li>\n<li><strong>اختيار أرض بلا مبنى.</strong> لم تعد الأراضي الفارغة والحقول مؤهلة للجنسية.</li>\n<li><strong>البيع قبل الأوان.</strong> يمنع الشرح البيع لمدة ثلاث سنوات، وقد تُفرض ضريبة على أرباح رأس المال إذا بعت خلال خمس سنوات. يمكنك تقديرها عبر <a href=\"/tax-calculator/\">حاسبة ضريبة أرباح العقارات</a> على موقعنا.</li>\n</ol>\n\n<h2>كيف تختار العقار المناسب في إسطنبول؟</h2>\n<p>شراء عقار للجنسية يبقى استثماراً عقارياً قبل كل شيء، وبعد ثلاث سنوات سترغب في تأجيره أو بيعه بشكل جيد. ثلاثة أسئلة تساعدك: هل سيرغب مشترٍ محلي في هذه الشقة عام 2029؟ هل السعر متوافق مع المبيعات الأخيرة في الشارع نفسه؟ هل يملك المبنى رخصة إشغال وبناءً مقاوماً للزلازل؟</p>\n<p>الأحياء الراسخة مثل بشيكتاش وشيشلي وكاديكوي يسهل عادةً إعادة البيع فيها، بينما تمنحك المناطق الأحدث في غرب المدينة مساحة أكبر بالميزانية نفسها. الاختيار الصحيح يعتمد على أولويتك: إعادة البيع، أم دخل الإيجار، أم السكن العائلي.</p>\n\n<h2>كيف تساعدك لاند إسطنبول؟</h2>\n<p>نبدأ بفحص الأهلية قبل أن تحجز أي عقار: نوع السند، والبائع، والسعر مقارنة بالسوق، وتوقعات التقييم. ثم ننسّق التقييم، وإجراءات البنك وشهادة DAB، وموعد الطابو، وطلبات الإقامة والجنسية مع شركاء مرخّصين، ونطلعك على كل خطوة بلغتك.</p>",
+      "faq": [
+        {
+          "q": "هل تحصل عائلتي على الجنسية التركية باستثمار واحد؟",
+          "a": "نعم. يُدرج الزوج أو الزوجة والأبناء دون 18 عاماً في الطلب نفسه، ولا يُضاف الأبناء البالغون إلا إذا ثبت أنهم معالون."
+        },
+        {
+          "q": "هل يجب أن أعيش في تركيا أو أتعلم اللغة التركية؟",
+          "a": "لا. لا يشترط مسار الاستثمار حداً أدنى للإقامة ولا اختباراً في اللغة التركية، لكنك تحضر شخصياً لأخذ البصمات في مرحلتي الإقامة والجنسية."
+        },
+        {
+          "q": "هل يمكنني الجمع بين عقارين أو أكثر للوصول إلى 400 ألف دولار؟",
+          "a": "نعم، بشرط أن يكون كل عقار مؤهلاً وأن يبلغ مجموع القيمة الحد الأدنى، ويُسجَّل شرح عدم البيع لثلاث سنوات على جميعها."
+        },
+        {
+          "q": "هل يمكنني شراء شقة قيد الإنشاء للحصول على الجنسية؟",
+          "a": "نعم، إذا دُفع 400 ألف دولار على الأقل مقدماً بموجب عقد بيع واحد موثّق لدى كاتب العدل، وسُجّل التزام بعدم النقل أو الفسخ لمدة ثلاث سنوات."
+        },
+        {
+          "q": "هل يمكنني تأجير العقار خلال السنوات الثلاث؟",
+          "a": "نعم، الإيجار العادي مسموح. أما البيع أو الوعد بالبيع أو منح حق الانتفاع فغير مسموح ما دام الشرح قائماً."
+        },
+        {
+          "q": "هل تسمح تركيا بازدواج الجنسية؟",
+          "a": "تسمح تركيا بازدواج الجنسية، لكن بعض الدول لا تسمح بذلك. تحقّق من قوانين بلدك قبل التقديم."
+        },
+        {
+          "q": "كم تستغرق الجنسية التركية عبر الاستثمار في 2026؟",
+          "a": "خطّط لفترة من 6 إلى 12 شهراً من الشراء حتى الجواز. بعض الملفات تُحسم أسرع، وبعضها يتجاوز العام."
+        }
+      ]
+    },
+    "ru": {
+      "slug": "turkish-citizenship-by-investment-2026",
+      "title": "Гражданство Турции за инвестиции в 2026 году: путь через недвижимость за $400 000 шаг за шагом",
+      "seo_title": "Гражданство Турции за инвестиции 2026: условия, шаги, расходы",
+      "og_title": "Гражданство Турции через недвижимость 2026: полное руководство",
+      "description": "Порог в $400 000 не изменился, но в 2026 году появились новые правила оценки, оплаты и проверки. Этапы, реальные расходы, сроки и ошибки, которых стоит избегать.",
+      "excerpt": "Главная цифра осталась прежней: купите подходящую недвижимость минимум на $400 000, владейте ею три года, и вся ваша семья сможет подать документы на турецкий паспорт. Но в 2026 году изменилось всё, что вокруг этой цифры: кто оценивает объект, как проходит оплата и насколько тщательно государство проверяет каждое досье. Рассказываем, как процесс работает сегодня.",
+      "image_alt": "Иллюстрация панорамы Стамбула к руководству по гражданству Турции за инвестиции в 2026 году",
+      "keywords": [
+        "гражданство Турции за инвестиции 2026",
+        "гражданство Турции за покупку недвижимости",
+        "турецкий паспорт за $400 000",
+        "купить квартиру в Стамбуле для гражданства",
+        "гражданство Турции условия"
+      ],
+      "body_html": "<h2>Гражданство Турции за инвестиции: главное на 2026 год</h2>\n<figure><img src=\"/blog-images/auto/turkish-citizenship-by-investment-2026-facts-ru.jpg\" alt=\"Главные цифры гражданства Турции за инвестиции в 2026 году: $400 000, 3 года, пошлина 4%\" loading=\"lazy\" width=\"1200\"></figure>\n<div class=\"li-table-wrap\"><table>\n<thead><tr><th>Параметр</th><th>Положение в 2026 году</th></tr></thead>\n<tbody>\n<tr><td>Минимальная инвестиция в недвижимость</td><td>$400 000 (один объект или несколько вместе)</td></tr>\n<tr><td>Срок владения</td><td>3 года: запрет на продажу вносится в тапу</td></tr>\n<tr><td>Другие варианты</td><td>$500 000 на банковском депозите, в гособлигациях, инвестиционных фондах, частной пенсионной системе или в основном капитале; либо создание 50 рабочих мест</td></tr>\n<tr><td>Семья</td><td>Супруг(а) и дети до 18 лет (а также взрослые дети-иждивенцы) в одном досье</td></tr>\n<tr><td>Экзамен по языку / проживание</td><td>Экзамена по турецкому нет, минимального срока проживания нет</td></tr>\n<tr><td>Окончательное решение</td><td>Указ Президента после проверки службами безопасности</td></tr>\n<tr><td>Реалистичный срок</td><td>Закладывайте 6–12 месяцев от покупки до паспорта</td></tr>\n</tbody></table></div>\n<p>Порог для недвижимости вырос с $250 000 до $400 000 в 2022 году и с тех пор не менялся. Недвижимость остаётся самым популярным вариантом: деньги вложены в ваш собственный актив, который можно сдавать в аренду, а через три года продать.</p>\n\n<h2>Какая недвижимость подходит, а какая нет</h2>\n<p>Не любой объект стоимостью $400 000 можно использовать для гражданства. После указа Президента от декабря 2023 года правила стали строже:</p>\n<ul>\n<li><strong>Подходит:</strong> квартиры, виллы, офисы и магазины с полным правом собственности на помещение (<em>kat mülkiyeti</em>) или правом застройки (<em>kat irtifakı</em>), а также земля с законно построенным зданием, имеющим разрешение.</li>\n<li><strong>Подходит:</strong> несколько объектов, купленных вместе, если их общая стоимость достигает $400 000. Запрет на продажу на 3 года вносится по каждому.</li>\n<li><strong>Подходит:</strong> строящееся жильё, если не менее $400 000 оплачено вперёд по одному нотариальному договору и в реестр внесено обязательство не передавать и не расторгать сделку три года.</li>\n<li><strong>Не подходит:</strong> доля в объекте, сельскохозяйственные земли и пустые участки без здания.</li>\n<li><strong>Не подходит:</strong> объект, который сейчас зарегистрирован на иностранца. Покупать нужно у турецкого собственника или компании.</li>\n<li><strong>Не подходит:</strong> покупка у ваших турецких родственников первой степени или их компаний, а также перепродажа, если турецкий продавец купил объект у иностранца в последние три года.</li>\n</ul>\n<!--CTA-->\n\n<h2>Что изменилось в 2026 году</h2>\n<p>Если вы читали руководство 2024 или 2025 года, часть информации уже устарела:</p>\n<ul>\n<li><strong>Оценку проводит больше компаний (28 сентября 2026).</strong> До этой даты объекты для гражданства могла оценивать только одна связанная с государством компания, GEDAŞ. Теперь через систему Web Tapu можно выбрать любую оценочную компанию с лицензией Совета по рынкам капитала (SPK), а подтверждение инвестиции, которое кадастр формирует по отчёту, действует 12 месяцев вместо 6.</li>\n<li><strong>Конец упрощённой оценки при покупке у девелоперов.</strong> Раньше покупки у публичных инвестиционных компаний в сфере недвижимости (GYO) не требовали отдельной оценки. Теперь нужен актуальный отчёт, и проверка может занять больше времени.</li>\n<li><strong>Каждая сумма должна достигать $400 000 сама по себе.</strong> Цена в договоре, оценка и каждый банковский перевод по сертификату покупки валюты (DAB) должны отдельно соответствовать порогу. С 1 октября 2026 года применяется курс покупки Центробанка, объявленный в 11:00 в день конвертации.</li>\n<li><strong>Система безопасных платежей с 1 декабря 2026 года.</strong> Министерство торговли Турции делает обязательной безопасную оплату через банк: деньги покупателя хранятся на защищённом счёте до перехода права собственности и только потом поступают продавцу.</li>\n<li><strong>Гораздо более строгие проверки.</strong> В августе 2026 года МВД Турции сообщило об аннулировании или отзыве гражданства у 6 134 человек: это 1 413 инвесторов и члены их семей, большинство из-за завышенных оценок и фиктивных сделок. Программа продолжает работать, но досье теперь проверяют значительно тщательнее.</li>\n<li><strong>Новая налоговая льгота для тех, кто действительно переезжает.</strong> По закону № 7582 физические лица, ставшие налоговыми резидентами Турции с 1 января 2026 года и не имевшие турецкого резидентства и налоговых обязательств в предыдущие три года, могут 20 лет не платить турецкий подоходный налог с иностранных доходов. Льгота не связана с гражданством напрямую, но многие семьи инвесторов теперь рассматривают оба варианта вместе.</li>\n</ul>\n<blockquote>Главный урок 2026 года: самый выгодный путь к паспорту не тот, где ниже цена, а тот, где документы выдержат любую проверку и через несколько лет.</blockquote>\n\n<h2>Процесс шаг за шагом</h2>\n<figure><img src=\"/blog-images/auto/turkish-citizenship-by-investment-2026-steps-ru.jpg\" alt=\"Девять шагов от покупки недвижимости до получения турецкого паспорта\" loading=\"lazy\" width=\"1200\"></figure>\n<ol class=\"li-steps\">\n<li><strong>Получите налоговый номер и откройте счёт в турецком банке.</strong> Оба шага нужны до оплаты. Если вы за границей, их может выполнить юрист по доверенности.</li>\n<li><strong>Выберите подходящий объект и проведите юридическую проверку.</strong> Проверьте тип титула, продавца, долги и обременения, разрешение на эксплуатацию здания и соответствие цены рынку.</li>\n<li><strong>Закажите отчёт об оценке через Web Tapu.</strong> Объект оценивает компания с лицензией SPK, а кадастр на основе отчёта формирует подтверждение инвестиции для вашего досье.</li>\n<li><strong>Продайте валюту и оплатите через банк.</strong> Банк покупает у вас валюту, выдаёт сертификат DAB и направляет его в кадастр. Наличные не принимаются.</li>\n<li><strong>Оформите право собственности.</strong> Кадастр выдаёт тапу на ваше имя с отметкой о запрете продажи на 3 года.</li>\n<li><strong>Получите сертификат соответствия.</strong> Он подтверждает, что ваша инвестиция отвечает условиям получения гражданства.</li>\n<li><strong>Подайте на вид на жительство.</strong> Краткосрочный ВНЖ выдаётся на основании инвестиции; вы приходите лично и сдаёте отпечатки пальцев.</li>\n<li><strong>Подайте заявление на гражданство.</strong> Вы снова приходите лично вместе с семьёй, и досье направляется в Главное управление по делам населения и гражданства для проверки.</li>\n<li><strong>Указ Президента, ID-карты и паспорта.</strong> Гражданство вступает в силу с даты решения, затем выдаются турецкие удостоверения личности и паспорта.</li>\n</ol>\n\n<h2>Сколько это занимает в 2026 году</h2>\n<p>В 2019–2021 годах решения часто приходили через три-четыре месяца после подачи. В 2026 году многие досье ждут значительно дольше четырёх месяцев, некоторые больше года, а решения нередко выходят пакетами. Наш совет: закладывайте 6–12 месяцев от покупки до паспорта и с первого дня готовьте безупречное досье. Это единственная часть сроков, которую вы контролируете.</p>\n\n<h2>Реальные расходы сверх $400 000</h2>\n<div class=\"li-table-wrap\"><table>\n<thead><tr><th>Статья</th><th>Как рассчитывается</th></tr></thead>\n<tbody>\n<tr><td>Пошлина за тапу</td><td>4% от заявленной цены: по закону 2% платит покупатель и 2% продавец. База не может быть ниже муниципальной стоимости объекта.</td></tr>\n<tr><td>Отчёт об оценке</td><td>Оплачивается лицензированной оценочной компании; обязателен для досье на гражданство.</td></tr>\n<tr><td>Страховка от землетрясений (DASK)</td><td>Обязательна для жилья.</td></tr>\n<tr><td>Перевод и нотариус</td><td>Заверенные переводы паспортов и документов, нотариальные доверенности.</td></tr>\n<tr><td>Услуги юриста</td><td>Проверка объекта и сопровождение заявки.</td></tr>\n<tr><td>НДС</td><td>Может применяться к новостройкам. Освобождение действует только при первой продаже нового жилья или коммерческого помещения покупателю, не проживающему в Турции, с оплатой ввезённой иностранной валютой; при продаже в течение трёх лет льгота аннулируется.</td></tr>\n</tbody></table></div>\n<p><strong>Пример:</strong> по курсу доллара Центробанка на 23 октября 2026 года (49,654 лиры) цена $400 000 составляет около 19,86 млн лир. Доля каждой стороны (2%) около 397 000 лир, или примерно $8 000, а вместе около $16 000.</p>\n\n<h2>Шесть ошибок, из-за которых можно лишиться паспорта</h2>\n<ol>\n<li><strong>Переплата по завышенной цене.</strong> Оценки намного выше рынка стали главной причиной аннулирований в 2026 году. Если «пакет для гражданства» кажется дорогим для того, что вы получаете, спросите почему.</li>\n<li><strong>«Скидка» ниже порога.</strong> Любая схема, где реальная цена ниже заявленных $400 000, ставит гражданство под угрозу даже спустя годы.</li>\n<li><strong>Покупка у иностранного владельца.</strong> Такой объект не подойдёт, какой бы выгодной ни была цена.</li>\n<li><strong>Неправильное разделение платежей.</strong> Переводы, которые по DAB не достигают порога, или наличные мимо банка могут погубить досье.</li>\n<li><strong>Земля без здания.</strong> Пустые участки и поля больше не подходят для гражданства.</li>\n<li><strong>Слишком ранняя продажа.</strong> Запрет действует три года, а при продаже в течение пяти лет может возникнуть налог на прирост капитала. Оценить его поможет наш <a href=\"/tax-calculator/\">калькулятор налога на прирост стоимости недвижимости</a>.</li>\n</ol>\n\n<h2>Как выбрать объект в Стамбуле</h2>\n<p>Покупка для гражданства остаётся инвестицией в недвижимость, и через три года вы захотите выгодно сдать или продать объект. Помогут три вопроса: захочет ли местный покупатель эту квартиру в 2029 году? Соответствует ли цена недавним сделкам на той же улице? Есть ли у здания разрешение на эксплуатацию и сейсмостойкая конструкция?</p>\n<p>В сложившихся районах, таких как Бешикташ, Шишли и Кадыкёй, перепродать обычно проще, а новые районы на западе города дают больше площади за тот же бюджет. Правильный выбор зависит от вашей цели: перепродажа, арендный доход или жизнь семьи.</p>\n\n<h2>Чем поможет Land Istanbul</h2>\n<p>Мы начинаем с проверки соответствия ещё до бронирования: тип титула, продавец, цена относительно рынка и прогноз оценки. Затем вместе с лицензированными партнёрами координируем оценку, банковские операции и DAB, сделку в кадастре, подачу на ВНЖ и гражданство, и держим вас в курсе на каждом этапе на вашем языке.</p>",
+      "faq": [
+        {
+          "q": "Получит ли моя семья гражданство Турции по одной инвестиции?",
+          "a": "Да. Супруг(а) и дети до 18 лет включаются в одно заявление. Взрослых детей можно добавить, только если доказано, что они на вашем иждивении."
+        },
+        {
+          "q": "Нужно ли жить в Турции или учить турецкий язык?",
+          "a": "Нет. Для инвестиционного пути нет требований к сроку проживания и экзамена по языку. Лично присутствовать нужно для сдачи отпечатков на этапах ВНЖ и гражданства."
+        },
+        {
+          "q": "Можно ли объединить несколько объектов, чтобы набрать $400 000?",
+          "a": "Да, если каждый объект подходит по условиям, а общая стоимость достигает порога. Запрет на продажу на три года вносится по всем объектам."
+        },
+        {
+          "q": "Можно ли купить квартиру на этапе строительства?",
+          "a": "Да, если не менее $400 000 оплачено вперёд по одному нотариальному договору и в реестр внесено обязательство не передавать и не расторгать сделку три года."
+        },
+        {
+          "q": "Можно ли сдавать недвижимость в аренду эти три года?",
+          "a": "Да, обычная аренда разрешена. Пока действует запрет, нельзя продавать объект, заключать предварительный договор продажи или устанавливать узуфрукт."
+        },
+        {
+          "q": "Разрешает ли Турция двойное гражданство?",
+          "a": "Турция разрешает двойное гражданство, но некоторые страны нет. Перед подачей проверьте законодательство своей страны."
+        },
+        {
+          "q": "Сколько длится получение гражданства Турции за инвестиции в 2026 году?",
+          "a": "Закладывайте 6–12 месяцев от покупки до паспорта. Некоторые досье решаются быстрее, другие дольше года."
+        }
+      ]
+    }
+  },
+  "images": {
+    "en": "images/turkish-citizenship-by-investment-2026-hero.jpg",
+    "ar": "images/turkish-citizenship-by-investment-2026-hero.jpg",
+    "ru": "images/turkish-citizenship-by-investment-2026-hero.jpg"
+  },
+  "og_images": {
+    "en": "images/turkish-citizenship-by-investment-2026-og-en.jpg",
+    "ar": "images/turkish-citizenship-by-investment-2026-og-ar.jpg",
+    "ru": "images/turkish-citizenship-by-investment-2026-og-ru.jpg"
+  }
+}

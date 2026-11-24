@@ -1,0 +1,12 @@
+{
+    "name": "landistanbul/blog",
+    "description": "Land Istanbul blog content; installs posts into landistanbul.com after each Git pull.",
+    "type": "project",
+    "license": "proprietary",
+    "require": {},
+    "config": { "platform-check": false },
+    "scripts": {
+        "post-install-cmd": ["@php system/install.php"],
+        "post-update-cmd": ["@php system/install.php"]
+    }
+}
