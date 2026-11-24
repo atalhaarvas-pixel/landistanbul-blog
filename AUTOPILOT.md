@@ -101,6 +101,13 @@ built by `system/taxcalc.php` on every deploy). The calculator works in Turkish 
   investor residence (Decision 11994, 18 Nov 2026) $150k = 3 yrs, $200k = 5 yrs in deposits, bonds, REIT/VC fund
   units or private pension, held half the term. If any of these change, update the texts in `le_t()` the same day.
 - Posts with segment `citizenship` or `apartment` link to the eligibility check from their lead box.
+- Country guides `/buy-property-in-turkey/<country>/` (+`/ar/` for Arab countries) and the hub
+  `/buy-property-in-turkey/` (+`/ar/`) come from `system/countries.php` (Pakistan, Saudi Arabia, UAE, Qatar, Kuwait,
+  Iraq, Germany, UK). Leads arrive with `details.Country`. Facts (visa, dual nationality, money transfer) were checked
+  in Nov 2026 with sources on each page; re-check them when news changes a rule (e.g. Pakistan adding Türkiye to its
+  dual-nationality list) and link country guides from articles aimed at those buyers.
+- IndexNow: every deploy submits new/changed sitemap URLs to Bing, Yandex, Seznam and Naver (key file at the site
+  root; state in `_private/indexnow.json`). Google is not part of IndexNow; it reads the sitemap.
 
 ## 8. Leads
 

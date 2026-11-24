@@ -19,6 +19,7 @@ define('AUTO_PAGES_FILE', SITE_ROOT . '/_private/auto-pages.json');
 define('WHATSAPP_NUMBER', '905468916349');
 if (file_exists(__DIR__ . '/valuation.php')) require_once __DIR__ . '/valuation.php';
 if (file_exists(__DIR__ . '/eligibility.php')) require_once __DIR__ . '/eligibility.php';
+if (file_exists(__DIR__ . '/countries.php')) require_once __DIR__ . '/countries.php';
 
 /**
  * The original blog posts that live inside index.html's own JS (not managed by this panel).
@@ -705,6 +706,11 @@ function update_sitemap(array $dynamicPosts) {
             $entries .= "  <url>\n    <loc>" . le_url($l) . "</loc>\n    <changefreq>monthly</changefreq>\n    <priority>" . ($l === 'en' ? '0.9' : '0.8') . "</priority>\n  </url>\n";
         }
     }
+    if (function_exists('lc_all_urls')) {
+        foreach (lc_all_urls() as $u) {
+            $entries .= "  <url>\n    <loc>" . $u . "</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n";
+        }
+    }
     $seenLang = [];
     foreach ($auto as $p) {
         if ($p['lang'] !== 'en' && empty($seenLang[$p['lang']])) {
@@ -788,4 +794,5 @@ function regenerate_all(array $dynamicPosts) {
     write_homepage_feed($dynamicPosts, $auto);
     if (function_exists('write_valuation_pages')) write_valuation_pages();
     if (function_exists('write_eligibility_pages')) write_eligibility_pages();
+    if (function_exists('write_country_pages')) write_country_pages();
 }

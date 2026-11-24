@@ -103,6 +103,49 @@ function li_validate_variant(array $v, $lang, $file) {
     return $p;
 }
 
+/** IndexNow: submit sitemap URLs whose page file is new or changed since the last successful submission. */
+const LI_INDEXNOW_KEY = '04dd161ebc5840adb6f2346463302420';
+function li_indexnow($site, $priv) {
+    $keyFile = $site . '/' . LI_INDEXNOW_KEY . '.txt';
+    if (!file_exists($keyFile)) file_put_contents($keyFile, LI_INDEXNOW_KEY);
+    $sitemap = @file_get_contents($site . '/sitemap.xml');
+    if (!$sitemap || !preg_match_all('~<loc>(https://landistanbul\.com/[^<]*)</loc>~', $sitemap, $m)) return;
+    $stateFile = $priv . '/indexnow.json';
+    $state = file_exists($stateFile) ? (json_decode(file_get_contents($stateFile), true) ?: []) : [];
+    $changed = [];
+    $now = [];
+    foreach (array_unique($m[1]) as $url) {
+        $path = parse_url($url, PHP_URL_PATH) ?: '/';
+        $file = $site . $path . (substr($path, -1) === '/' ? 'index.html' : '');
+        if (!is_file($file)) continue;
+        $h = md5_file($file);
+        $now[$url] = $h;
+        if (($state[$url] ?? null) !== $h) $changed[] = $url;
+    }
+    if (!$changed) return;
+    $changed = array_slice($changed, 0, 1000);
+    $body = json_encode(['host' => 'landistanbul.com', 'key' => LI_INDEXNOW_KEY, 'keyLocation' => 'https://landistanbul.com/' . LI_INDEXNOW_KEY . '.txt', 'urlList' => $changed], JSON_UNESCAPED_SLASHES);
+    $code = 0;
+    if (function_exists('curl_init')) {
+        $ch = curl_init('https://api.indexnow.org/indexnow');
+        curl_setopt_array($ch, [CURLOPT_POST => true, CURLOPT_POSTFIELDS => $body, CURLOPT_HTTPHEADER => ['Content-Type: application/json; charset=utf-8'], CURLOPT_RETURNTRANSFER => true, CURLOPT_TIMEOUT => 15]);
+        curl_exec($ch);
+        $code = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+    } else {
+        $ctx = stream_context_create(['http' => ['method' => 'POST', 'header' => "Content-Type: application/json; charset=utf-8\r\n", 'content' => $body, 'timeout' => 15, 'ignore_errors' => true]]);
+        @file_get_contents('https://api.indexnow.org/indexnow', false, $ctx);
+        if (isset($http_response_header[0]) && preg_match('~\s(\d{3})\s~', $http_response_header[0], $mm)) $code = (int) $mm[1];
+    }
+    if ($code === 200 || $code === 202) {
+        foreach ($changed as $u) $state[$u] = $now[$u];
+        file_put_contents($stateFile, json_encode($state, JSON_UNESCAPED_SLASHES));
+        li_log('indexnow: submitted ' . count($changed) . ' URLs (HTTP ' . $code . ')');
+    } else {
+        li_log('indexnow: HTTP ' . $code . ' for ' . count($changed) . ' URLs, will retry next deploy');
+    }
+}
+
 /** Shrink oversized images in /blog-images (not the generated /auto ones). */
 function li_optimize_images($site, $priv, $maxPerRun = 12) {
     if (!function_exists('imagecreatefromjpeg') || !function_exists('getimagesize')) return 0;
@@ -224,6 +267,7 @@ try {
         $repo . '/system/generator.php' => $site . '/admin/includes/generator.php',
         $repo . '/system/valuation.php' => $site . '/admin/includes/valuation.php',
         $repo . '/system/eligibility.php' => $site . '/admin/includes/eligibility.php',
+        $repo . '/system/countries.php' => $site . '/admin/includes/countries.php',
         $repo . '/system/mail.php' => $site . '/mail.php',
         $repo . '/system/blog-extra.css' => $site . '/blog-extra.css',
         $repo . '/system/blog-lead.js' => $site . '/blog-lead.js',
@@ -302,7 +346,10 @@ try {
     regenerate_all($blogData);
     li_log('regenerated blog pages, indexes, valuation pages and sitemap');
 
-    // 7) Oversized images.
+    // 7) Tell search engines (Bing, Yandex, Seznam, Naver via IndexNow) about new or changed pages.
+    try { li_indexnow($site, $priv); } catch (Throwable $e) { li_log('indexnow skipped: ' . $e->getMessage()); }
+
+    // 8) Oversized images.
     try { li_optimize_images($site, $priv); } catch (Throwable $e) { li_log('image optimization skipped: ' . $e->getMessage()); }
 
     $status['ok'] = true;

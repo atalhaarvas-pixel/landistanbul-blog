@@ -66,6 +66,15 @@
     var home = document.getElementById('home');
     if (anchor && anchor.parentNode) anchor.parentNode.insertBefore(band, anchor);
     else if (home && home.parentNode) home.parentNode.insertBefore(band, home.nextSibling);
+    // International buyers strip under the band
+    var intl = document.createElement('section');
+    intl.className = 'lb-intl';
+    var cs = [['pakistan', 'PK', 'Pakistan'], ['saudi-arabia', 'SA', 'Saudi Arabia'], ['uae', 'AE', 'UAE'], ['qatar', 'QA', 'Qatar'], ['kuwait', 'KW', 'Kuwait'], ['iraq', 'IQ', 'Iraq'], ['germany', 'DE', 'Germany'], ['united-kingdom', 'GB', 'United Kingdom']];
+    intl.innerHTML = '<div class="lb-intl-in"><div class="lb-intl-h"><span>International buyers</span><b>Buying from abroad? Read the guide for your country</b></div><div class="lb-intl-list">' +
+      cs.map(function (c) { return '<a href="/buy-property-in-turkey/' + c[0] + '/" data-c="' + c[0] + '"><i>' + c[1] + '</i>' + c[2] + '</a>'; }).join('') +
+      '<a class="lb-intl-all" href="/buy-property-in-turkey/">All countries →</a></div></div>';
+    intl.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { track('select_promotion', { promotion_name: 'home_country_' + (a.dataset.c || 'all') }); }); });
+    band.parentNode && band.parentNode.insertBefore(intl, band.nextSibling);
   }
 
   // 4. Slide-in card (desktop, homepage and blog), once a week at most
