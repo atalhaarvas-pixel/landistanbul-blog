@@ -252,5 +252,9 @@
     "en": "images/turkey-residence-permit-150000-investor-2026-og-en.jpg",
     "ar": "images/turkey-residence-permit-150000-investor-2026-og-ar.jpg",
     "ru": "images/turkey-residence-permit-150000-investor-2026-og-ru.jpg"
+  },
+  "cover": {
+    "style": "passport",
+    "palette": "cream"
   }
 }

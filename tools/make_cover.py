@@ -4,9 +4,12 @@ Land Istanbul cover generator.
 
 Usage:
     python3 tools/make_cover.py posts/2026-11-24-some-post.json
+    python3 tools/make_cover.py posts/x.json --style coast --palette teal   # force a style / palette
 
-Draws an original Istanbul skyline illustration for the post (seeded by its group slug, themed by
-its segment), then writes:
+Every post gets a DIFFERENT cover. The tool picks an illustration style that fits the topic (passport,
+facade, isometric, aerial_land, chart, window, coast, keys, skyline) and that none of the last 4 posts
+used, plus a palette never used before with that style, and records the choice in the post JSON
+("cover": {"style", "palette"}). Re-running keeps the recorded choice. Then it writes:
     images/<group>-hero.jpg          1600x900, no text  (hero + blog cards)
     images/<group>-og-<lang>.jpg     1200x630, title in that language (social sharing)
 and records the paths in the post JSON ("images" and "og_images").
@@ -17,7 +20,10 @@ import random
 import sys
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFilter, ImageFont, features
+from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageStat, features
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from scenes import PAL, STYLES  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 ROBOTO = "/usr/share/fonts/truetype/google-fonts/ofl/roboto/Roboto[wdth,wght].ttf"
@@ -139,11 +145,12 @@ def draw_ferry(d, x, y, s, color, light):
 
 # ───────────────────────── scene ─────────────────────────
 
-def render_scene(group, segment, W=1600, H=900):
+def render_scene(group, segment, W=1600, H=900, pal_name=None):
     rng = random.Random(group)
-    pal_name = rng.choice(list(PALETTES))
+    auto = rng.choice(list(PALETTES))
     if segment == "citizenship" and rng.random() < 0.5:
-        pal_name = "sunset"
+        auto = "sunset"
+    pal_name = pal_name or auto
     p = PALETTES[pal_name]
     night = pal_name in ("night", "dusk")
     horizon = int(H * rng.uniform(0.6, 0.66))
@@ -364,12 +371,13 @@ def render_og(scene, title, lang, segment):
     img = base.crop((left, top, left + W, top + H)).convert("RGB")
     rtl = lang == "ar"
 
+    light = ImageStat.Stat(img.convert("L")).mean[0] > 120
+    peak, fall = (238, 1.0) if light else (225, 1.25)
     shade = Image.new("L", (W, H), 0)
     sd = ImageDraw.Draw(shade)
     for x in range(W):
-        t = x / W
-        v = int(225 * max(0.0, 1 - t * 1.25)) if not rtl else int(225 * max(0.0, 1 - (1 - t) * 1.25))
-        sd.line([(x, 0), (x, H)], fill=v)
+        t = x / W if not rtl else 1 - x / W
+        sd.line([(x, 0), (x, H)], fill=int(peak * max(0.0, 1 - t * fall)))
     img = Image.composite(Image.new("RGB", (W, H), (10, 10, 12)), img, shade)
     d = ImageDraw.Draw(img)
 
@@ -424,17 +432,101 @@ def render_og(scene, title, lang, segment):
     return img
 
 
+SEGMENT_STYLES = {
+    "citizenship": ["passport", "window", "isometric", "skyline", "chart", "keys"],
+    "apartment": ["facade", "window", "isometric", "keys", "skyline", "coast"],
+    "sell": ["keys", "facade", "chart", "window", "isometric", "skyline"],
+    "land": ["aerial_land", "isometric", "chart", "coast", "skyline"],
+    "general": ["chart", "skyline", "isometric", "coast", "facade"],
+}
+KEYWORD_STYLES = [
+    (("antalya", "alanya", "bodrum", "fethiye", "mersin", "kas-", "kalkan", "coast", "beach", "seaside", "mediterranean", "aegean"), "coast"),
+    (("land", "plot", "zoning", "imar", "field", "farm"), "aerial_land"),
+    (("tax", "price", "market", "trend", "yield", "rent", "statistic", "cost", "fee"), "chart"),
+    (("residence", "passport", "citizenship", "permit", "visa"), "passport"),
+    (("district", "neighbourhood", "neighborhood", "area", "where-to", "guide-to", "vs-"), "isometric"),
+    (("sell", "sale", "handover", "inherit"), "keys"),
+    (("view", "bosphorus", "sea-view", "lifestyle", "living"), "window"),
+]
+ALL_STYLES = ["skyline"] + list(STYLES)
+RECENT = 4
+
+
+def existing_covers(post_path):
+    out = []
+    for f in sorted((ROOT / "posts").glob("*.json")):
+        if f.resolve() == post_path.resolve():
+            continue
+        try:
+            d = json.loads(f.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        c = d.get("cover") or {"style": "skyline", "palette": None}
+        out.append((d.get("published", ""), f.name, c.get("style"), c.get("palette")))
+    out.sort(reverse=True)
+    return out
+
+
+def choose_cover(post, post_path):
+    tr = post["translations"].get("en") or next(iter(post["translations"].values()))
+    text = (post["group"] + " " + tr.get("title", "")).lower().replace(" ", "-")
+    seg = post.get("segment", "general")
+    order = []
+    for words, style in KEYWORD_STYLES:
+        if any(w in text for w in words) and style not in order:
+            order.append(style)
+    for st in SEGMENT_STYLES.get(seg, SEGMENT_STYLES["general"]) + ALL_STYLES:
+        if st not in order:
+            order.append(st)
+    covers = existing_covers(post_path)
+    recent = {c[2] for c in covers[:RECENT]}
+    used = {(c[2], c[3]) for c in covers}
+    last_pal = covers[0][3] if covers else None
+    style = next((st for st in order if st not in recent), order[0])
+    pals = list(PALETTES) if style == "skyline" else list(PAL)
+    rng = random.Random(post["group"])
+    rng.shuffle(pals)
+    fresh = [p for p in pals if (style, p) not in used and p != last_pal]
+    palette = (fresh or pals)[0]
+    return {"style": style, "palette": palette}
+
+
+def render_cover(post, cover):
+    group, segment = post["group"], post.get("segment", "general")
+    style, pal = cover["style"], cover["palette"]
+    rng = random.Random(group + style + pal)
+    if style == "skyline":
+        return render_scene(group, segment, pal_name=pal)
+    if style == "window":
+        view_pal = random.Random(group).choice(["sunset", "dusk", "night", "golden"])
+        return STYLES["window"](PAL[pal], rng, view=render_scene(group + "-view", segment, pal_name=view_pal))
+    return STYLES[style](PAL[pal], rng)
+
+
 def main():
-    if len(sys.argv) < 2:
+    args = sys.argv[1:]
+    if not args:
         print(__doc__)
         sys.exit(1)
-    post_path = Path(sys.argv[1])
+    post_path = Path(args[0])
     post = json.loads(post_path.read_text(encoding="utf-8"))
     group, segment = post["group"], post.get("segment", "general")
+    forced = {}
+    for flag in ("--style", "--palette"):
+        if flag in args:
+            forced[flag[2:]] = args[args.index(flag) + 1]
+    cover = post.get("cover") or choose_cover(post, post_path)
+    cover.update(forced)
+    if cover["style"] not in ALL_STYLES:
+        sys.exit(f"unknown style {cover['style']}; choose from {ALL_STYLES}")
+    valid = PALETTES if cover["style"] == "skyline" else PAL
+    if cover["palette"] not in valid:
+        sys.exit(f"unknown palette {cover['palette']} for {cover['style']}; choose from {list(valid)}")
+    post["cover"] = cover
     img_dir = ROOT / "images"
     img_dir.mkdir(exist_ok=True)
 
-    scene = render_scene(group, segment)
+    scene = render_cover(post, cover)
     hero_rel = f"images/{group}-hero.jpg"
     scene.save(ROOT / hero_rel, "JPEG", quality=84, optimize=True, progressive=True)
 
@@ -447,6 +539,7 @@ def main():
     post["images"] = images
     post["og_images"] = og_images
     post_path.write_text(json.dumps(post, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"cover: {cover['style']} / {cover['palette']}")
     print("hero:", hero_rel)
     for lang, rel in og_images.items():
         print(f"og[{lang}]:", rel)

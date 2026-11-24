@@ -60,8 +60,15 @@ python3 tools/make_infographic.py posts/<file>.json
 python3 tools/make_cover.py posts/<file>.json
 python3 tools/validate.py posts/<file>.json      # must end with 0 errors
 ```
-Look at the hero image and one infographic with the Read tool. Mark the topic `[x]` with the date in `plan/topics.md`
-(add it if it came from the news).
+**Every post must have a different cover (owner's rule).** `make_cover.py` picks an illustration style that fits the
+topic and that none of the last 4 posts used (passport, facade, isometric, aerial_land, chart, window, coast, keys,
+skyline), with a palette never used before with that style, and stores it as `"cover"` in the post JSON.
+`validate.py` fails if the style/palette pair was used before or the style matches one of the 2 previous posts.
+To change it: `python3 tools/make_cover.py posts/<file>.json --style coast --palette teal` (styles and palettes are
+listed in `tools/scenes.py`). New styles can be added to `tools/scenes.py` (register them in `STYLES` and in
+`SEGMENT_STYLES` / `KEYWORD_STYLES` in `make_cover.py`).
+Look at the hero image and one infographic with the Read tool: it must look clearly different from the previous
+post's cover. Mark the topic `[x]` with the date in `plan/topics.md` (add it if it came from the news).
 
 ## 6. Publish
 

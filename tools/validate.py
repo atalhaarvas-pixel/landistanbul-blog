@@ -45,9 +45,25 @@ class TagChecker(HTMLParser):
             self.stack.pop()
 
 
-def check(path, all_slugs):
+def cover_of(d):
+    c = d.get("cover") or {}
+    return c.get("style"), c.get("palette")
+
+
+def check(path, all_slugs, covers=None):
     errs, warns = [], []
     d = json.loads(path.read_text(encoding="utf-8"))
+    st, pal = cover_of(d)
+    if not st:
+        errs.append("missing cover (run tools/make_cover.py)")
+    elif covers is not None:
+        others = sorted((v for k, v in covers.items() if k != path.name), reverse=True)
+        if any((o[1], o[2]) == (st, pal) for o in others):
+            errs.append(f"cover {st}/{pal} already used by another post: pick a different style or palette")
+        mine = d.get("published", "")
+        older = [o for o in others if o[0] <= mine][:2]
+        if any(o[1] == st for o in older):
+            errs.append(f"cover style '{st}' was used by one of the 2 previous posts: run make_cover.py with another --style")
     for k in ("group", "segment", "published", "translations", "sources"):
         if k not in d:
             errs.append(f"missing {k}")
@@ -106,18 +122,19 @@ def check(path, all_slugs):
 
 def main():
     files = [Path(a) for a in sys.argv[1:]] or sorted((ROOT / "posts").glob("*.json"))
-    all_slugs = {}
+    all_slugs, covers = {}, {}
     for f in sorted((ROOT / "posts").glob("*.json")):
+        try:
+            d = json.loads(f.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        covers[f.name] = (d.get("published", ""),) + cover_of(d)
         if f.resolve() not in [x.resolve() for x in files]:
-            try:
-                d = json.loads(f.read_text(encoding="utf-8"))
-                for lang, t in d.get("translations", {}).items():
-                    all_slugs[(lang, t.get("slug"))] = f.name
-            except Exception:
-                pass
+            for lang, t in d.get("translations", {}).items():
+                all_slugs[(lang, t.get("slug"))] = f.name
     bad = False
     for f in files:
-        errs, warns = check(f, all_slugs)
+        errs, warns = check(f, all_slugs, covers)
         print(f"{f.name}: {len(errs)} error(s), {len(warns)} warning(s)")
         for e in errs:
             print("  ERROR", e)
