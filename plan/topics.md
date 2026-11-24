@@ -42,3 +42,25 @@ Rules for picking the next topic:
 - [ ] land — Land near Canal Istanbul: facts, plans and hype — *Canal Istanbul land*
 - [ ] apartment — New-build vs resale apartments in Istanbul: VAT, prices, risks — *new build vs resale Istanbul*
 - [ ] sell — Selling to a foreign buyer vs a local buyer: what changes for the seller — *sell property to foreigner Turkey*
+
+## Location guides
+
+Area and city guides that foreigners search for. Each must cover who the area suits, transport, schools/hospitals/shopping,
+building stock and earthquake checks, residence/citizenship points (incl. closed neighbourhoods), pitfalls and how prices
+vary inside the area. No invented prices: quote only sourced figures.
+
+- [x] apartment — Buying an apartment in Başakşehir: a 2026 guide for foreign families — *buy apartment in Basaksehir* (2026-11-24)
+- [ ] apartment — Buying an apartment in Beylikdüzü: metrobus, sea-side compounds and what to check — *Beylikdüzü apartments for sale*
+- [ ] apartment — Esenyurt: what foreigners should check before buying (building age, closed addresses, resale) — *Esenyurt apartments for foreigners*
+- [ ] apartment — Kadıköy vs Beşiktaş: where to buy in central Istanbul — *Kadıköy vs Beşiktaş*
+- [ ] apartment — Ataşehir and Ümraniye: Asian-side family districts near the Finance Center — *Ataşehir apartments for sale*
+- [ ] apartment — Göktürk and Kemerburgaz: villas and compounds by the forest — *Göktürk villas for sale*
+- [ ] apartment — Kağıthane and Şişli: buying near Istanbul's business districts — *Kağıthane apartments*
+- [ ] apartment — Buying property in Antalya as a foreigner: districts, rules and residence checks — *buy property in Antalya as a foreigner*
+- [ ] apartment — Alanya for foreign buyers: Mahmutlar, Kestel, Avsallar and residence-permit checks — *buy property in Alanya*
+- [ ] apartment — Buying property in Bursa as a foreigner: Nilüfer, Mudanya and the Istanbul commute — *buy property in Bursa*
+- [ ] apartment — Buying property in Trabzon as a foreigner: rules, areas and pitfalls — *buy property in Trabzon*
+- [ ] sell — Selling an apartment in Esenyurt or Beylikdüzü: pricing in a crowded resale market — *sell apartment in Esenyurt*
+- [ ] sell — Selling a holiday home in Antalya or Alanya from abroad — *sell property in Alanya*
+- [ ] land — Silivri and Çatalca: land and villa plots on Istanbul's western edge — *land for sale Silivri*
+- [ ] land — Sapanca and Kartepe: weekend-home land near Istanbul, zoning and limits for foreigners — *Sapanca land for sale*
