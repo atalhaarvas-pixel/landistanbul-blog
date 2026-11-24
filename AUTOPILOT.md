@@ -68,7 +68,7 @@ To change it: `python3 tools/make_cover.py posts/<file>.json --style coast --pal
 listed in `tools/scenes.py`). New styles can be added to `tools/scenes.py` (register them in `STYLES` and in
 `SEGMENT_STYLES` / `KEYWORD_STYLES` in `make_cover.py`).
 Look at the hero image and one infographic with the Read tool: it must look clearly different from the previous
-post's cover. Mark the topic `[x]` with the date in `plan/topics.md` (add it if it came from the news).
+post's cover, and each `image_alt` must describe what the cover actually shows. Mark the topic `[x]` with the date in `plan/topics.md` (add it if it came from the news).
 
 ## 6. Publish
 
