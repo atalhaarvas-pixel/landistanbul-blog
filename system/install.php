@@ -6,7 +6,7 @@
  * and can also be run by cron:  php /home/<user>/domains/landistanbul.com/public_html/autoblog/system/install.php
  *
  * 1. Backs up the original site files once (to /_private/backups).
- * 2. Refreshes the TCMB exchange rates (/fx-rates.json) and rebuilds the tax calculator page.
+ * 2. Rebuilds the tax calculator pages (EN/AR/RU, Turkish lira only).
  * 3. Patches the homepage (assets for the valuation promos, small HTML fixes, blog feed).
  * 4. Installs the system files from this repo (generator, valuation pages, mail handler, CSS, JS) when they changed.
  * 5. Copies post images to /blog-images/auto/, flattens posts/*.json into /_private/blog-auto.json.
@@ -98,38 +98,6 @@ function li_validate_variant(array $v, $lang, $file) {
     return $p;
 }
 
-/** Today's TCMB buying rates for USD and EUR. Returns array or null. */
-function li_fetch_tcmb() {
-    $url = 'https://www.tcmb.gov.tr/kurlar/today.xml';
-    $xml = false;
-    if (function_exists('curl_init')) {
-        $ch = curl_init($url);
-        curl_setopt_array($ch, [CURLOPT_RETURNTRANSFER => true, CURLOPT_TIMEOUT => 10, CURLOPT_FOLLOWLOCATION => true, CURLOPT_USERAGENT => 'landistanbul.com']);
-        $xml = curl_exec($ch);
-        curl_close($ch);
-    }
-    if (!$xml && ini_get('allow_url_fopen')) {
-        $xml = @file_get_contents($url, false, stream_context_create(['http' => ['timeout' => 10]]));
-    }
-    if (!$xml || !function_exists('simplexml_load_string')) return null;
-    $doc = @simplexml_load_string($xml);
-    if (!$doc) return null;
-    $out = ['source' => 'TCMB', 'date' => ''];
-    $attrs = $doc->attributes();
-    if (isset($attrs['Date'])) {
-        $d = DateTime::createFromFormat('m/d/Y', (string)$attrs['Date']);
-        $out['date'] = $d ? $d->format('Y-m-d') : (string)$attrs['Date'];
-    }
-    foreach ($doc->Currency as $c) {
-        $code = (string)$c['CurrencyCode'];
-        if ($code === 'USD' || $code === 'EUR') {
-            $v = (float)str_replace(',', '.', (string)$c->ForexBuying);
-            if ($v > 0) $out[$code] = round($v, 4);
-        }
-    }
-    return (isset($out['USD']) && isset($out['EUR'])) ? $out : null;
-}
-
 /** Shrink oversized images in /blog-images (not the generated /auto ones). */
 function li_optimize_images($site, $priv, $maxPerRun = 12) {
     if (!function_exists('imagecreatefromjpeg') || !function_exists('getimagesize')) return 0;
@@ -191,26 +159,16 @@ try {
     ];
     foreach ($backups as $src => $dst) li_backup_once($src, $dst);
 
-    // 2) Exchange rates + tax calculator page (cheap; runs on every install).
-    $fxFile = $site . '/fx-rates.json';
-    $fx = li_fetch_tcmb();
-    if ($fx) {
-        $old = file_exists($fxFile) ? json_decode(file_get_contents($fxFile), true) : null;
-        if ($old != $fx) { li_write_atomic($fxFile, json_encode($fx, JSON_PRETTY_PRINT)); li_log('fx rates ' . $fx['date'] . ' USD ' . $fx['USD'] . ' EUR ' . $fx['EUR']); }
-    } else {
-        li_log('fx rates: TCMB not reachable, keeping previous');
-    }
-    $tpl = $repo . '/system/pages/tax-calculator/index.html';
+    // 2) Tax calculator pages, EN/AR/RU, all amounts in lira (cheap; runs on every install).
     $taxData = $repo . '/data/tax-data.json';
-    if (file_exists($tpl) && file_exists($taxData)) {
+    if (file_exists($taxData) && file_exists($repo . '/system/taxcalc.php')) {
         $data = json_decode(file_get_contents($taxData), true);
         if (!$data || empty($data['yiufe']) || empty($data['brackets'])) throw new RuntimeException('data/tax-data.json is invalid');
-        $fxJson = file_exists($fxFile) ? trim(file_get_contents($fxFile)) : 'null';
-        $page = str_replace(['/*TAX_DATA*/null', '/*FX_DATA*/null'],
-            [json_encode($data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES), $fxJson ?: 'null'], file_get_contents($tpl));
-        $out = $site . '/tax-calculator/index.html';
-        if (!file_exists($out) || md5_file($out) !== md5($page)) { li_write_atomic($out, $page); li_log('tax calculator page updated'); }
+        require_once $repo . '/system/taxcalc.php';
+        $n = write_taxcalc_pages($site, $data);
+        if ($n) li_log("tax calculator pages updated: $n");
     }
+    if (file_exists($site . '/fx-rates.json')) @unlink($site . '/fx-rates.json');
 
     // 3) Homepage patches (idempotent).
     $indexFile = $site . '/index.html';
@@ -228,6 +186,10 @@ try {
         }
         $html = str_replace('<button id="contact-submit" type="submit" id="contact-submit" type="submit" class="send-btn">', '<button id="contact-submit" type="submit" class="send-btn">', $html);
         $html = str_replace('© 2024 LAND ISTANBUL', '© 2026 LAND ISTANBUL', $html);
+        $sortJs = "grid.insertBefore(frag, grid.firstChild);\n      /*LI-SORT*/ var all = Array.prototype.slice.call(grid.children); var dt = function(c){ var e = c.querySelector('.blog-date'); var d = e ? Date.parse(e.textContent) : NaN; return isNaN(d) ? 0 : d; }; all.sort(function(x, y){ return dt(y) - dt(x); }); all.forEach(function(c){ grid.appendChild(c); }); grid.style.scrollBehavior = 'auto'; grid.scrollLeft = 0; requestAnimationFrame(function(){ grid.scrollLeft = 0; grid.style.scrollBehavior = ''; });";
+        if (strpos($html, '/*LI-SORT*/') === false) $html = str_replace('grid.insertBefore(frag, grid.firstChild);', $sortJs, $html);
+        $html = str_replace('>Tüm Yazılar →</a>', '>All Articles →</a>', $html);
+        $html = str_replace(['/site-boost.css?v=1', '/site-boost.js?v=1'], ['/site-boost.css?v=2', '/site-boost.js?v=2'], $html);
         if ($html !== $orig) { li_write_atomic($indexFile, $html); li_log('homepage patched'); }
     }
 
@@ -253,6 +215,7 @@ try {
     $systemFiles = [
         $repo . '/system/generator.php' => $site . '/admin/includes/generator.php',
         $repo . '/system/valuation.php' => $site . '/admin/includes/valuation.php',
+        $repo . '/system/eligibility.php' => $site . '/admin/includes/eligibility.php',
         $repo . '/system/mail.php' => $site . '/mail.php',
         $repo . '/system/blog-extra.css' => $site . '/blog-extra.css',
         $repo . '/system/blog-lead.js' => $site . '/blog-lead.js',

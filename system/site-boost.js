@@ -1,15 +1,16 @@
-/* Land Istanbul — site-wide promotion of the free valuation and the tax calculator (v1). */
+/* Land Istanbul — site-wide promotion of the free valuation, citizenship check and tax calculator (v2). */
 (function () {
   var lang = (document.documentElement.getAttribute('lang') || 'en').slice(0, 2);
   var T = {
-    en: { nav: 'Free Valuation', fab: 'Free valuation', k1: 'Free · any city in Turkey', h1: 'What is your property worth?', p1: 'Get a realistic price range from a local expert, usually within 24 hours. No obligation.', b1: 'Get my free valuation', k2: 'Free tool · 2026 rates', h2: 'Selling? Check your tax first', p2: 'See in 30 seconds whether you owe capital gains tax, how much, and when your sale becomes tax-free.', b2: 'Calculate my tax', sh: 'Thinking of selling?', sp: 'Find out what your property in Turkey is worth. Free valuation, usually within 24 hours.', sb: 'Get my valuation', close: 'Close' },
-    ar: { nav: 'تقييم مجاني', fab: 'تقييم مجاني', k1: 'مجاني · أي مدينة في تركيا', h1: 'كم يساوي عقارك؟', p1: 'احصل على نطاق سعر واقعي من خبير محلي خلال 24 ساعة عادةً، دون أي التزام.', b1: 'احصل على تقييمك المجاني', k2: 'أداة مجانية · أسعار 2026', h2: 'تبيع؟ احسب الضريبة أولاً', p2: 'اعرف خلال 30 ثانية هل عليك ضريبة على أرباح العقار وكم تبلغ ومتى يصبح البيع معفى.', b2: 'احسب الضريبة', sh: 'تفكر في البيع؟', sp: 'اعرف كم يساوي عقارك في تركيا. تقييم مجاني خلال 24 ساعة عادةً.', sb: 'احصل على التقييم', close: 'إغلاق' },
-    ru: { nav: 'Бесплатная оценка', fab: 'Бесплатная оценка', k1: 'Бесплатно · любой город Турции', h1: 'Сколько стоит ваша недвижимость?', p1: 'Реалистичный диапазон цены от местного эксперта, обычно за 24 часа. Без обязательств.', b1: 'Получить бесплатную оценку', k2: 'Бесплатный инструмент · ставки 2026', h2: 'Продаёте? Сначала проверьте налог', p2: 'За 30 секунд узнайте, нужно ли платить налог на прирост капитала, сколько и когда продажа станет безналоговой.', b2: 'Рассчитать налог', sh: 'Думаете о продаже?', sp: 'Узнайте, сколько стоит ваша недвижимость в Турции. Бесплатная оценка, обычно за 24 часа.', sb: 'Получить оценку', close: 'Закрыть' }
+    en: { nav: 'Free Valuation', fab: 'Free valuation', k1: 'Free · any city in Turkey', h1: 'What is your property worth?', p1: 'Get a realistic price range from a local expert, usually within 24 hours. No obligation.', b1: 'Get my free valuation', k2: 'Free tool · 2026 rates', h2: 'Selling? Check your tax first', p2: 'See in 30 seconds whether you owe capital gains tax, how much, and when your sale becomes tax-free.', b2: 'Calculate my tax', k3: 'Free check · 60 seconds', h3: 'Do you qualify for citizenship?', p3: 'Answer 4 questions and see which route fits your budget: citizenship ($400k), residence permit ($200k) or the new $150k investor permit.', b3: 'Check my eligibility', sh: 'Thinking of selling?', sp: 'Find out what your property in Turkey is worth. Free valuation, usually within 24 hours.', sb: 'Get my valuation', close: 'Close' },
+    ar: { nav: 'تقييم مجاني', fab: 'تقييم مجاني', k1: 'مجاني · أي مدينة في تركيا', h1: 'كم يساوي عقارك؟', p1: 'احصل على نطاق سعر واقعي من خبير محلي خلال 24 ساعة عادةً، دون أي التزام.', b1: 'احصل على تقييمك المجاني', k2: 'أداة مجانية · أسعار 2026', h2: 'تبيع؟ احسب الضريبة أولاً', p2: 'اعرف خلال 30 ثانية هل عليك ضريبة على أرباح العقار وكم تبلغ ومتى يصبح البيع معفى.', b2: 'احسب الضريبة', k3: 'اختبار مجاني · 60 ثانية', h3: 'هل أنت مؤهل للجنسية؟', p3: 'أجب عن 4 أسئلة واعرف المسار المناسب لميزانيتك: الجنسية (400 ألف دولار)، أو الإقامة (200 ألف)، أو إقامة المستثمر الجديدة (150 ألف).', b3: 'اختبر أهليتك', sh: 'تفكر في البيع؟', sp: 'اعرف كم يساوي عقارك في تركيا. تقييم مجاني خلال 24 ساعة عادةً.', sb: 'احصل على التقييم', close: 'إغلاق' },
+    ru: { nav: 'Бесплатная оценка', fab: 'Бесплатная оценка', k1: 'Бесплатно · любой город Турции', h1: 'Сколько стоит ваша недвижимость?', p1: 'Реалистичный диапазон цены от местного эксперта, обычно за 24 часа. Без обязательств.', b1: 'Получить бесплатную оценку', k2: 'Бесплатный инструмент · ставки 2026', h2: 'Продаёте? Сначала проверьте налог', p2: 'За 30 секунд узнайте, нужно ли платить налог на прирост капитала, сколько и когда продажа станет безналоговой.', b2: 'Рассчитать налог', k3: 'Бесплатно · 60 секунд', h3: 'Подходите ли вы для гражданства?', p3: 'Ответьте на 4 вопроса и узнайте, какой путь подходит вашему бюджету: гражданство ($400k), ВНЖ ($200k) или новый ВНЖ инвестора ($150k).', b3: 'Проверить', sh: 'Думаете о продаже?', sp: 'Узнайте, сколько стоит ваша недвижимость в Турции. Бесплатная оценка, обычно за 24 часа.', sb: 'Получить оценку', close: 'Закрыть' }
   };
   var t = T[lang] || T.en;
-  var valUrl = '/free-property-valuation/' + (lang === 'ar' || lang === 'ru' ? lang + '/' : '');
+  var sfx = (lang === 'ar' || lang === 'ru') ? lang + '/' : '';
+  var valUrl = '/free-property-valuation/' + sfx, taxUrl = '/tax-calculator/' + sfx, eligUrl = '/turkish-citizenship-eligibility/' + sfx;
   var path = location.pathname;
-  var onValuation = path.indexOf('/free-property-valuation') === 0;
+  var onValuation = path.indexOf('/free-property-valuation') === 0 || path.indexOf('/turkish-citizenship-eligibility') === 0;
   var isHome = path === '/' || path === '/index.html';
 
   function track(name, params) { try { if (typeof gtag === 'function') gtag('event', name, params || {}); } catch (e) {} }
@@ -51,9 +52,10 @@
     band.className = 'lb-band';
     band.innerHTML = '<div class="lb-band-in">' +
       '<a class="lb-tile lb-red" href="' + valUrl + '" data-p="home_band_valuation"><span class="lb-kicker"></span><h3></h3><p></p><span class="lb-go"></span></a>' +
-      '<a class="lb-tile" href="/tax-calculator/" data-p="home_band_tax"><span class="lb-kicker"></span><h3></h3><p></p><span class="lb-go"></span></a></div>';
+      '<a class="lb-tile" href="' + eligUrl + '" data-p="home_band_eligibility"><span class="lb-kicker"></span><h3></h3><p></p><span class="lb-go"></span></a>' +
+      '<a class="lb-tile" href="' + taxUrl + '" data-p="home_band_tax"><span class="lb-kicker"></span><h3></h3><p></p><span class="lb-go"></span></a></div>';
     var tiles = band.querySelectorAll('.lb-tile');
-    [[t.k1, t.h1, t.p1, t.b1 + ' →'], [t.k2, t.h2, t.p2, t.b2 + ' →']].forEach(function (c, i) {
+    [[t.k1, t.h1, t.p1, t.b1 + ' →'], [t.k3, t.h3, t.p3, t.b3 + ' →'], [t.k2, t.h2, t.p2, t.b2 + ' →']].forEach(function (c, i) {
       tiles[i].querySelector('.lb-kicker').textContent = c[0];
       tiles[i].querySelector('h3').textContent = c[1];
       tiles[i].querySelector('p').textContent = c[2];

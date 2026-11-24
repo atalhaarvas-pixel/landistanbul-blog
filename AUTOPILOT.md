@@ -75,13 +75,25 @@ Look at the hero image and one infographic with the Read tool. Mark the topic `[
 
 ## 7. Tax calculator data (monthly / yearly)
 
-`data/tax-data.json` feeds the tax calculator (`/tax-calculator/`, rebuilt by the installer):
+`data/tax-data.json` feeds the tax calculator (`/tax-calculator/`, `/tax-calculator/ar/`, `/tax-calculator/ru/`,
+built by `system/taxcalc.php` on every deploy). The calculator works in Turkish lira only (no exchange rates):
 - **Monthly, after TÜİK publishes (around the 3rd):** add the previous month's Yİ-ÜFE (2003=100) to `yiufe`
-  and the previous month's average USD/TRY and EUR/TRY (TCMB) to `usdtry` / `eurtry`; set `updated`.
-  Check at least two sources (e.g. TÜİK bulletin, hakedis.org, oska.com.tr, dolar724.com).
+  and set `updated`. Check at least two sources (e.g. TÜİK bulletin, hakedis.org, oska.com.tr).
 - **Every January:** add the new year's annual exemption (`exemptions`) and the NON-WAGE income tax tariff
   (`brackets`, from the Gelir Vergisi Genel Tebliği) once published in the Resmî Gazete.
-- Today's exchange rate comes from TCMB automatically on every deploy (`/fx-rates.json`).
+- Text of the calculator in three languages lives in `tc_t()` in `system/taxcalc.php`. The 2026 figures quoted in
+  its FAQ (₺150,000, brackets) must be updated together with the data in January.
+
+## 7b. Lead tools
+
+- `/free-property-valuation/` (+ar/ru) from `system/valuation.php`; leads arrive with interest "Free property valuation".
+- `/turkish-citizenship-eligibility/` (+ar/ru) from `system/eligibility.php`: 4-question quiz, then a form. Leads arrive
+  with interest "Turkish citizenship by investment", "Residence permit by property", "Investor residence permit" or
+  "Buying an apartment" and the answers in `details` (p_budget, p_buy, p_family, p_when, p_result).
+  Thresholds used (Nov 2026): citizenship $400k property / $500k deposit-funds; residence by property $200k;
+  investor residence (Decision 11994, 18 Nov 2026) $150k = 3 yrs, $200k = 5 yrs in deposits, bonds, REIT/VC fund
+  units or private pension, held half the term. If any of these change, update the texts in `le_t()` the same day.
+- Posts with segment `citizenship` or `apartment` link to the eligibility check from their lead box.
 
 ## 8. Leads
 

@@ -227,3 +227,55 @@
 [dir="rtl"] .lv-chips li::before { content: '✓ '; }
 .lv-tag { display: table; }
 @media (max-width: 600px) { .lv-chips { display: none; } .lv-lead { font-size: 1.02rem; } .lv-intro h1 { margin-top: 12px; } }
+
+/* ─── Navigation in Arabic ─── */
+.lang-ar nav .nav-links a, .lang-ar #mobile-menu a { letter-spacing: 0; text-transform: none; }
+
+/* ─── Citizenship eligibility check ─── */
+.le { background: var(--first); }
+.le-hero { padding: 104px 0 26px; text-align: center; }
+.le-hero .li-lang-switch { justify-content: center; margin-bottom: 18px; }
+.le-hero .lv-tag { margin: 0 auto; }
+.le-hero h1 { font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 900; text-transform: uppercase; letter-spacing: -.03em; line-height: 1; margin: 16px auto 14px; max-width: 900px; }
+.le-hero .lv-lead { margin: 0 auto; }
+.le-quiz-wrap { padding: 10px 0 64px; }
+.le-quiz { max-width: 760px; margin: 0 auto; background: #fff; border-top: 5px solid var(--third); box-shadow: 0 18px 40px rgba(0,0,0,.08); padding: 26px 28px 28px; scroll-margin-top: 90px; }
+.le-bar { height: 6px; background: #eee; margin-bottom: 22px; }
+.le-bar i { display: block; height: 100%; width: 0; background: var(--third); transition: width .3s ease; }
+.le-q { border: 0; }
+.le-q legend { font-size: clamp(1.35rem, 2.6vw, 1.8rem); font-weight: 900; line-height: 1.15; margin-bottom: 16px; }
+.le-q legend small { display: block; font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #999; margin-bottom: 6px; }
+.le-opts { display: grid; gap: 10px; }
+.le-opt { text-align: start; padding: 16px 18px; border: 1.5px solid #e2ddd1; background: #fbfaf6; font: inherit; font-size: 1.08rem; font-weight: 700; color: #171717; cursor: pointer; transition: border-color .15s, background .15s; min-height: 54px; }
+.le-opt:hover { border-color: var(--third); background: #fff; }
+.le-opt.on { background: #171717; border-color: #171717; color: #fff; }
+.le-verdict { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 14px; }
+.le-badge { flex: none; width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; font-size: 1.7rem; font-weight: 900; color: #fff; background: #777; }
+.le-badge.le-cit { background: #11734b; }
+.le-badge.le-res { background: #b7791f; }
+.le-badge.le-inv { background: #1f5fa8; }
+.le-verdict h2 { font-size: clamp(1.3rem, 2.4vw, 1.7rem); font-weight: 900; line-height: 1.2; }
+.le-points { list-style: none; margin: 0 0 14px; display: grid; gap: 10px; }
+.le-points li { position: relative; padding-inline-start: 28px; line-height: 1.55; color: #333; }
+.le-points li::before { content: '→'; position: absolute; inset-inline-start: 0; top: 0; color: var(--third); font-weight: 900; }
+[dir="rtl"] .le-points li::before { content: '←'; }
+.le-disc { font-size: .85rem; color: #888; margin-bottom: 18px; }
+.le-form { background: var(--fourth); color: #fff; padding: 22px; }
+.le-form h3 { font-size: 1.35rem; font-weight: 900; text-transform: uppercase; line-height: 1.1; }
+.le-form > p { color: rgba(255,255,255,.88); margin: 6px 0 14px; }
+.le-form input { width: 100%; font: inherit; font-size: 16px; padding: 12px; border: 0; background: #fff; color: #171717; margin-bottom: 10px; border-radius: 0; }
+.le-form .lv-two { gap: 0 10px; }
+.le-form .li-submit { width: 100%; min-height: 48px; background: #171717; color: #fff; border: 0; font: inherit; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; cursor: pointer; }
+.le-form .li-status { margin-top: 10px; font-weight: 700; }
+.le-form .li-status.is-ok { background: #11734b; padding: 10px; }
+.le-form .li-status.is-error { background: #222; padding: 10px; }
+.le-form .li-privacy { font-size: .8rem; color: rgba(255,255,255,.75); margin-top: 8px; }
+.le-restart { margin-top: 16px; background: none; border: 0; font: inherit; font-weight: 700; color: #777; text-decoration: underline; cursor: pointer; }
+.le-facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 6px; }
+.le-facts div { background: var(--first); border-top: 4px solid var(--third); padding: 18px; }
+.le-facts b { display: block; font-size: clamp(1.5rem, 2.6vw, 2.1rem); font-weight: 900; color: var(--third); margin-bottom: 4px; }
+.le-facts span { color: #444; line-height: 1.45; }
+.li-elig-link { display: inline-block; margin: -10px 0 18px; color: #fff !important; font-weight: 700; text-decoration: underline; }
+@media (max-width: 900px) { .le-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .le-hero { padding-top: 92px; } .le-quiz { padding: 20px 16px; } .le-facts { grid-template-columns: minmax(0, 1fr); } }
+.lang-ar .le-hero h1, .lang-ar .le-form h3, .lang-ar .le-q legend small { text-transform: none; letter-spacing: 0; line-height: 1.3; }

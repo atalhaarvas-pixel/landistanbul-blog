@@ -18,6 +18,7 @@ define('AUTO_DATA_FILE', SITE_ROOT . '/_private/blog-auto.json');
 define('AUTO_PAGES_FILE', SITE_ROOT . '/_private/auto-pages.json');
 define('WHATSAPP_NUMBER', '905468916349');
 if (file_exists(__DIR__ . '/valuation.php')) require_once __DIR__ . '/valuation.php';
+if (file_exists(__DIR__ . '/eligibility.php')) require_once __DIR__ . '/eligibility.php';
 
 /**
  * The original blog posts that live inside index.html's own JS (not managed by this panel).
@@ -255,6 +256,18 @@ function blocks_to_html(array $blocks) {
  * Common <head> + nav markup shared by generated pages.
  * $opts: lang, alternates [lang => url], type, published, modified, robots, extra_head
  */
+/** Navigation links in the page language. */
+function li_nav($lang) {
+    $sfx = $lang === 'en' ? '' : $lang . '/';
+    $labels = [
+        'en' => ['Home', 'Services', 'Free Valuation', 'Tax Calculator', 'Blogs', 'Contact Us'],
+        'ar' => ['الرئيسية', 'الخدمات', 'تقييم مجاني', 'حاسبة الضريبة', 'المدونة', 'تواصل معنا'],
+        'ru' => ['Главная', 'Услуги', 'Бесплатная оценка', 'Налоговый калькулятор', 'Блог', 'Связаться'],
+    ];
+    $l = $labels[$lang] ?? $labels['en'];
+    return [['/#home', $l[0]], ['/#services', $l[1]], ['/free-property-valuation/' . $sfx, $l[2]], ['/tax-calculator/' . $sfx, $l[3]], ['/blog/' . $sfx, $l[4]], ['/#contact', $l[5]]];
+}
+
 function page_head($title, $description, $canonical, $ogImage, array $opts = []) {
     $lang = $opts['lang'] ?? 'en';
     $t = li_t($lang);
@@ -308,38 +321,31 @@ function page_head($title, $description, $canonical, $ogImage, array $opts = [])
 <?php endif; ?>
 <link rel="stylesheet" href="/blog-style.css">
 <link rel="stylesheet" href="/blog-extra.css?v=3">
-<link rel="stylesheet" href="/site-boost.css?v=1">
+<link rel="stylesheet" href="/site-boost.css?v=2">
 <?= $opts['extra_head'] ?? '' ?>
 </head>
 <body class="lang-<?= htmlspecialchars($lang) ?>">
+<?php $nv = li_nav($lang); ?>
 <nav>
   <a class="logo" href="/">LAND ISTANBUL</a>
   <div class="nav-links">
-    <a href="/#home">Home</a>
-    <a href="/#services">Services</a>
-    <a href="/free-property-valuation/" class="nav-val">Free Valuation</a>
-    <a href="/tax-calculator/">Tax Calculator</a>
-    <a href="/blog/">Blogs</a>
-    <a href="/#contact" class="nav-btn">Contact Us</a>
+<?php foreach ($nv as $i => $n): ?>    <a href="<?= htmlspecialchars($n[0]) ?>"<?= $i === 2 ? ' class="nav-val"' : ($i === 5 ? ' class="nav-btn"' : '') ?>><?= htmlspecialchars($n[1]) ?></a>
+<?php endforeach; ?>
   </div>
   <button class="menu-toggle" onclick="document.getElementById('mobile-menu').classList.toggle('open')" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
 </nav>
 <div id="mobile-menu">
-  <a href="/#home">Home</a>
-  <a href="/#services">Services</a>
-  <a href="/free-property-valuation/">Free Valuation</a>
-  <a href="/tax-calculator/">Tax Calculator</a>
-  <a href="/blog/">Blogs</a>
-  <a href="/#contact">Contact</a>
+<?php foreach ($nv as $n): ?>  <a href="<?= htmlspecialchars($n[0]) ?>"><?= htmlspecialchars($n[1]) ?></a>
+<?php endforeach; ?>
 </div>
 <?php
     return ob_get_clean();
 }
 
 function page_footer() {
-    return '<footer><a class="logo" href="/">LAND ISTANBUL</a><p>© 2026 LAND ISTANBUL. ALL RIGHTS RESERVED.</p></footer><script src="/blog-lead.js?v=3" defer></script><script src="/site-boost.js?v=1" defer></script></body></html>';
+    return '<footer><a class="logo" href="/">LAND ISTANBUL</a><p>© 2026 LAND ISTANBUL. ALL RIGHTS RESERVED.</p></footer><script src="/blog-lead.js?v=3" defer></script><script src="/site-boost.js?v=2" defer></script></body></html>';
 }
 
 /** Lead capture box: segment-specific copy, short form posting to /mail.php, WhatsApp shortcut. */
@@ -355,6 +361,10 @@ function lead_box_html($lang, $segment, $postTitle, $postUrl) {
     $h .= '<h3>' . htmlspecialchars($cta[0]) . '</h3><p class="li-lead-sub">' . htmlspecialchars($cta[1]) . '</p>';
     if ($segment === 'sell' && function_exists('lv_url')) {
         $h .= '<a class="li-val-link" href="' . htmlspecialchars(str_replace(SITE_URL, '', lv_url($lang))) . '">' . htmlspecialchars(lv_t($lang)['cta_btn']) . ' →</a>';
+    }
+    if (in_array($segment, ['citizenship', 'apartment'], true) && function_exists('le_url')) {
+        $lbl = ['en' => 'Check your eligibility in 60 seconds', 'ar' => 'اختبر أهليتك خلال 60 ثانية', 'ru' => 'Проверьте право за 60 секунд'];
+        $h .= '<a class="li-elig-link" href="' . htmlspecialchars(str_replace(SITE_URL, '', le_url($lang))) . '">' . htmlspecialchars($lbl[$lang] ?? $lbl['en']) . ' →</a>';
     }
     $h .= '<form class="li-lead-form" method="post" action="/mail.php" novalidate'
         . ' data-ok="' . htmlspecialchars($t['f_ok']) . '" data-err="' . htmlspecialchars($t['f_err']) . '"'
@@ -681,6 +691,14 @@ function update_sitemap(array $dynamicPosts) {
             $entries .= "  <url>\n    <loc>" . lv_url($l) . "</loc>\n    <changefreq>monthly</changefreq>\n    <priority>" . ($l === 'en' ? '0.9' : '0.8') . "</priority>\n  </url>\n";
         }
     }
+    foreach (['ar', 'ru'] as $l) {
+        $entries .= "  <url>\n    <loc>" . SITE_URL . "/tax-calculator/" . $l . "/</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n";
+    }
+    if (function_exists('le_url')) {
+        foreach (['en', 'ar', 'ru'] as $l) {
+            $entries .= "  <url>\n    <loc>" . le_url($l) . "</loc>\n    <changefreq>monthly</changefreq>\n    <priority>" . ($l === 'en' ? '0.9' : '0.8') . "</priority>\n  </url>\n";
+        }
+    }
     $seenLang = [];
     foreach ($auto as $p) {
         if ($p['lang'] !== 'en' && empty($seenLang[$p['lang']])) {
@@ -763,4 +781,5 @@ function regenerate_all(array $dynamicPosts) {
     update_sitemap($dynamicPosts);
     write_homepage_feed($dynamicPosts, $auto);
     if (function_exists('write_valuation_pages')) write_valuation_pages();
+    if (function_exists('write_eligibility_pages')) write_eligibility_pages();
 }

@@ -16,7 +16,7 @@ Rules for picking the next topic:
 - [ ] sell — Selling property in Turkey as a foreigner in 2026: taxes, documents, the Secure Payment System — *sell property in Turkey as a foreigner*
 - [ ] apartment — Buying an apartment in Istanbul as a foreigner: 2026 step-by-step guide — *buy apartment in Istanbul as a foreigner*
 - [ ] land — Buying land in Istanbul: zoning (imar), title types and red flags — *buy land in Istanbul*
-- [ ] citizenship — Residence permit by property vs Turkish citizenship: which one fits you? — *Turkey residence permit by property*
+- [x] citizenship — Turkey's new $150,000 investor residence permit vs $200,000 property residence vs citizenship — *Turkey residence permit 150000* (2026-11-24)
 - [ ] sell — Capital gains tax when selling property in Turkey: the 5-year rule explained — *capital gains tax Turkey property*
 - [ ] apartment — Best Istanbul districts for foreign buyers in 2026 (by budget and goal) — *best areas to buy property in Istanbul*
 - [ ] land — Arnavutköy and the airport corridor: what land buyers should check — *Arnavutköy land for sale*
