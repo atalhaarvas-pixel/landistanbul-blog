@@ -78,7 +78,7 @@ function li_git_head($repo) {
 }
 
 function li_inputs_hash($repo, $site) {
-    $files = array_merge(glob($repo . '/posts/*.json') ?: [], glob($repo . '/images/*') ?: [], glob($repo . '/system/*') ?: [],
+    $files = array_merge(glob($repo . '/posts/*.json') ?: [], glob($repo . '/images/*') ?: [], glob($repo . '/media/*') ?: [], glob($repo . '/system/*') ?: [],
         glob($repo . '/system/pages/*/*') ?: [], glob($repo . '/data/*') ?: []);
     sort($files);
     $h = '';
@@ -297,6 +297,13 @@ try {
         if (li_copy_if_changed($img, $imgDir . '/' . basename($img))) $copied++;
     }
     if ($copied) li_log("images copied: $copied");
+
+    // 5b) Social videos (Reels) -> /media/ so Buffer can fetch them by URL.
+    $mediaDir = $site . '/media';
+    foreach (glob($repo . '/media/*.{mp4,jpg}', GLOB_BRACE) ?: [] as $vid) {
+        if (!is_dir($mediaDir)) mkdir($mediaDir, 0755, true);
+        if (li_copy_if_changed($vid, $mediaDir . '/' . basename($vid))) li_log('media: ' . basename($vid));
+    }
 
     // Posts.
     $blogData = file_exists($site . '/blog-data.json') ? (json_decode(file_get_contents($site . '/blog-data.json'), true) ?: []) : [];
