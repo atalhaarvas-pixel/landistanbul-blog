@@ -1,0 +1,284 @@
+{
+  "group": "turkey-secure-payment-system-property-sales",
+  "segment": "sell",
+  "published": "2026-11-25",
+  "updated": "2026-11-25",
+  "sources": [
+    {
+      "title": "Ministry of Trade: press release on the Secure Payment System regulation change, new start date 1 December 2026 (28 September 2026)",
+      "url": "https://ticaret.gov.tr/haberler/tasinmaz-satislarinda-guvenli-odeme-sistemi-ile-ilgili-yonetmelik-degisikligi-hakkinda-basin-aciklamasi"
+    },
+    {
+      "title": "Official Gazette No. 33238, 29 April 2026: amendment to the Regulation on Real Estate Trade, additional Article 1 on the payment system (text via Alo Maliye)",
+      "url": "https://www.alomaliye.com/2026/04/29/tasinmaz-ticareti-hakkinda-yonetmelikte-degisiklik-29-04-2026/amp/"
+    },
+    {
+      "title": "Öner Law Office: The Secure Payment System in real estate trade, legal analysis (updated 19 October 2026)",
+      "url": "https://oner.av.tr/tasinmaz-ticaretinde-guvenli-odeme-sistemi/"
+    },
+    {
+      "title": "Takvim: Secure Payment System in home and land sales starts on 1 December (18 November 2026)",
+      "url": "https://www.takvim.com.tr/ekonomi/2026/11/18/ev-ve-arsa-satislarinda-guvenli-odeme-sistemi-1-aralikta-basliyor"
+    },
+    {
+      "title": "Turkish Revenue Administration (GİB): 2026 guide to other income and gains, sale of real estate within 5 years, 2026 exemption ₺150,000",
+      "url": "https://intvrg.gib.gov.tr/hazirbeyan/assets/pdf/DUYURU_UNIVERSAL_2026_Diger_Kazanc_ve_Iratlar_2026.pdf"
+    },
+    {
+      "title": "PwC Türkiye: tax provisions of Law No. 7566, including the title deed fee under-declaration penalty (8 December 2025)",
+      "url": "https://www.pwc.com.tr/tr/Hizmetlerimiz/vergi/vergi-bultenleri/2025/7566-sayili-kanunun-vergi-duzenlemeleri.pdf"
+    },
+    {
+      "title": "Mondaq (Ongur & Partners): Real estate investment in Türkiye 2026, title deed fee and valuation reports (23 September 2026)",
+      "url": "https://www.mondaq.com/real-estate-investment-in-t%C3%BCrkiye-2026/1846206"
+    }
+  ],
+  "infographics": [
+    {
+      "name": "steps",
+      "type": "steps",
+      "title": {
+        "en": "Selling from 1 December 2026: how the price is paid",
+        "ar": "البيع اعتباراً من 1 ديسمبر 2026: كيف يُدفع الثمن",
+        "ru": "Продажа с 1 декабря 2026: как платится цена"
+      },
+      "items": {
+        "en": [
+          [
+            "Agree price and declared value",
+            "The declared price is what goes through the system"
+          ],
+          [
+            "Apply for the transfer",
+            "Web Tapu or the land registry sets the appointment"
+          ],
+          [
+            "Buyer pays into the system",
+            "Money is blocked, not yet sent to the seller"
+          ],
+          [
+            "Signatures at the land registry",
+            "Parties or attorneys, interpreter if needed"
+          ],
+          [
+            "Deed registered, money released",
+            "Paid to the seller minus the usage fee"
+          ],
+          [
+            "Sale fails?",
+            "The blocked money goes back to the buyer"
+          ]
+        ],
+        "ar": [
+          [
+            "الاتفاق على الثمن والقيمة المصرح بها",
+            "الثمن المصرح به هو ما يمر عبر النظام"
+          ],
+          [
+            "تقديم طلب نقل الملكية",
+            "عبر Web Tapu أو دائرة الطابو التي تحدد الموعد"
+          ],
+          [
+            "المشتري يدفع داخل النظام",
+            "المال محجوز ولم يصل إلى البائع بعد"
+          ],
+          [
+            "التوقيع في دائرة الطابو",
+            "الطرفان أو وكلاؤهما، ومترجم عند الحاجة"
+          ],
+          [
+            "تسجيل السند وتحويل المال",
+            "إلى البائع بعد خصم رسم الاستخدام"
+          ],
+          [
+            "تعثر البيع؟",
+            "يعود المبلغ المحجوز إلى المشتري"
+          ]
+        ],
+        "ru": [
+          [
+            "Цена и заявленная стоимость",
+            "Через систему идёт заявленная цена"
+          ],
+          [
+            "Заявка на переоформление",
+            "Web Tapu или кадастр назначает дату"
+          ],
+          [
+            "Покупатель платит в систему",
+            "Деньги заблокированы, продавцу ещё не ушли"
+          ],
+          [
+            "Подписание в тапу",
+            "Стороны или представители, переводчик при необходимости"
+          ],
+          [
+            "Тапу зарегистрировано, деньги переведены",
+            "Продавцу за вычетом платы за систему"
+          ],
+          [
+            "Сделка сорвалась?",
+            "Заблокированная сумма возвращается покупателю"
+          ]
+        ]
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "slug": "turkey-secure-payment-system-property-sales",
+      "title": "Turkey's Secure Payment System for Property Sales: What Sellers Need to Know from 1 December 2026",
+      "seo_title": "Turkey Secure Payment System for Property Sales (2026)",
+      "og_title": "Selling Property in Turkey from 1 December 2026: Secure Payments",
+      "description": "From 1 December 2026, the price of a property sold in Turkey must pass through the Secure Payment System. How it works, fees, mortgages, taxes, foreign sellers.",
+      "excerpt": "From 1 December 2026 the buyer's money no longer goes straight to the seller at the land registry: it is held in Turkey's Secure Payment System and released when the title deed is registered. Here is how it works, what is still undecided, and what sellers living abroad should prepare now.",
+      "image_alt": "Illustration of a golden house key with a red house tag next to a closed wooden door, for a guide to Turkey's Secure Payment System for property sales",
+      "keywords": [
+        "Turkey secure payment system property sales",
+        "sell property in Turkey",
+        "güvenli ödeme sistemi tapu",
+        "sell property in Turkey as a foreigner",
+        "title deed payment Turkey 2026"
+      ],
+      "body_html": "<h2>Turkey's Secure Payment System for property sales in one minute</h2>\n<p>From <strong>1 December 2026</strong>, when a property in Turkey is sold and the price is paid in cash, by bank transfer or by EFT, that money has to go through the Ministry of Trade's <strong>Secure Payment System</strong> (Güvenli Ödeme Sistemi). The buyer's payment is held in the system and released to the seller only when the title deed (tapu) is registered in the buyer's name, so the title and the money change hands at the same time. As of 25 November 2026 the start date stands, but the fee and parts of the procedure have not been published yet.</p>\n<figure><img src=\"/blog-images/auto/turkey-secure-payment-system-property-sales-steps-en.jpg\" alt=\"How a property sale in Turkey is paid through the Secure Payment System from 1 December 2026, in six steps\" loading=\"lazy\" width=\"1200\"></figure>\n<div class=\"li-table-wrap\"><table>\n<thead><tr><th>Item</th><th>Status on 25 November 2026</th></tr></thead>\n<tbody>\n<tr><td>Legal basis</td><td>Regulation on Real Estate Trade (Taşınmaz Ticareti Hakkında Yönetmelik), additional Article 1, added in the Official Gazette of 29 April 2026 (No. 33238)</td></tr>\n<tr><td>Mandatory from</td><td>1 December 2026, after moving from 1 July and then 1 October 2026 (Official Gazette of 1 October 2026, No. 33387)</td></tr>\n<tr><td>Who it covers</td><td>Property sales by licensed real estate businesses and by other individuals and companies</td></tr>\n<tr><td>Mortgage-financed part</td><td>Outside the system; only the rest of the price goes through it</td></tr>\n<tr><td>Fee</td><td>A usage fee per transaction, deducted from the amount paid to the seller; the amount has not been announced</td></tr>\n<tr><td>If the sale does not complete</td><td>The money is not released to the seller and goes back to the buyer</td></tr>\n</tbody></table></div>\n<p>The aim is simple: no more bags of cash at the land registry, and no more cases where the deed was transferred but the money never arrived, or the buyer paid and the seller walked away.</p>\n\n<h2>Which sales are covered, and what is still open</h2>\n<p>The amended regulation applies to property sales by real estate businesses \"and other natural or legal persons\" whenever the price, in whole or in part, is paid in cash, by bank transfer, by EFT or by another method the Ministry names. In practice, a private owner selling a flat, a villa, a shop or a plot of land is covered, not only agencies and developers.</p>\n<ul>\n<li><strong>Mortgages:</strong> the part financed by a bank or a financing or savings-financing company is excluded. If a buyer pays ₺4 million with a ₺2.5 million loan, the remaining ₺1.5 million goes through the system.</li>\n<li><strong>Sales completed before 1 December 2026</strong> do not have to use it.</li>\n<li><strong>Exceptions:</strong> the Ministry of Trade, after consulting the Ministry of Environment, Urbanisation and Climate Change, decides which sales stay outside the system, together with the procedures and the fee, and announces them on its website. As of 25 November 2026 no such list has been published.</li>\n<li><strong>Foreign owners:</strong> the rule makes no exception for foreigners, and no separate procedure for foreign buyers or sellers has been announced. Plan on the system applying to you.</li>\n</ul>\n<p>One more caveat: the date has already moved twice. The Ministry announced the 1 December date on 28 September 2026, citing the integration work with banks and a planned pilot. If your land registry appointment falls in early December, confirm the rules a few days before.</p>\n<!--CTA-->\n\n<h2>How the money moves on sale day</h2>\n<ol class=\"li-steps\">\n<li><strong>Agree the price and the declared value.</strong> The price declared at the land registry is the amount the buyer pays through the system and the basis of the title deed fee.</li>\n<li><strong>Apply for the transfer.</strong> As before, through Web Tapu or the land registry office, which sets the appointment. Reports in November 2026 describe the buyer starting the payment with a reference number via e-Devlet.</li>\n<li><strong>The buyer pays into the system.</strong> The amount is blocked in an account. It does not reach the seller yet.</li>\n<li><strong>Signatures at the land registry.</strong> Seller and buyer, or their attorneys, sign. A sworn interpreter attends when a party does not speak Turkish.</li>\n<li><strong>Registration and release.</strong> Once the registry approves the transfer, the money is released to the seller's account, minus the usage fee.</li>\n<li><strong>If the transfer does not happen,</strong> the blocked money is returned to the buyer.</li>\n</ol>\n<p>Which banks take part, how long money can stay blocked and how refunds are processed are left to a protocol between the ministries and the system's integrator, which had not been published at the time of writing. Treat any detailed \"how-to\" you read elsewhere as provisional until it is.</p>\n\n<h2>What changes for sellers, especially if you live abroad</h2>\n<ul>\n<li><strong>No cash at the desk.</strong> After 1 December, cash, a direct transfer or an EFT outside the system will not complete a sale. If a buyer offers to pay \"the rest in cash\", the sale cannot be registered that way.</li>\n<li><strong>The declared price has to be the real one.</strong> Every lira now leaves a record. The title deed fee is 2% for the seller and 2% for the buyer, calculated on the declared price, which cannot be lower than the property's tax value (emlak vergisi değeri). Since Law No. 7566 (December 2025), under-declaring the price is penalised at one times the unpaid fee instead of 25%.</li>\n<li><strong>Deposits (kapora).</strong> The regulation does not mention deposits paid before the sale day. Put any deposit in a written agreement that says how it is credited, and expect the balance to go through the system.</li>\n<li><strong>Your receiving account.</strong> The money is paid to the seller's account. Have it ready in your own name and ask your bank whether it is already connected to the system.</li>\n<li><strong>Selling through a power of attorney.</strong> Many owners abroad sell through an attorney in Turkey. Ask your lawyer to check that the power of attorney covers both signing the sale and receiving the price, and decide in advance which account the price goes to.</li>\n<li><strong>Timing.</strong> Expect the first weeks to be slower while banks and registry offices adapt. Leave a margin if you are flying in for the appointment.</li>\n</ul>\n<p>For honest sellers this is mostly good news. The classic fear of selling from abroad, signing away the deed before the money is safely in your account, is exactly what the system is designed to remove.</p>\n\n<h2>Taxes and costs the system does not change</h2>\n<p>The Secure Payment System changes how the money moves, not what you owe.</p>\n<div class=\"li-table-wrap\"><table>\n<thead><tr><th>Cost</th><th>Who pays</th><th>Notes (2026)</th></tr></thead>\n<tbody>\n<tr><td>Title deed fee</td><td>Seller 2%, buyer 2%</td><td>On the declared price, not below the property's tax value</td></tr>\n<tr><td>Secure Payment System usage fee</td><td>Seller, deducted from the price</td><td>Amount still to be announced</td></tr>\n<tr><td>Capital gains tax (değer artış kazancı)</td><td>Seller, only if the property is sold within 5 years of acquisition</td><td>2026 exemption ₺150,000; progressive rates from 15% to 40%</td></tr>\n<tr><td>Non-resident tax return</td><td>Seller who is not a Turkish tax resident</td><td>When the gain is taxable: a separate return within 15 days, at the tax office where the property is</td></tr>\n</tbody></table></div>\n<p>A few details decide the tax. The five years run from acquisition, normally the date the title was registered in your name. Property you inherited or received as a gift is outside this rule, so selling it is not taxed as a value-increase gain. The purchase price is indexed with the domestic producer price index (Yİ-ÜFE) when that index has risen by at least 10%, which often shrinks the taxable gain considerably. Sellers who are not tax residents and do not file an annual return in Turkey must file a separate return within 15 days of the sale.</p>\n<p>Want a figure for your own sale? Our <a href=\"/tax-calculator/\">capital gains tax calculator in Turkish lira</a> applies the 5-year rule, the 2026 exemption and the Yİ-ÜFE indexation. For the final number, confirm with a Turkish tax adviser.</p>\n\n<h2>A seller's checklist for December 2026</h2>\n<ol class=\"li-steps\">\n<li><strong>Check the title.</strong> Owners and shares, mortgages, liens and annotations. If you bought for citizenship, the deed carries a three-year no-sale annotation; our <a href=\"/blog/turkish-citizenship-by-investment-2026/\">Turkish citizenship by investment guide</a> explains the rule.</li>\n<li><strong>Know your price.</strong> Get a market valuation before you list, so the declared price, the asking price and the tax all start from the same realistic figure.</li>\n<li><strong>Estimate your tax</strong> if you acquired the property less than five years ago.</li>\n<li><strong>Prepare your documents:</strong> passport, Turkish tax number, a valid DASK compulsory earthquake insurance policy for residential property, and a power of attorney if you will not attend.</li>\n<li><strong>If the buyer is a foreign individual,</strong> plan for a valuation report from a licensed firm, which the land registry generally requires in sales to foreign individuals.</li>\n<li><strong>A few days before the appointment,</strong> confirm the start date, your bank's connection to the system and the fee.</li>\n</ol>\n<blockquote>The system protects the money. The price, the paperwork and the tax are still the seller's homework.</blockquote>\n\n<h2>How Land Istanbul helps</h2>\n<p>We work with owners who want to sell property in Istanbul, many of whom live abroad. We price the property against recent sales nearby, prepare the file, find and screen buyers, and coordinate the land registry appointment and the payment through the new system, together with independent lawyers and sworn interpreters when your case needs them. If you are thinking of selling in the coming months, start with a <a href=\"/free-property-valuation/\">free property valuation</a>: you will see what your property is likely to sell for, what the sale will cost and whether any tax applies.</p>\n",
+      "faq": [
+        {
+          "q": "When does the Secure Payment System become mandatory for property sales in Turkey?",
+          "a": "On 1 December 2026. The date was set by a regulation published in the Official Gazette on 1 October 2026 (No. 33387), after earlier start dates of 1 July and 1 October 2026 were postponed. Sales completed before 1 December do not have to use it."
+        },
+        {
+          "q": "Does the Secure Payment System apply to foreign sellers and buyers?",
+          "a": "Yes, as far as the rules published so far show. The regulation covers property sales by real estate businesses and by other individuals and companies, with no exception for foreigners, and no separate procedure for foreigners has been announced."
+        },
+        {
+          "q": "Who pays the Secure Payment System fee?",
+          "a": "The seller. The regulation says a usage fee is charged on each transaction and deducted from the price transferred to the seller. As of 25 November 2026 the amount had not been announced."
+        },
+        {
+          "q": "What if the buyer uses a mortgage?",
+          "a": "The part financed by a bank or a financing company stays outside the system. Only the rest of the price, for example the buyer's own funds, goes through the Secure Payment System."
+        },
+        {
+          "q": "What happens to the money if the title deed transfer fails?",
+          "a": "It is not released to the seller. The buyer's payment stays blocked and is returned to the buyer if the sale does not take place. Detailed refund procedures are set in a protocol that had not been published at the time of writing."
+        },
+        {
+          "q": "Can I still be paid in cash at the land registry?",
+          "a": "No. From 1 December 2026, a price paid in cash, by bank transfer or by EFT must go through the system, otherwise the sale cannot be completed at the land registry."
+        },
+        {
+          "q": "Do I pay capital gains tax when I sell property in Turkey?",
+          "a": "Only if you sell within five years of acquiring it; inherited property is outside this rule. In 2026 the first ₺150,000 of the gain is exempt, the purchase price can be indexed with Yİ-ÜFE, and non-residents file a separate return within 15 days of the sale."
+        }
+      ]
+    },
+    "ar": {
+      "slug": "turkey-secure-payment-system-property-sales",
+      "title": "نظام الدفع الآمن لبيع العقارات في تركيا: ما يجب أن يعرفه البائع اعتباراً من 1 ديسمبر 2026",
+      "seo_title": "نظام الدفع الآمن لبيع العقارات في تركيا 2026",
+      "og_title": "بيع العقار في تركيا اعتباراً من 1 ديسمبر 2026: نظام الدفع الآمن",
+      "description": "اعتباراً من 1 ديسمبر 2026 يجب أن يمر ثمن العقار المبيع في تركيا عبر نظام الدفع الآمن. كيف يعمل، الرسوم، القروض، الضرائب، وما يعنيه للبائع الأجنبي.",
+      "excerpt": "اعتباراً من 1 ديسمبر 2026 لن يصل مال المشتري إلى البائع مباشرة في دائرة الطابو، بل يُحجز في نظام الدفع الآمن ويُحوَّل عند تسجيل السند. إليك كيف يعمل النظام، وما الذي لم يُحسم بعد، وما يجب أن يجهزه البائع المقيم في الخارج الآن.",
+      "image_alt": "رسم توضيحي لمفتاح منزل ذهبي بميدالية حمراء على شكل بيت بجانب باب خشبي مغلق، لدليل نظام الدفع الآمن لبيع العقارات في تركيا",
+      "keywords": [
+        "نظام الدفع الآمن في تركيا",
+        "بيع عقار في تركيا",
+        "بيع عقار في تركيا للأجانب",
+        "دفع ثمن العقار في الطابو",
+        "ضريبة بيع العقار في تركيا"
+      ],
+      "body_html": "<h2>نظام الدفع الآمن لبيع العقارات في تركيا في دقيقة واحدة</h2>\n<p>اعتباراً من <strong>1 ديسمبر 2026</strong>، عند بيع أي عقار في تركيا ودفع ثمنه نقداً أو بحوالة مصرفية أو عبر EFT، يجب أن يمر المبلغ عبر <strong>نظام الدفع الآمن</strong> (Güvenli Ödeme Sistemi) التابع لوزارة التجارة. يُحجز ما يدفعه المشتري داخل النظام، ولا يُحوَّل إلى البائع إلا بعد تسجيل سند الملكية (الطابو) باسم المشتري، أي أن الملكية والمال ينتقلان في الوقت نفسه. وحتى 25 نوفمبر 2026 لا يزال موعد البدء قائماً، لكن مقدار الرسوم وبعض تفاصيل الإجراءات لم يُنشر بعد.</p>\n<figure><img src=\"/blog-images/auto/turkey-secure-payment-system-property-sales-steps-ar.jpg\" alt=\"خطوات دفع ثمن العقار في تركيا عبر نظام الدفع الآمن اعتباراً من 1 ديسمبر 2026 في ست مراحل\" loading=\"lazy\" width=\"1200\"></figure>\n<div class=\"li-table-wrap\"><table>\n<thead><tr><th>البند</th><th>الوضع في 25 نوفمبر 2026</th></tr></thead>\n<tbody>\n<tr><td>الأساس القانوني</td><td>لائحة تجارة العقارات (Taşınmaz Ticareti Hakkında Yönetmelik)، المادة الإضافية 1، المضافة في الجريدة الرسمية بتاريخ 29 أبريل 2026 (العدد 33238)</td></tr>\n<tr><td>إلزامي اعتباراً من</td><td>1 ديسمبر 2026، بعد تأجيله من 1 يوليو ثم من 1 أكتوبر 2026 (الجريدة الرسمية 1 أكتوبر 2026، العدد 33387)</td></tr>\n<tr><td>من يشمل</td><td>عمليات البيع التي تجريها المكاتب العقارية المرخصة وسائر الأفراد والشركات</td></tr>\n<tr><td>الجزء الممول بقرض</td><td>خارج النظام، ويمر الباقي فقط عبره</td></tr>\n<tr><td>الرسوم</td><td>رسم استخدام عن كل عملية يُخصم من المبلغ المحوَّل إلى البائع، ولم يُعلن مقداره بعد</td></tr>\n<tr><td>إذا لم يكتمل البيع</td><td>لا يُحوَّل المال إلى البائع ويُعاد إلى المشتري</td></tr>\n</tbody></table></div>\n<p>الهدف واضح: لا أكياس نقود في دائرة الطابو بعد اليوم، ولا حالات يُنقل فيها السند دون أن يصل المال، أو يدفع المشتري ثم يتراجع البائع.</p>\n\n<h2>ما عمليات البيع المشمولة؟ وما الذي لم يُحسم بعد؟</h2>\n<p>تنطبق اللائحة المعدلة على بيع العقارات من قبل المكاتب العقارية «وسائر الأشخاص الطبيعيين أو الاعتباريين» كلما دُفع الثمن كله أو جزء منه نقداً أو بحوالة أو EFT أو بوسيلة أخرى تحددها الوزارة. عملياً، المالك الفرد الذي يبيع شقة أو فيلا أو محلاً أو قطعة أرض مشمول أيضاً، وليس المكاتب والمطورون وحدهم.</p>\n<ul>\n<li><strong>القروض العقارية:</strong> الجزء الممول من بنك أو من شركة تمويل أو شركة تمويل ادخاري مستثنى. فإذا دفع المشتري 4 ملايين ليرة منها 2.5 مليون قرضاً، يمر 1.5 مليون ليرة فقط عبر النظام.</li>\n<li><strong>البيوع المنجزة قبل 1 ديسمبر 2026</strong> غير ملزمة باستخدامه.</li>\n<li><strong>الاستثناءات:</strong> تحدد وزارة التجارة، بعد التشاور مع وزارة البيئة والتطوير العمراني وتغير المناخ، البيوع التي تبقى خارج النظام، وكذلك الإجراءات والرسوم، وتعلنها على موقعها الرسمي. وحتى 25 نوفمبر 2026 لم تُنشر هذه القائمة.</li>\n<li><strong>الملاك الأجانب:</strong> لا تستثني اللائحة الأجانب، ولم يُعلن أي إجراء خاص بالبائعين أو المشترين الأجانب، لذا خطط على أساس أن النظام ينطبق عليك.</li>\n</ul>\n<p>وتنبيه أخير: الموعد تأجل مرتين من قبل. أعلنت الوزارة موعد 1 ديسمبر في 28 سبتمبر 2026، مشيرة إلى أعمال الربط مع البنوك وتطبيق تجريبي مخطط له. إذا كان موعدك في الطابو في أوائل ديسمبر، فتأكد من القواعد قبله بأيام.</p>\n<!--CTA-->\n\n<h2>كيف ينتقل المال يوم البيع؟</h2>\n<ol class=\"li-steps\">\n<li><strong>الاتفاق على الثمن والقيمة المصرح بها.</strong> الثمن المصرح به في الطابو هو المبلغ الذي يدفعه المشتري عبر النظام، وهو أساس حساب رسوم الطابو.</li>\n<li><strong>تقديم طلب نقل الملكية.</strong> كما في السابق عبر Web Tapu أو دائرة الطابو التي تحدد الموعد. وتذكر تقارير نوفمبر 2026 أن المشتري يبدأ الدفع برقم مرجعي عبر e-Devlet.</li>\n<li><strong>يدفع المشتري داخل النظام.</strong> يُحجز المبلغ في حساب، ولا يصل إلى البائع بعد.</li>\n<li><strong>التوقيع في دائرة الطابو.</strong> يوقع البائع والمشتري أو وكلاؤهما، ويحضر مترجم محلَّف إذا كان أحد الطرفين لا يتحدث التركية.</li>\n<li><strong>التسجيل وتحويل المال.</strong> بعد موافقة الطابو على النقل يُحوَّل المبلغ إلى حساب البائع بعد خصم رسم الاستخدام.</li>\n<li><strong>إذا لم يتم النقل</strong> يُعاد المبلغ المحجوز إلى المشتري.</li>\n</ol>\n<p>أما البنوك المشاركة، ومدة بقاء المال محجوزاً، وطريقة الاسترداد، فهي متروكة لبروتوكول بين الوزارتين والجهة المشغلة للنظام، ولم يكن منشوراً عند كتابة هذا المقال. لذا تعامل مع أي شرح تفصيلي تقرؤه في مكان آخر على أنه مؤقت حتى يُنشر.</p>\n\n<h2>ما الذي يتغير للبائع، خصوصاً إذا كان يعيش خارج تركيا؟</h2>\n<ul>\n<li><strong>لا نقود عند الشباك.</strong> بعد 1 ديسمبر لن يكتمل أي بيع بالنقد أو بحوالة مباشرة أو EFT خارج النظام. وإذا عرض المشتري دفع «الباقي نقداً» فلن يُسجَّل البيع بهذه الطريقة.</li>\n<li><strong>يجب أن يكون الثمن المصرح به حقيقياً.</strong> كل ليرة تترك أثراً مسجلاً الآن. رسوم الطابو 2% على البائع و2% على المشتري، وتُحسب على الثمن المصرح به الذي لا يجوز أن يقل عن القيمة الضريبية للعقار (emlak vergisi değeri). ومنذ القانون رقم 7566 (ديسمبر 2025) أصبحت غرامة التصريح بثمن أقل تعادل مثل الرسم غير المدفوع بدلاً من 25% منه.</li>\n<li><strong>العربون (kapora).</strong> لا تذكر اللائحة العربون المدفوع قبل يوم البيع. ضع أي عربون في اتفاق مكتوب يبين كيفية احتسابه، وتوقع أن يمر الباقي عبر النظام.</li>\n<li><strong>الحساب الذي ستستلم عليه.</strong> يُحوَّل المال إلى حساب البائع، فجهّزه باسمك واسأل بنكك هل هو مرتبط بالنظام.</li>\n<li><strong>البيع عبر وكالة.</strong> كثير من الملاك في الخارج يبيعون عبر وكيل في تركيا. اطلب من محاميك التأكد من أن الوكالة تشمل التوقيع على البيع وقبض الثمن معاً، وحدد مسبقاً الحساب الذي سيُحوَّل إليه الثمن.</li>\n<li><strong>التوقيت.</strong> توقع أن تكون الأسابيع الأولى أبطأ ريثما تتأقلم البنوك ودوائر الطابو، واترك هامشاً إذا كنت ستسافر لحضور الموعد.</li>\n</ul>\n<p>بالنسبة إلى البائع الجاد هذه أخبار جيدة في الغالب. فالخوف التقليدي عند البيع من الخارج، أي التنازل عن السند قبل أن يصل المال إلى حسابك، هو بالضبط ما صُمم النظام لإزالته.</p>\n\n<h2>الضرائب والتكاليف التي لا يغيرها النظام</h2>\n<p>يغير نظام الدفع الآمن طريقة انتقال المال، لا ما يجب عليك دفعه.</p>\n<div class=\"li-table-wrap\"><table>\n<thead><tr><th>التكلفة</th><th>من يدفع</th><th>ملاحظات (2026)</th></tr></thead>\n<tbody>\n<tr><td>رسوم الطابو</td><td>البائع 2%، المشتري 2%</td><td>على الثمن المصرح به، وليس أقل من القيمة الضريبية للعقار</td></tr>\n<tr><td>رسم استخدام نظام الدفع الآمن</td><td>البائع، ويُخصم من الثمن</td><td>لم يُعلن مقداره بعد</td></tr>\n<tr><td>ضريبة الأرباح الرأسمالية (değer artış kazancı)</td><td>البائع، فقط إذا باع خلال 5 سنوات من التملك</td><td>إعفاء 2026: 150 ألف ليرة؛ نسب تصاعدية من 15% إلى 40%</td></tr>\n<tr><td>إقرار غير المقيم</td><td>البائع غير المقيم ضريبياً في تركيا</td><td>عند وجود ربح خاضع للضريبة: إقرار منفصل خلال 15 يوماً لدى دائرة الضرائب في مكان العقار</td></tr>\n</tbody></table></div>\n<p>بعض التفاصيل تحدد الضريبة. تُحسب السنوات الخمس من تاريخ التملك، وهو عادة تاريخ تسجيل السند باسمك. والعقار الموروث أو الموهوب خارج هذه القاعدة، فبيعه لا يخضع لضريبة الأرباح الرأسمالية. ويُرفع سعر الشراء بمؤشر أسعار المنتجين المحلي (Yİ-ÜFE) إذا ارتفع المؤشر بنسبة 10% على الأقل، وهذا يخفض الربح الخاضع للضريبة كثيراً في أغلب الحالات. أما البائع غير المقيم الذي لا يقدم إقراراً سنوياً في تركيا فعليه تقديم إقرار منفصل خلال 15 يوماً من البيع.</p>\n<p>تريد رقماً لعملية البيع الخاصة بك؟ تطبق <a href=\"/tax-calculator/ar/\">حاسبة ضريبة بيع العقار بالليرة التركية</a> قاعدة السنوات الخمس وإعفاء 2026 وتعديل Yİ-ÜFE. وللرقم النهائي، استشر مستشاراً ضريبياً تركياً.</p>\n\n<h2>قائمة مراجعة للبائع في ديسمبر 2026</h2>\n<ol class=\"li-steps\">\n<li><strong>افحص السند.</strong> الملاك والحصص والرهون والحجوزات والشروح. إذا اشتريت للحصول على الجنسية، فعلى السند شرح بعدم البيع لثلاث سنوات، ويشرح <a href=\"/blog/ar/turkish-citizenship-by-investment-2026/\">دليلنا للجنسية التركية عبر الاستثمار</a> هذه القاعدة.</li>\n<li><strong>اعرف سعرك.</strong> احصل على تقييم سوقي قبل عرض العقار، حتى يبدأ الثمن المصرح به وسعر العرض والضريبة من رقم واقعي واحد.</li>\n<li><strong>قدّر ضريبتك</strong> إذا تملكت العقار منذ أقل من خمس سنوات.</li>\n<li><strong>جهّز مستنداتك:</strong> جواز السفر، والرقم الضريبي التركي، ووثيقة تأمين الزلازل الإلزامي DASK سارية للعقار السكني، ووكالة إذا لن تحضر بنفسك.</li>\n<li><strong>إذا كان المشتري فرداً أجنبياً</strong> فخطط لتقرير تقييم من شركة مرخصة، إذ تشترطه دائرة الطابو عموماً في البيع للأفراد الأجانب.</li>\n<li><strong>قبل الموعد بأيام</strong> تأكد من تاريخ البدء، ومن ارتباط بنكك بالنظام، ومن مقدار الرسم.</li>\n</ol>\n<blockquote>النظام يحمي المال، أما السعر والأوراق والضريبة فتبقى مسؤولية البائع.</blockquote>\n\n<h2>كيف تساعدك Land Istanbul</h2>\n<p>نعمل مع ملاك يريدون بيع عقاراتهم في إسطنبول، وكثير منهم يعيشون خارج تركيا. نسعّر العقار مقارنة بالمبيعات الأخيرة في محيطه، ونجهز الملف، ونبحث عن المشترين ونتحقق منهم، وننسق موعد الطابو والدفع عبر النظام الجديد، بالتعاون مع محامين مستقلين ومترجمين محلَّفين عندما تحتاج حالتك إليهم. إذا كنت تفكر في البيع خلال الأشهر المقبلة، فابدأ بـ<a href=\"/free-property-valuation/ar/\">تقييم مجاني لعقارك</a>: ستعرف السعر المتوقع، وتكلفة البيع، وهل تترتب عليك ضريبة.</p>\n",
+      "faq": [
+        {
+          "q": "متى يصبح نظام الدفع الآمن إلزامياً لبيع العقارات في تركيا؟",
+          "a": "في 1 ديسمبر 2026. حُدد هذا الموعد بلائحة نُشرت في الجريدة الرسمية في 1 أكتوبر 2026 (العدد 33387) بعد تأجيل موعدي 1 يوليو و1 أكتوبر 2026. البيوع المنجزة قبل 1 ديسمبر غير ملزمة باستخدامه."
+        },
+        {
+          "q": "هل ينطبق نظام الدفع الآمن على البائعين والمشترين الأجانب؟",
+          "a": "نعم، وفق القواعد المنشورة حتى الآن. تشمل اللائحة بيع العقارات من قبل المكاتب العقارية وسائر الأفراد والشركات دون استثناء للأجانب، ولم يُعلن إجراء خاص بهم."
+        },
+        {
+          "q": "من يدفع رسم نظام الدفع الآمن؟",
+          "a": "البائع. تنص اللائحة على رسم استخدام عن كل عملية يُخصم من الثمن المحوَّل إلى البائع، ولم يُعلن مقداره حتى 25 نوفمبر 2026."
+        },
+        {
+          "q": "ماذا لو اشترى المشتري بقرض عقاري؟",
+          "a": "يبقى الجزء الممول من بنك أو شركة تمويل خارج النظام، ويمر الباقي فقط، مثل أموال المشتري الخاصة، عبر نظام الدفع الآمن."
+        },
+        {
+          "q": "ماذا يحدث للمال إذا تعثر نقل الطابو؟",
+          "a": "لا يُحوَّل إلى البائع. يبقى المبلغ محجوزاً ويُعاد إلى المشتري إذا لم يتم البيع، أما تفاصيل الاسترداد فيحددها بروتوكول لم يُنشر بعد."
+        },
+        {
+          "q": "هل يمكنني استلام الثمن نقداً في دائرة الطابو؟",
+          "a": "لا. اعتباراً من 1 ديسمبر 2026 يجب أن يمر الثمن المدفوع نقداً أو بحوالة أو EFT عبر النظام، وإلا فلن يكتمل البيع في الطابو."
+        },
+        {
+          "q": "هل أدفع ضريبة أرباح رأسمالية عند بيع عقاري في تركيا؟",
+          "a": "فقط إذا بعت خلال خمس سنوات من التملك، والعقار الموروث خارج هذه القاعدة. في 2026 يُعفى أول 150 ألف ليرة من الربح، ويمكن تعديل سعر الشراء بمؤشر Yİ-ÜFE، ويقدم غير المقيم إقراراً منفصلاً خلال 15 يوماً من البيع."
+        }
+      ]
+    },
+    "ru": {
+      "slug": "turkey-secure-payment-system-property-sales",
+      "title": "Система безопасных платежей при продаже недвижимости в Турции: что нужно знать продавцу с 1 декабря 2026 года",
+      "seo_title": "Система безопасных платежей в Турции: продажа жилья 2026",
+      "og_title": "Продажа недвижимости в Турции с 1 декабря 2026: безопасные платежи",
+      "description": "С 1 декабря 2026 года цена проданной в Турции недвижимости должна пройти через систему безопасных платежей. Как она работает, комиссия, ипотека, налоги.",
+      "excerpt": "С 1 декабря 2026 года деньги покупателя больше не попадают к продавцу напрямую в тапу: они блокируются в системе безопасных платежей и переводятся после регистрации права. Как это работает, что ещё не решено и что стоит подготовить продавцу, живущему за границей.",
+      "image_alt": "Иллюстрация: золотой ключ с красным брелоком-домиком рядом с закрытой деревянной дверью, к статье о системе безопасных платежей при продаже недвижимости в Турции",
+      "keywords": [
+        "система безопасных платежей Турция",
+        "продажа недвижимости в Турции",
+        "продать квартиру в Турции иностранцу",
+        "оплата сделки в тапу 2026",
+        "налог при продаже недвижимости в Турции"
+      ],
+      "body_html": "<h2>Система безопасных платежей при продаже недвижимости в Турции: главное за минуту</h2>\n<p>С <strong>1 декабря 2026 года</strong>, если недвижимость в Турции продаётся, а цена платится наличными, банковским переводом или через EFT, деньги должны пройти через <strong>систему безопасных платежей</strong> (Güvenli Ödeme Sistemi) Министерства торговли. Платёж покупателя блокируется в системе и переводится продавцу только после регистрации права собственности (тапу) на покупателя, то есть титул и деньги переходят из рук в руки одновременно. На 25 ноября 2026 года дата запуска в силе, но размер комиссии и часть процедуры ещё не опубликованы.</p>\n<figure><img src=\"/blog-images/auto/turkey-secure-payment-system-property-sales-steps-ru.jpg\" alt=\"Как оплачивается продажа недвижимости в Турции через систему безопасных платежей с 1 декабря 2026 года: шесть шагов\" loading=\"lazy\" width=\"1200\"></figure>\n<div class=\"li-table-wrap\"><table>\n<thead><tr><th>Пункт</th><th>Статус на 25 ноября 2026 года</th></tr></thead>\n<tbody>\n<tr><td>Правовая основа</td><td>Положение о торговле недвижимостью (Taşınmaz Ticareti Hakkında Yönetmelik), дополнительная статья 1, добавлена в Официальной газете от 29 апреля 2026 года (№ 33238)</td></tr>\n<tr><td>Обязательна с</td><td>1 декабря 2026 года, после переноса с 1 июля и затем с 1 октября 2026 года (Официальная газета от 1 октября 2026 года, № 33387)</td></tr>\n<tr><td>Кого касается</td><td>Продаж недвижимости лицензированными агентствами, а также другими физическими и юридическими лицами</td></tr>\n<tr><td>Часть, оплаченная ипотекой</td><td>Вне системы; через неё идёт только остаток цены</td></tr>\n<tr><td>Комиссия</td><td>Плата за использование с каждой сделки, удерживается из суммы, переводимой продавцу; размер не объявлен</td></tr>\n<tr><td>Если сделка не состоялась</td><td>Деньги не переводятся продавцу и возвращаются покупателю</td></tr>\n</tbody></table></div>\n<p>Цель простая: больше никаких пакетов с наличными в кадастровом управлении и никаких историй, когда тапу переоформили, а деньги так и не пришли, или покупатель заплатил, а продавец передумал.</p>\n\n<h2>Какие сделки попадают под правило и что ещё не решено</h2>\n<p>Изменённое положение распространяется на продажи недвижимости агентствами «и другими физическими или юридическими лицами», если цена полностью или частично оплачивается наличными, переводом, EFT или другим способом, который определит министерство. На практике под правило попадает и частный владелец, продающий квартиру, виллу, магазин или участок, а не только агентства и застройщики.</p>\n<ul>\n<li><strong>Ипотека:</strong> часть, профинансированная банком, финансовой или сберегательно-финансовой компанией, исключена. Если покупатель платит ₺4 млн, из которых ₺2,5 млн кредит, через систему проходят оставшиеся ₺1,5 млн.</li>\n<li><strong>Сделки, завершённые до 1 декабря 2026 года,</strong> не обязаны использовать систему.</li>\n<li><strong>Исключения:</strong> Министерство торговли после консультаций с Министерством окружающей среды, градостроительства и изменения климата определяет, какие продажи остаются вне системы, а также процедуры и комиссию, и публикует их на своём сайте. На 25 ноября 2026 года такой список не опубликован.</li>\n<li><strong>Иностранные владельцы:</strong> исключений для иностранцев правило не делает, и отдельной процедуры для иностранных продавцов или покупателей не объявлено. Исходите из того, что система касается и вас.</li>\n</ul>\n<p>Ещё одна оговорка: дату уже переносили дважды. Министерство объявило о 1 декабря 28 сентября 2026 года, сославшись на интеграцию с банками и запланированный пилотный запуск. Если ваша запись в тапу приходится на начало декабря, уточните правила за несколько дней до неё.</p>\n<!--CTA-->\n\n<h2>Как движутся деньги в день сделки</h2>\n<ol class=\"li-steps\">\n<li><strong>Согласуйте цену и заявленную стоимость.</strong> Цена, заявленная в тапу, — это сумма, которую покупатель платит через систему, и база для пошлины за тапу.</li>\n<li><strong>Подайте заявку на переоформление.</strong> Как и раньше, через Web Tapu или в кадастровом управлении, которое назначает дату. По сообщениям ноября 2026 года, покупатель начинает платёж по референс-номеру через e-Devlet.</li>\n<li><strong>Покупатель платит в систему.</strong> Сумма блокируется на счёте и продавцу пока не поступает.</li>\n<li><strong>Подписание в тапу.</strong> Подписывают продавец и покупатель или их представители по доверенности. Если сторона не говорит по-турецки, присутствует присяжный переводчик.</li>\n<li><strong>Регистрация и перевод денег.</strong> После того как кадастр подтвердит переход права, деньги поступают на счёт продавца за вычетом платы за использование.</li>\n<li><strong>Если переоформление не состоялось,</strong> заблокированная сумма возвращается покупателю.</li>\n</ol>\n<p>Какие банки участвуют, сколько деньги могут оставаться заблокированными и как проходит возврат, определяет протокол между министерствами и оператором-интегратором системы, который на момент написания статьи не опубликован. Любые подробные инструкции, которые вы встретите в других местах, считайте предварительными, пока он не выйдет.</p>\n\n<h2>Что меняется для продавца, особенно если вы живёте за границей</h2>\n<ul>\n<li><strong>Никаких наличных у окошка.</strong> После 1 декабря наличные, прямой перевод или EFT мимо системы не позволят завершить сделку. Если покупатель предлагает «остаток наличными», зарегистрировать продажу так не получится.</li>\n<li><strong>Заявленная цена должна быть реальной.</strong> Теперь каждая лира оставляет след. Пошлина за тапу — 2% с продавца и 2% с покупателя от заявленной цены, которая не может быть ниже налоговой стоимости объекта (emlak vergisi değeri). С принятием закона № 7566 (декабрь 2025 года) штраф за занижение цены равен однократной сумме недоплаченной пошлины вместо 25%.</li>\n<li><strong>Задаток (kapora).</strong> О задатке, внесённом до дня сделки, положение не говорит. Оформите задаток письменным соглашением, где указано, как он засчитывается, и рассчитывайте, что остаток пойдёт через систему.</li>\n<li><strong>Счёт для получения денег.</strong> Деньги поступают на счёт продавца. Подготовьте счёт на своё имя и спросите в банке, подключён ли он уже к системе.</li>\n<li><strong>Продажа по доверенности.</strong> Многие владельцы за рубежом продают через представителя в Турции. Попросите юриста проверить, что доверенность даёт право и подписать продажу, и получить деньги, и заранее решите, на какой счёт пойдёт цена.</li>\n<li><strong>Сроки.</strong> В первые недели процесс может идти медленнее, пока банки и кадастровые управления привыкают. Оставьте запас времени, если прилетаете на сделку.</li>\n</ul>\n<p>Для добросовестного продавца это в основном хорошая новость. Главный страх при продаже из-за рубежа — отдать тапу раньше, чем деньги окажутся на вашем счёте, — система как раз и должна устранить.</p>\n\n<h2>Налоги и расходы, которые система не меняет</h2>\n<p>Система безопасных платежей меняет то, как движутся деньги, а не то, сколько вы должны заплатить.</p>\n<div class=\"li-table-wrap\"><table>\n<thead><tr><th>Расход</th><th>Кто платит</th><th>Примечание (2026)</th></tr></thead>\n<tbody>\n<tr><td>Пошлина за тапу</td><td>Продавец 2%, покупатель 2%</td><td>От заявленной цены, не ниже налоговой стоимости объекта</td></tr>\n<tr><td>Плата за систему безопасных платежей</td><td>Продавец, удерживается из цены</td><td>Размер ещё не объявлен</td></tr>\n<tr><td>Налог на прирост стоимости (değer artış kazancı)</td><td>Продавец, только при продаже в течение 5 лет после приобретения</td><td>Льгота 2026 года ₺150 000; прогрессивные ставки от 15% до 40%</td></tr>\n<tr><td>Декларация нерезидента</td><td>Продавец, не являющийся налоговым резидентом Турции</td><td>Если прибыль облагается: отдельная декларация в течение 15 дней в налоговую по месту объекта</td></tr>\n</tbody></table></div>\n<p>Несколько деталей определяют налог. Пять лет считаются с даты приобретения, обычно это дата регистрации тапу на ваше имя. Унаследованная или подаренная недвижимость под это правило не попадает, и её продажа не облагается налогом на прирост стоимости. Цена покупки индексируется по индексу цен производителей (Yİ-ÜFE), если он вырос минимум на 10%, и это часто заметно уменьшает облагаемую прибыль. Продавцы-нерезиденты, которые не подают годовую декларацию в Турции, обязаны подать отдельную декларацию в течение 15 дней после продажи.</p>\n<p>Хотите увидеть цифру для своей сделки? Наш <a href=\"/tax-calculator/ru/\">калькулятор налога при продаже недвижимости в турецких лирах</a> учитывает правило пяти лет, льготу 2026 года и индексацию по Yİ-ÜFE. Окончательную сумму уточните у турецкого налогового консультанта.</p>\n\n<h2>Чек-лист продавца на декабрь 2026 года</h2>\n<ol class=\"li-steps\">\n<li><strong>Проверьте тапу.</strong> Собственники и доли, ипотека, аресты и отметки. Если вы покупали ради гражданства, в тапу есть запрет на продажу на три года; правило объясняет наш <a href=\"/blog/ru/turkish-citizenship-by-investment-2026/\">гид по гражданству Турции за инвестиции</a>.</li>\n<li><strong>Узнайте свою цену.</strong> Получите рыночную оценку до выставления объекта, чтобы заявленная цена, цена предложения и налог исходили из одной реалистичной цифры.</li>\n<li><strong>Оцените налог,</strong> если вы приобрели объект меньше пяти лет назад.</li>\n<li><strong>Подготовьте документы:</strong> паспорт, турецкий налоговый номер, действующий полис обязательного страхования от землетрясений DASK для жилья и доверенность, если не будете присутствовать лично.</li>\n<li><strong>Если покупатель — иностранный гражданин,</strong> заложите время на отчёт об оценке от лицензированной компании: кадастр, как правило, требует его при продаже иностранным физическим лицам.</li>\n<li><strong>За несколько дней до записи</strong> уточните дату запуска, подключение вашего банка к системе и размер комиссии.</li>\n</ol>\n<blockquote>Система защищает деньги. Цена, документы и налог по-прежнему остаются задачей продавца.</blockquote>\n\n<h2>Чем поможет Land Istanbul</h2>\n<p>Мы работаем с владельцами, которые хотят продать недвижимость в Стамбуле, и многие из них живут за границей. Мы оцениваем объект по недавним сделкам поблизости, готовим документы, ищем и проверяем покупателей, координируем запись в тапу и оплату через новую систему вместе с независимыми юристами и присяжными переводчиками, когда это нужно для вашего случая. Если вы думаете о продаже в ближайшие месяцы, начните с <a href=\"/free-property-valuation/ru/\">бесплатной оценки недвижимости</a>: вы узнаете, за сколько объект реально продать, во что обойдётся сделка и придётся ли платить налог.</p>\n",
+      "faq": [
+        {
+          "q": "С какого числа система безопасных платежей обязательна при продаже недвижимости в Турции?",
+          "a": "С 1 декабря 2026 года. Дату установило положение, опубликованное в Официальной газете 1 октября 2026 года (№ 33387), после переноса прежних дат — 1 июля и 1 октября 2026 года. Сделки, завершённые до 1 декабря, систему использовать не обязаны."
+        },
+        {
+          "q": "Касается ли система иностранных продавцов и покупателей?",
+          "a": "Да, судя по опубликованным правилам. Положение распространяется на продажи агентствами и другими физическими и юридическими лицами без исключения для иностранцев, отдельной процедуры для них не объявлено."
+        },
+        {
+          "q": "Кто платит комиссию системы безопасных платежей?",
+          "a": "Продавец. По положению плата за использование взимается с каждой сделки и удерживается из цены, переводимой продавцу. На 25 ноября 2026 года её размер не объявлен."
+        },
+        {
+          "q": "Что если покупатель берёт ипотеку?",
+          "a": "Часть, профинансированная банком или финансовой компанией, остаётся вне системы. Через систему безопасных платежей проходит только остаток цены, например собственные средства покупателя."
+        },
+        {
+          "q": "Что будет с деньгами, если переоформление тапу сорвётся?",
+          "a": "Продавцу они не переводятся. Платёж покупателя остаётся заблокированным и возвращается ему, если сделка не состоялась. Подробный порядок возврата устанавливает протокол, который пока не опубликован."
+        },
+        {
+          "q": "Можно ли ещё получить оплату наличными в тапу?",
+          "a": "Нет. С 1 декабря 2026 года цена, оплачиваемая наличными, переводом или через EFT, должна пройти через систему, иначе сделку в тапу не завершить."
+        },
+        {
+          "q": "Платится ли налог при продаже недвижимости в Турции?",
+          "a": "Только если продать в течение пяти лет после приобретения; унаследованная недвижимость под это правило не попадает. В 2026 году первые ₺150 000 прибыли не облагаются, цену покупки можно индексировать по Yİ-ÜFE, а нерезиденты подают отдельную декларацию в течение 15 дней после продажи."
+        }
+      ]
+    }
+  },
+  "cover": {
+    "style": "keys",
+    "palette": "sand"
+  },
+  "images": {
+    "en": "images/turkey-secure-payment-system-property-sales-hero.jpg",
+    "ar": "images/turkey-secure-payment-system-property-sales-hero.jpg",
+    "ru": "images/turkey-secure-payment-system-property-sales-hero.jpg"
+  },
+  "og_images": {
+    "en": "images/turkey-secure-payment-system-property-sales-og-en.jpg",
+    "ar": "images/turkey-secure-payment-system-property-sales-og-ar.jpg",
+    "ru": "images/turkey-secure-payment-system-property-sales-og-ru.jpg"
+  }
+}

@@ -14,6 +14,7 @@ Rules for picking the next topic:
 
 - [x] citizenship — Turkish Citizenship by Investment in 2026: the $400,000 property route — *turkish citizenship by investment 2026* (2026-11-24)
 - [ ] sell — Selling property in Turkey as a foreigner in 2026: taxes, documents, the Secure Payment System — *sell property in Turkey as a foreigner*
+- [x] sell — (news) Turkey's Secure Payment System for property sales, mandatory from 1 December 2026 — *Turkey secure payment system property sales* (2026-11-25)
 - [ ] apartment — Buying an apartment in Istanbul as a foreigner: 2026 step-by-step guide — *buy apartment in Istanbul as a foreigner*
 - [ ] land — Buying land in Istanbul: zoning (imar), title types and red flags — *buy land in Istanbul*
 - [x] citizenship — Turkey's new $150,000 investor residence permit vs $200,000 property residence vs citizenship — *Turkey residence permit 150000* (2026-11-24)
