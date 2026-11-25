@@ -32,7 +32,7 @@
 .lb-tile:hover .lb-go { transform: translateX(4px); transition: transform .2s; }
 @media (max-width: 980px) { .lb-band-in { grid-template-columns: 1fr; } .lb-tile { padding: 26px 22px; } .lb-tile + .lb-tile { border-left: 0; border-top: 1px solid #333; } }
 .lb-slide {
-  position: fixed; right: 20px; bottom: 20px; z-index: 97; width: 340px; max-width: calc(100vw - 40px); background: #fff; color: #171717;
+  position: fixed; right: 20px; bottom: 96px; z-index: 97; width: 340px; max-width: calc(100vw - 40px); background: #fff; color: #171717;
   border-top: 5px solid #e70000; box-shadow: 0 18px 50px rgba(0,0,0,.25); padding: 20px 20px 18px; font-family: 'Roboto Condensed', sans-serif;
   transform: translateY(140%); transition: transform .45s ease; 
 }
@@ -83,3 +83,39 @@ footer a.logo .li-logo-by { color: #fff; }
 @media (max-width: 860px) { .li-trust-in { grid-template-columns: minmax(0, 1fr); gap: 16px; } }
 .li-trust-mini { display: flex; gap: 6px; align-items: center; font-size: .8rem; line-height: 1.4; margin: 10px 0 0; color: inherit; opacity: .85; }
 .li-trust-mini svg { width: 16px; height: 16px; flex: none; }
+
+/* WhatsApp floating button */
+.li-wa-fab { position: fixed; right: 20px; bottom: 20px; z-index: 98; width: 60px; height: 60px; border-radius: 50%; background: #25d366; display: grid; place-items: center; box-shadow: 0 8px 24px rgba(0,0,0,.25); transition: transform .2s; }
+.li-wa-fab:hover { transform: scale(1.07); }
+[dir="rtl"] .li-wa-fab { right: auto; left: 20px; }
+[dir="rtl"] .lb-slide { bottom: 96px; }
+@media (max-width: 768px) { .li-wa-fab { right: 12px; bottom: 12px; width: 54px; height: 54px; } [dir="rtl"] .li-wa-fab { left: 12px; } body.lb-has-sticky .li-wa-fab { display: none; } }
+/* Homepage: language switcher, social links, process + FAQ */
+.nav-links .li-langs { display: inline-flex; gap: 2px; align-items: center; margin: 0 6px; }
+.li-langs a { padding: 4px 7px !important; font-size: .78rem !important; letter-spacing: .06em; opacity: .75; }
+.li-langs a.on, .li-langs a:hover { opacity: 1; }
+#mobile-menu .li-langs-m { display: flex; gap: 18px; justify-content: center; }
+.social-links a { display: inline-flex; align-items: center; }
+#li-process { background: #f6f5f2; color: #171717; padding: 90px 6%; }
+#li-process .lp-in { max-width: 1200px; margin: 0 auto; }
+#li-process .lp-kick { color: #e70000; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; font-size: .8rem; }
+#li-process h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); margin: 10px 0 34px; text-transform: uppercase; line-height: 1.05; }
+.lp-steps { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 18px; counter-reset: lp; margin-bottom: 70px; }
+.lp-step { background: #fff; padding: 26px 22px; border-top: 4px solid #e70000; counter-increment: lp; }
+.lp-step:before { content: "0" counter(lp); display: block; font-size: 2rem; font-weight: 900; color: #e70000; margin-bottom: 10px; }
+.lp-step h3 { font-size: 1.1rem; margin: 0 0 8px; text-transform: uppercase; }
+.lp-step p { font-size: .97rem; line-height: 1.5; color: #444; margin: 0; }
+.lp-faq { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 28px; align-items: start; }
+.lp-faq details { background: #fff; padding: 18px 22px; border-left: 3px solid #e70000; }
+.lp-faq summary { cursor: pointer; font-weight: 700; font-size: 1.02rem; list-style: none; }
+.lp-faq summary::-webkit-details-marker { display: none; }
+.lp-faq summary:after { content: "+"; float: right; color: #e70000; font-weight: 900; }
+.lp-faq details[open] summary:after { content: "–"; }
+.lp-faq p { margin: 12px 0 0; color: #444; line-height: 1.55; font-size: .97rem; }
+.lp-faq a, .lp-cta a { color: #e70000; }
+.lp-cta { margin-top: 36px; display: flex; gap: 14px; flex-wrap: wrap; }
+.lp-cta a { display: inline-block; padding: 14px 24px; font-weight: 700; text-decoration: none; text-transform: uppercase; letter-spacing: .06em; font-size: .9rem; }
+.lp-cta .lp-wa { background: #25d366; color: #fff; }
+.lp-cta .lp-val { background: #171717; color: #fff; }
+@media (max-width: 900px) { .lp-steps { grid-template-columns: 1fr 1fr; } .lp-faq { grid-template-columns: 1fr; } #li-process { padding: 64px 6%; } }
+@media (max-width: 520px) { .lp-steps { grid-template-columns: 1fr; } }

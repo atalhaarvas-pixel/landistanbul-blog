@@ -248,6 +248,26 @@ try {
         $html = str_replace('"parentOrganization": { "@type": "Organization", "name": "Math Investment" },', '"parentOrganization": { "@type": "Organization", "name": "Math Investment", "alternateName": "Mat Yatırım", "taxID": "0850564655" }, "taxID": "0850564655",', $html);
         $html = str_replace('"alternateName": "LAND ISTANBUL",', '"alternateName": "Land Istanbul by Math Investment",', $html);
         $html = preg_replace('~"address": \{\s*"@type": "PostalAddress",\s*"addressLocality": "Istanbul",\s*"addressCountry": "TR"\s*\},~', '"address": { "@type": "PostalAddress", "streetAddress": "Kavaklı, Olimpiyat Cd. No:58", "addressLocality": "Beylikdüzü", "addressRegion": "İstanbul", "postalCode": "34520", "addressCountry": "TR" }, "telephone": "+905468916349", "email": "info@landistanbul.com", "hasMap": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x14caa181dce03687:0xc7290e74b462666c", "parentOrganization": { "@type": "Organization", "name": "Math Investment", "alternateName": "Mat Yatırım", "taxID": "0850564655" }, "taxID": "0850564655",', $html);
+        // Real social profiles (footer + schema sameAs).
+        $social = '<div class="social-links">'
+            . '<a href="https://www.instagram.com/mathinvestment/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>'
+            . '<a href="https://www.tiktok.com/@land.istanbul" target="_blank" rel="noopener" aria-label="TikTok">TT</a>'
+            . '<a href="https://www.youtube.com/channel/UCVakVBqWVqEAEUuf-Dw5VUg" target="_blank" rel="noopener" aria-label="YouTube">YT</a>'
+            . '<a href="https://wa.me/905468916349" target="_blank" rel="noopener" aria-label="WhatsApp" data-track="whatsapp">WA</a></div>';
+        $html = preg_replace('~<div class="social-links">.*?</div>~s', $social, $html);
+        $html = preg_replace('~"sameAs":\s*\[[^\]]*\]~', '"sameAs": ["https://www.instagram.com/mathinvestment/", "https://www.tiktok.com/@land.istanbul", "https://www.youtube.com/channel/UCVakVBqWVqEAEUuf-Dw5VUg"]', $html);
+        // Language switcher (EN homepage, Arabic buyers' hub, Russian blog).
+        if (strpos($html, 'li-langs') === false) {
+            $langs = '<span class="li-langs"><a class="on" href="/" hreflang="en">EN</a><a href="/buy-property-in-turkey/ar/" hreflang="ar" lang="ar">عربي</a><a href="/blog/ru/" hreflang="ru" lang="ru">RU</a></span>';
+            $html = preg_replace('~(<div class="nav-links">.*?)(<a href="#contact" class="nav-btn")~s', '$1' . $langs . "\n    " . '$2', $html, 1);
+            $html = preg_replace('~(<div id="mobile-menu">.*?)(</div>)~s', '$1  <div class="li-langs li-langs-m"><a href="/">EN</a><a href="/buy-property-in-turkey/ar/" lang="ar">عربي</a><a href="/blog/ru/" lang="ru">RU</a></div>' . "\n" . '$2', $html, 1);
+        }
+        // How we work + FAQ, before the contact section (replaced on every run so edits ship).
+        $proc = @file_get_contents($repo . '/system/home-process.html');
+        if ($proc) {
+            $html = preg_replace('~<!--LI-PROCESS-->.*?<!--/LI-PROCESS-->\s*~s', '', $html);
+            $html = preg_replace_callback('~(?:<!-- [^>]*-->\s*)?<section id="contact">~', function ($m) use ($proc) { return trim($proc) . "\n\n  " . $m[0]; }, $html, 1);
+        }
         foreach (['css', 'js'] as $ext) {
             $v = substr(md5_file($repo . '/system/site-boost.' . $ext), 0, 10);
             $html = preg_replace('~/site-boost\.' . $ext . '\?v=[A-Za-z0-9]+~', '/site-boost.' . $ext . '?v=' . $v, $html);
