@@ -104,5 +104,34 @@
   }
 
   // 5. Hide placeholder social links that go nowhere
+
+  /* Licence and tax ID: strip on the homepage, one line under every lead form. */
+  var TRUST = {
+    en: ['Licensed real estate broker', 'Real estate trade licence (Taşınmaz Ticareti Yetki Belgesi) No. 3408945, Turkish Ministry of Trade', 'Registered company', 'Math Investment (Mat Yatırım) · Tax ID 0850564655', 'Office in Istanbul', 'Licensed broker · Licence No. 3408945 · Tax ID 0850564655'],
+    ar: ['وسيط عقاري مرخّص', 'رخصة تجارة العقارات (Taşınmaz Ticareti Yetki Belgesi) رقم 3408945، وزارة التجارة التركية', 'شركة مسجّلة', 'Math Investment (Mat Yatırım) · الرقم الضريبي 0850564655', 'مكتبنا في إسطنبول', 'وسيط مرخّص · رخصة رقم 3408945 · الرقم الضريبي 0850564655'],
+    ru: ['Лицензированный агент по недвижимости', 'Лицензия на торговлю недвижимостью (Taşınmaz Ticareti Yetki Belgesi) № 3408945, Министерство торговли Турции', 'Зарегистрированная компания', 'Math Investment (Mat Yatırım) · налоговый номер 0850564655', 'Офис в Стамбуле', 'Лицензированный агент · Лицензия № 3408945 · Налоговый номер 0850564655']
+  };
+  var tr = TRUST[lang] || TRUST.en;
+  var SHIELD = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>';
+  if (isHome && !document.querySelector('.li-trust')) {
+    var ts = document.createElement('section');
+    ts.className = 'li-trust li-trust-home';
+    ts.innerHTML = '<div class="li-trust-in">' +
+      '<div class="li-trust-item"><i>' + SHIELD + '</i><div><b>' + tr[0] + '</b><span>' + tr[1] + '</span></div></div>' +
+      '<div class="li-trust-item"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 13h6M10 17h6"/></svg></i><div><b>' + tr[2] + '</b><span>' + tr[3] + '</span></div></div>' +
+      '<div class="li-trust-item"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></i><div><b>' + tr[4] + '</b><span><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x14caa181dce03687:0xc7290e74b462666c" target="_blank" rel="noopener">Kavaklı, Olimpiyat Cd. No:58, 34520 Beylikdüzü / İstanbul</a></span></div></div></div>';
+    var hero = document.getElementById('home');
+    var bandEl = document.querySelector('.lb-band');
+    if (bandEl && bandEl.parentNode) bandEl.parentNode.insertBefore(ts, bandEl);
+    else if (hero && hero.parentNode) hero.parentNode.insertBefore(ts, hero.nextSibling);
+  }
+  document.querySelectorAll('.li-lead-form, #hero-form, #contact-form').forEach(function (f) {
+    if (f.querySelector('.li-trust-mini')) return;
+    var m = document.createElement('p');
+    m.className = 'li-trust-mini';
+    m.innerHTML = SHIELD + '<span>' + tr[5] + '</span>';
+    f.appendChild(m);
+  });
+
   document.querySelectorAll('.social-links a[href="#"]').forEach(function (a) { a.style.display = 'none'; });
 })();

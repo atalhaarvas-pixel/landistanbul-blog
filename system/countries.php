@@ -446,7 +446,7 @@ function build_country_page_html($slug, $lang) {
     $schema = ['@context' => 'https://schema.org', '@graph' => [
         ['@type' => 'Service', 'name' => $title, 'serviceType' => 'Real estate consultancy for international buyers', 'url' => $url, 'inLanguage' => $lang,
          'areaServed' => ['@type' => 'Country', 'name' => $c['en']['name'] === 'the UAE' ? 'United Arab Emirates' : ($c['en']['name'] === 'the UK' ? 'United Kingdom' : $c['en']['name'])],
-         'provider' => ['@type' => 'RealEstateAgent', 'name' => 'Land Istanbul', 'url' => SITE_URL . '/', 'telephone' => '+905468916349', 'email' => 'info@landistanbul.com', 'parentOrganization' => ['@type' => 'Organization', 'name' => 'Math Investment'], 'address' => ['@type' => 'PostalAddress', 'streetAddress' => 'Kavaklı, Olimpiyat Cd. No:58', 'addressLocality' => 'Beylikdüzü', 'addressRegion' => 'İstanbul', 'postalCode' => '34520', 'addressCountry' => 'TR']]],
+         'provider' => ['@type' => 'RealEstateAgent', 'name' => 'Land Istanbul', 'url' => SITE_URL . '/', 'telephone' => '+905468916349', 'email' => 'info@landistanbul.com', 'parentOrganization' => ['@type' => 'Organization', 'name' => 'Math Investment', 'alternateName' => 'Mat Yatırım', 'taxID' => '0850564655'], 'address' => ['@type' => 'PostalAddress', 'streetAddress' => 'Kavaklı, Olimpiyat Cd. No:58', 'addressLocality' => 'Beylikdüzü', 'addressRegion' => 'İstanbul', 'postalCode' => '34520', 'addressCountry' => 'TR']]],
         ['@type' => 'FAQPage', 'mainEntity' => $faqSchema],
         ['@type' => 'BreadcrumbList', 'itemListElement' => [
             ['@type' => 'ListItem', 'position' => 1, 'name' => 'Land Istanbul', 'item' => SITE_URL . '/'],

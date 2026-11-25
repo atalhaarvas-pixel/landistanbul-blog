@@ -6,7 +6,21 @@
 
 function tc_logo() { return '<span class="li-logo-main">LAND ISTANBUL</span><span class="li-logo-by">by Math Investment</span>'; }
 function tc_footer_line() {
-    return '<p class="li-foot-line">© 2026 Land Istanbul by Math Investment · <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x14caa181dce03687:0xc7290e74b462666c" target="_blank" rel="noopener">Kavaklı, Olimpiyat Cd. No:58, 34520 Beylikdüzü / İstanbul</a></p>';
+    return '<p class="li-foot-line">© 2026 Land Istanbul by Math Investment (Mat Yatırım) · Licence No. 3408945 · Tax ID 0850564655<br><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x14caa181dce03687:0xc7290e74b462666c" target="_blank" rel="noopener">Kavaklı, Olimpiyat Cd. No:58, 34520 Beylikdüzü / İstanbul</a></p>';
+}
+function tc_trust($lang) {
+    $all = [
+        'en' => ['Licensed real estate broker', 'Real estate trade licence (Taşınmaz Ticareti Yetki Belgesi) No. 3408945, Turkish Ministry of Trade', 'Registered company', 'Math Investment (Mat Yatırım) · Tax ID 0850564655', 'Office in Istanbul'],
+        'ar' => ['وسيط عقاري مرخّص', 'رخصة تجارة العقارات (Taşınmaz Ticareti Yetki Belgesi) رقم 3408945، وزارة التجارة التركية', 'شركة مسجّلة', 'Math Investment (Mat Yatırım) · الرقم الضريبي 0850564655', 'مكتبنا في إسطنبول'],
+        'ru' => ['Лицензированный агент по недвижимости', 'Лицензия на торговлю недвижимостью (Taşınmaz Ticareti Yetki Belgesi) № 3408945, Министерство торговли Турции', 'Зарегистрированная компания', 'Math Investment (Mat Yatırım) · налоговый номер 0850564655', 'Офис в Стамбуле'],
+    ];
+    $t = $all[$lang] ?? $all['en'];
+    $h = function ($s) { return htmlspecialchars($s, ENT_QUOTES, 'UTF-8'); };
+    return '<section class="li-trust" aria-label="' . $h($t[0]) . '"><div class="li-trust-in">'
+        . '<div class="li-trust-item"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></i><div><b>' . $h($t[0]) . '</b><span>' . $h($t[1]) . '</span></div></div>'
+        . '<div class="li-trust-item"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 13h6M10 17h6"/></svg></i><div><b>' . $h($t[2]) . '</b><span>' . $h($t[3]) . '</span></div></div>'
+        . '<div class="li-trust-item"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></i><div><b>' . $h($t[4]) . '</b><span><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x14caa181dce03687:0xc7290e74b462666c" target="_blank" rel="noopener">Kavaklı, Olimpiyat Cd. No:58, 34520 Beylikdüzü / İstanbul</a></span></div></div>'
+        . '</div></section>';
 }
 function tc_asset($name) {
     $f = __DIR__ . '/' . $name;
@@ -375,7 +389,7 @@ function build_taxcalc_page_html($lang, array $data) {
 
     // cta
     $o .= '<section class="cta"><h2>' . $h($t['cta_h']) . '</h2><p>' . $h($t['cta_p']) . '</p><div class="btns"><a class="btn btn-red" href="' . $val . '">' . $h($t['btn_val']) . '</a><a class="btn btn-line btn-ghost" href="' . $h($wa) . '" target="_blank" rel="noopener" data-track="whatsapp">' . $h($t['cta_wa']) . "</a></div></section>\n";
-    $o .= '<footer><a class="logo" href="/" aria-label="Land Istanbul by Math Investment">' . tc_logo() . '</a>' . tc_footer_line() . '</footer>' . "\n";
+    $o .= tc_trust($lang) . '<footer><a class="logo" href="/" aria-label="Land Istanbul by Math Investment">' . tc_logo() . '</a>' . tc_footer_line() . '</footer>' . "\n";
 
     $cfg = $sub + ['t' => $t['js'], 'dateLocale' => $t['date_locale'], 'numLocale' => $t['num_locale'], 'yours' => $t['yours'], 'copy' => $t['btn_copy'], 'copied' => $t['copied']];
     $o .= '<script>var TC=' . json_encode($cfg, $J) . ";</script>\n<script>" . tc_js() . "</script>\n";

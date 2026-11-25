@@ -260,6 +260,30 @@ function blocks_to_html(array $blocks) {
 const LI_ADDRESS = 'Kavaklı, Olimpiyat Cd. No:58, 34520 Beylikdüzü / İstanbul';
 const LI_MAPS_URL = 'https://www.google.com/maps/place//data=!4m2!3m1!1s0x14caa181dce03687:0xc7290e74b462666c';
 
+const LI_LICENCE_NO = '3408945';
+const LI_TAX_ID = '0850564655';
+
+/** Trust strings per language. */
+function li_trust_t($lang) {
+    $all = [
+        'en' => ['Licensed real estate broker', 'Real estate trade licence (Taşınmaz Ticareti Yetki Belgesi) No. 3408945, Turkish Ministry of Trade', 'Registered company', 'Math Investment (Mat Yatırım) · Tax ID 0850564655', 'Office in Istanbul'],
+        'ar' => ['وسيط عقاري مرخّص', 'رخصة تجارة العقارات (Taşınmaz Ticareti Yetki Belgesi) رقم 3408945، وزارة التجارة التركية', 'شركة مسجّلة', 'Math Investment (Mat Yatırım) · الرقم الضريبي 0850564655', 'مكتبنا في إسطنبول'],
+        'ru' => ['Лицензированный агент по недвижимости', 'Лицензия на торговлю недвижимостью (Taşınmaz Ticareti Yetki Belgesi) № 3408945, Министерство торговли Турции', 'Зарегистрированная компания', 'Math Investment (Mat Yatırım) · налоговый номер 0850564655', 'Офис в Стамбуле'],
+    ];
+    return $all[$lang] ?? $all['en'];
+}
+
+/** Licence, tax ID and office strip, shown above the footer on every generated page. */
+function li_trust_html($lang = 'en') {
+    $t = li_trust_t($lang);
+    $h = function ($s) { return htmlspecialchars($s, ENT_QUOTES, 'UTF-8'); };
+    return '<section class="li-trust" aria-label="' . $h($t[0]) . '"><div class="li-trust-in">'
+        . '<div class="li-trust-item"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></i><div><b>' . $h($t[0]) . '</b><span>' . $h($t[1]) . '</span></div></div>'
+        . '<div class="li-trust-item"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 13h6M10 17h6"/></svg></i><div><b>' . $h($t[2]) . '</b><span>' . $h($t[3]) . '</span></div></div>'
+        . '<div class="li-trust-item"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></i><div><b>' . $h($t[4]) . '</b><span><a href="' . LI_MAPS_URL . '" target="_blank" rel="noopener">' . $h(LI_ADDRESS) . '</a></span></div></div>'
+        . '</div></section>';
+}
+
 /** Logo lockup: Land Istanbul by Math Investment. */
 function li_logo_html() {
     return '<span class="li-logo-main">LAND ISTANBUL</span><span class="li-logo-by">by Math Investment</span>';
@@ -267,7 +291,7 @@ function li_logo_html() {
 
 /** Footer line with the company and office address. */
 function li_footer_line() {
-    return '<p class="li-foot-line">© 2026 Land Istanbul by Math Investment · <a href="' . LI_MAPS_URL . '" target="_blank" rel="noopener">' . htmlspecialchars(LI_ADDRESS) . '</a></p>';
+    return '<p class="li-foot-line">© 2026 Land Istanbul by Math Investment (Mat Yatırım) · Licence No. ' . LI_LICENCE_NO . ' · Tax ID ' . LI_TAX_ID . '<br><a href="' . LI_MAPS_URL . '" target="_blank" rel="noopener">' . htmlspecialchars(LI_ADDRESS) . '</a></p>';
 }
 
 /** Asset URL with a content hash, so browsers and caches fetch the new file after every change. */
@@ -290,6 +314,7 @@ function li_nav($lang) {
 
 function page_head($title, $description, $canonical, $ogImage, array $opts = []) {
     $lang = $opts['lang'] ?? 'en';
+    $GLOBALS['LI_PAGE_LANG'] = $lang;
     $t = li_t($lang);
     $alternates = $opts['alternates'] ?? [];
     $type = $opts['type'] ?? 'article';
@@ -365,7 +390,7 @@ function page_head($title, $description, $canonical, $ogImage, array $opts = [])
 }
 
 function page_footer() {
-    return '<footer><a class="logo" href="/" aria-label="Land Istanbul by Math Investment">' . li_logo_html() . '</a>' . li_footer_line() . '</footer><script src="' . li_asset('/blog-lead.js') . '" defer></script><script src="' . li_asset('/site-boost.js') . '" defer></script></body></html>';
+    return li_trust_html($GLOBALS['LI_PAGE_LANG'] ?? 'en') . '<footer><a class="logo" href="/" aria-label="Land Istanbul by Math Investment">' . li_logo_html() . '</a>' . li_footer_line() . '</footer><script src="' . li_asset('/blog-lead.js') . '" defer></script><script src="' . li_asset('/site-boost.js') . '" defer></script></body></html>';
 }
 
 /** Lead capture box: segment-specific copy, short form posting to /mail.php, WhatsApp shortcut. */
