@@ -2,7 +2,7 @@
 Cover illustration styles for Land Istanbul posts (used by tools/make_cover.py).
 
 Each style draws an original flat illustration at 1600x900 (rendered at 2x and downscaled for smooth edges).
-Styles: passport, facade, isometric, aerial_land, chart, window, coast, keys (plus the Bosphorus "skyline" scene
+Styles: passport, facade, isometric, aerial_land, chart, window, coast, keys, route (plus the Bosphorus "skyline" scene
 that lives in make_cover.py). Every style accepts any palette from PAL.
 """
 import math
@@ -622,6 +622,119 @@ def style_keys(p, rng, W=1600, H=900):
     return finish(base.convert("RGB"), W, H)
 
 
+# ───────────────────────── 9. route: from abroad to an Istanbul home ─────────────────────────
+
+def style_route(p, rng, W=1600, H=900):
+    """Dotted map, a dashed flight arc from a home-country pin to an Istanbul home card (country guides)."""
+    img = new(W, H, p["bg"])
+    d = ImageDraw.Draw(img)
+    vgrad(d, [0, 0, W * S, H * S], p["bg"], p["bg2"])
+    dark = sum(p["bg"]) < 400
+    ink_soft = p["light"] if dark else p["ink"]
+    # dotted "land masses": dots are denser and stronger inside a few random blobs
+    blobs = [(rng.uniform(0.05, 0.95) * W, rng.uniform(0.1, 0.9) * H, rng.uniform(150, 340), rng.uniform(90, 220)) for _ in range(7)]
+    step = 26
+    for y in range(step, H, step):
+        for x in range(step + (y // step % 2) * (step // 2), W, step):
+            inside = any(((x - bx) / bw) ** 2 + ((y - by) / bh) ** 2 < 1 for bx, by, bw, bh in blobs)
+            r = 4.2 if inside else 2.2
+            col = mix(p["bg"], ink_soft, 0.22 if inside else 0.07)
+            d.ellipse([(x - r) * S, (y - r) * S, (x + r) * S, (y + r) * S], fill=col)
+    base = img.convert("RGBA")
+    flip = rng.random() < 0.5
+    dest = (430, 380) if not flip else (1170, 380)
+    orig = (1260, 690) if not flip else (340, 690)
+    # dashed arc (quadratic bezier) from origin to destination
+    ctrl = ((dest[0] + orig[0]) / 2, min(dest[1], orig[1]) - 330)
+    pts = []
+    for k in range(0, 101):
+        t = k / 100
+        x = (1 - t) ** 2 * orig[0] + 2 * (1 - t) * t * ctrl[0] + t ** 2 * dest[0]
+        y = (1 - t) ** 2 * orig[1] + 2 * (1 - t) * t * ctrl[1] + t ** 2 * dest[1]
+        pts.append((x, y))
+    lay = Image.new("RGBA", base.size, (0, 0, 0, 0))
+    ld = ImageDraw.Draw(lay)
+    arc_col = p["light"] if dark else p["ink"]
+    for k in range(4, 92, 4):
+        a, b = pts[k], pts[k + 2]
+        ld.line([(a[0] * S, a[1] * S), (b[0] * S, b[1] * S)], fill=arc_col + (230,), width=7 * S)
+    base.alpha_composite(lay)
+    # plane on the arc, pointing along the tangent
+    t_idx = 55
+    (x1, y1), (x2, y2) = pts[t_idx - 1], pts[t_idx + 1]
+    ang = math.degrees(math.atan2(-(y2 - y1), x2 - x1))
+    pl = Image.new("RGBA", (260 * S, 260 * S), (0, 0, 0, 0))
+    pd = ImageDraw.Draw(pl)
+    c = 130 * S
+    body = p["light"] if not dark else p["a"]
+    if sum(body) > 690 and not dark:
+        body = p["c"]
+    pd.rounded_rectangle([c - 100 * S, c - 14 * S, c + 100 * S, c + 14 * S], radius=14 * S, fill=body)
+    pd.polygon([(c + 100 * S, c - 14 * S), (c + 128 * S, c), (c + 100 * S, c + 14 * S)], fill=body)
+    pd.polygon([(c + 10 * S, c - 12 * S), (c - 40 * S, c - 100 * S), (c - 60 * S, c - 100 * S), (c - 30 * S, c - 12 * S)], fill=body)
+    pd.polygon([(c + 10 * S, c + 12 * S), (c - 40 * S, c + 100 * S), (c - 60 * S, c + 100 * S), (c - 30 * S, c + 12 * S)], fill=body)
+    pd.polygon([(c - 80 * S, c - 10 * S), (c - 104 * S, c - 46 * S), (c - 116 * S, c - 46 * S), (c - 100 * S, c - 8 * S)], fill=body)
+    pd.polygon([(c - 80 * S, c + 10 * S), (c - 104 * S, c + 46 * S), (c - 116 * S, c + 46 * S), (c - 100 * S, c + 8 * S)], fill=body)
+    pd.rectangle([c + 70 * S, c - 6 * S, c + 92 * S, c + 6 * S], fill=RED)
+    pl = pl.rotate(ang, resample=Image.BICUBIC, expand=True)
+    full = Image.new("RGBA", base.size, (0, 0, 0, 0))
+    px, py = pts[t_idx]
+    full.paste(pl, (int(px * S - pl.width / 2), int(py * S - pl.height / 2)), pl)
+    soft_shadow(base, full, (10, 16), 12, 70)
+    # origin pin (ring) with a small suitcase
+    d2 = ImageDraw.Draw(base)
+    ox, oy = orig
+    for r, col in ((46, mix(p["bg"], arc_col, 0.25)), (30, p["a"]), (12, p["light"])):
+        d2.ellipse([(ox - r) * S, (oy - r) * S, (ox + r) * S, (oy + r) * S], fill=col)
+    sx = ox + (80 if not flip else -200)
+    lay = Image.new("RGBA", base.size, (0, 0, 0, 0))
+    sd = ImageDraw.Draw(lay)
+    case_col = rng.choice([p["c"], p["b"], (128, 18, 34), (24, 70, 92)])
+    rrect(sd, [sx * S, (oy - 40) * S, (sx + 120) * S, (oy + 70) * S], 14 * S, fill=case_col)
+    rrect(sd, [(sx + 36) * S, (oy - 64) * S, (sx + 84) * S, (oy - 36) * S], 10 * S, outline=shade(case_col, 0.7), width=8 * S)
+    for k in (30, 90):
+        sd.rectangle([(sx + k - 4) * S, (oy - 40) * S, (sx + k + 4) * S, (oy + 70) * S], fill=shade(case_col, 0.75))
+    soft_shadow(base, lay, (10, 14), 14, 80)
+    # destination: home card with an Istanbul silhouette and a red pin
+    cw, ch = 420, 330
+    cx0 = dest[0] - cw / 2
+    cy0 = dest[1] + 40
+    lay = Image.new("RGBA", base.size, (0, 0, 0, 0))
+    cd = ImageDraw.Draw(lay)
+    rrect(cd, [cx0 * S, cy0 * S, (cx0 + cw) * S, (cy0 + ch) * S], 30 * S, fill=p["light"])
+    sky = mix(p["light"], p["b"], 0.35)
+    rrect(cd, [(cx0 + 24) * S, (cy0 + 24) * S, (cx0 + cw - 24) * S, (cy0 + ch - 90) * S], 18 * S, fill=sky)
+    sil = mix(p["c"], p["ink"], 0.35)
+    gy = cy0 + ch - 90
+    # dome and minarets
+    mx = cx0 + cw * 0.36
+    cd.pieslice([(mx - 70) * S, (gy - 120) * S, (mx + 70) * S, (gy + 20) * S], 180, 360, fill=sil)
+    cd.rectangle([(mx - 80) * S, (gy - 50) * S, (mx + 80) * S, gy * S], fill=sil)
+    for k in (-110, 110):
+        cd.rectangle([(mx + k - 6) * S, (gy - 150) * S, (mx + k + 6) * S, gy * S], fill=sil)
+        cd.polygon([((mx + k - 8) * S, (gy - 150) * S), ((mx + k + 8) * S, (gy - 150) * S), ((mx + k) * S, (gy - 180) * S)], fill=sil)
+    # house
+    hx = cx0 + cw * 0.74
+    hcol = p["a"]
+    cd.rectangle([(hx - 56) * S, (gy - 80) * S, (hx + 56) * S, gy * S], fill=hcol)
+    cd.polygon([((hx - 72) * S, (gy - 78) * S), (hx * S, (gy - 140) * S), ((hx + 72) * S, (gy - 78) * S)], fill=RED)
+    cd.rectangle([(hx - 14) * S, (gy - 44) * S, (hx + 14) * S, gy * S], fill=shade(hcol, 0.6))
+    for k in (-36, 36):
+        cd.rectangle([(hx + k - 10) * S, (gy - 66) * S, (hx + k + 10) * S, (gy - 48) * S], fill=p["light"])
+    # text bars
+    for i, wf in enumerate((0.62, 0.4)):
+        yy = cy0 + ch - 70 + i * 30
+        rrect(cd, [(cx0 + 30) * S, yy * S, (cx0 + 30 + (cw - 60) * wf) * S, (yy + 14) * S], 7 * S, fill=mix(p["light"], p["ink"], 0.18 + 0.1 * i))
+    soft_shadow(base, lay, (16, 22), 20, 100)
+    # red map pin above the card
+    d3 = ImageDraw.Draw(base)
+    px, py, pr = dest[0], dest[1] - 30, 40
+    d3.polygon([((px - pr * 0.82) * S, (py + pr * 0.45) * S), ((px + pr * 0.82) * S, (py + pr * 0.45) * S), (px * S, (py + pr * 2.1) * S)], fill=RED)
+    d3.ellipse([(px - pr) * S, (py - pr) * S, (px + pr) * S, (py + pr) * S], fill=RED)
+    d3.ellipse([(px - pr * 0.4) * S, (py - pr * 0.4) * S, (px + pr * 0.4) * S, (py + pr * 0.4) * S], fill=p["light"])
+    return finish(base.convert("RGB"), W, H)
+
+
 STYLES = {
     "passport": style_passport,
     "facade": style_facade,
@@ -631,4 +744,5 @@ STYLES = {
     "window": style_window,
     "coast": style_coast,
     "keys": style_keys,
+    "route": style_route,
 }

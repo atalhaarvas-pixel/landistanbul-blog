@@ -301,7 +301,7 @@ function lc_countries() {
             'code' => 'IQ', 'langs' => ['en', 'ar'],
             'en' => [
                 'name' => 'Iraq', 'from' => 'Iraq', 'buyers' => 'Iraq',
-                'visa' => 'A visa is required: Iraq was not included in the visa waivers Turkey granted to Gulf countries. Apply before you travel.',
+                'visa' => 'It depends on age. With an ordinary passport, Iraqis under 15 and over 50 need no visa for up to 90 days in any 180-day period (since 1 September 2024). Ages 15 to 50 need a visa: a one-month, single-entry e-Visa if you hold a valid Schengen, US, UK or Irish visa or residence permit, otherwise a visa from a Turkish embassy or consulate.',
                 'buy' => 'Yes. Iraqi citizens can buy homes, commercial units and land, within the limits that apply to all foreigners.',
                 'dual' => 'Iraq recognises dual nationality (Constitution, Article 18), although holders of senior state posts may not keep a second nationality. Turkish citizenship by investment is therefore a realistic option for most Iraqi families.',
                 'money' => 'Payments for citizenship must arrive through a bank as foreign currency with a foreign-exchange certificate (DAB). Cash is not accepted, so plan the transfer route with your bank early.',
@@ -312,11 +312,12 @@ function lc_countries() {
                 ],
                 'faq' => [
                     ['Can Iraqis keep Iraqi citizenship after becoming Turkish citizens?', 'Iraq recognises dual nationality, so most Iraqis can hold both. People in senior state posts are an exception under the constitution.'],
-                    ['Do Iraqis need a visa to view property?', 'Yes. Iraq is not on Turkey\'s visa-exemption list, so apply for a visa before you travel. After you buy, a residence permit makes repeat visits easier.'],
+                    ['Do Iraqis need a visa to view property?', 'Iraqis aged 15 to 50 do. Children under 15 and adults over 50 with ordinary passports can visit visa-free for up to 90 days in any 180-day period. If you hold a valid Schengen, US, UK or Irish visa or residence permit you can apply for an e-Visa; otherwise apply at a Turkish mission. You can also buy without travelling, through a power of attorney.'],
                     ['Can I pay in cash?', 'No. Payments must go through a bank; for citizenship the currency is converted at a Turkish bank and documented with a DAB certificate.'],
                     ['Which areas do Iraqi families choose in Istanbul?', 'It depends on schools, budget and whether you want to live there or rent it out. Tell us your plans and we will shortlist areas with the reasons.'],
                 ],
                 'sources' => [
+                    ['Turkish Ministry of Foreign Affairs: Visa information for foreigners (Iraq: under 15 and over 50 visa-free; e-Visa conditions)', 'https://www.mfa.gov.tr/visa-information-for-foreigners.en.mfa?level=1'],
                     ['Shafaq News: Iraqis remain subject to visa procedures; top Arab visitors to Turkey', 'https://shafaq.com/en/World/Ignoring-Iraq-Turkey-issues-visa-waivers-to-six-states-including-US-KSA'],
                     ['Constitution of the Republic of Iraq 2005, Article 18 (UN Women)', 'https://constitutions.unwomen.org/en/countries/asia/iraq'],
                     ['Naharnet / AFP: Article 18 allows dual citizenship except for senior posts', 'https://naharnet.com/stories/90790-iraq-seeks-to-bar-top-officials-from-dual-citizenship/print'],
@@ -324,7 +325,7 @@ function lc_countries() {
             ],
             'ar' => [
                 'name' => 'العراق', 'from' => 'العراق', 'buyers' => 'العراق',
-                'visa' => 'التأشيرة مطلوبة: لم يُدرج العراق ضمن الإعفاءات التي منحتها تركيا لدول الخليج، فقدّم طلبك قبل السفر.',
+                'visa' => 'يعتمد ذلك على العمر. حاملو الجوازات العادية من العراقيين دون 15 عاماً وفوق 50 عاماً لا يحتاجون إلى تأشيرة لإقامة حتى 90 يوماً خلال كل 180 يوماً (منذ 1 سبتمبر 2024). أما من تتراوح أعمارهم بين 15 و50 عاماً فيحتاجون إلى تأشيرة: تأشيرة إلكترونية لدخول واحد مدتها شهر إذا كنت تحمل تأشيرة أو إقامة سارية من دول شنغن أو الولايات المتحدة أو بريطانيا أو أيرلندا، وإلا فتأشيرة من سفارة أو قنصلية تركية.',
                 'buy' => 'نعم. يمكن للمواطنين العراقيين شراء المنازل والوحدات التجارية والأراضي ضمن القيود التي تسري على جميع الأجانب.',
                 'dual' => 'يعترف العراق بالجنسية المزدوجة (الدستور، المادة 18)، باستثناء من يشغلون مناصب سيادية عليا. لذا فالجنسية التركية عبر الاستثمار خيار واقعي لمعظم العائلات العراقية.',
                 'money' => 'يجب أن تصل مدفوعات الجنسية عبر بنك بالعملة الأجنبية مع شهادة صرف العملة (DAB). لا يُقبل الدفع نقداً، فخطّط لمسار التحويل مع بنكك مبكراً.',
@@ -335,7 +336,7 @@ function lc_countries() {
                 ],
                 'faq' => [
                     ['هل يحتفظ العراقي بجنسيته بعد الحصول على الجنسية التركية؟', 'يعترف العراق بالجنسية المزدوجة، لذا يمكن لمعظم العراقيين حمل الجنسيتين. يُستثنى من يشغلون مناصب سيادية عليا وفق الدستور.'],
-                    ['هل يحتاج العراقيون إلى تأشيرة لمعاينة العقارات؟', 'نعم. العراق ليس ضمن قائمة الإعفاء التركية، فقدّم طلب التأشيرة قبل السفر. وبعد الشراء تسهّل الإقامة الزيارات المتكررة.'],
+                    ['هل يحتاج العراقيون إلى تأشيرة لمعاينة العقارات؟', 'من تتراوح أعمارهم بين 15 و50 عاماً نعم. أما الأطفال دون 15 عاماً والبالغون فوق 50 عاماً بجوازات عادية فيمكنهم الزيارة دون تأشيرة حتى 90 يوماً خلال كل 180 يوماً. إذا كنت تحمل تأشيرة أو إقامة سارية من شنغن أو الولايات المتحدة أو بريطانيا أو أيرلندا فيمكنك طلب تأشيرة إلكترونية، وإلا فقدّم طلبك لدى بعثة تركية. ويمكنك أيضاً الشراء دون سفر عبر وكالة رسمية.'],
                     ['هل يمكنني الدفع نقداً؟', 'لا. يجب أن تمر المدفوعات عبر بنك؛ وفي حالة الجنسية تُحوَّل العملة في بنك تركي وتُوثَّق بشهادة DAB.'],
                     ['ما المناطق التي تختارها العائلات العراقية في إسطنبول؟', 'يعتمد ذلك على المدارس والميزانية وهل تريد السكن أم التأجير. أخبرنا بخططك وسنرشح لك مناطق مع الأسباب.'],
                 ],

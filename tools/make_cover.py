@@ -440,6 +440,7 @@ SEGMENT_STYLES = {
     "general": ["chart", "skyline", "isometric", "coast", "facade"],
 }
 KEYWORD_STYLES = [
+    (("iraq", "pakistan", "saudi", "emirat", "uae", "qatar", "kuwait", "german", "british", "-uk-", "nationals", "expat", "from-abroad", "gulf"), "route"),
     (("antalya", "alanya", "bodrum", "fethiye", "mersin", "kas-", "kalkan", "coast", "beach", "seaside", "mediterranean", "aegean"), "coast"),
     (("land", "plot", "zoning", "imar", "field", "farm"), "aerial_land"),
     (("tax", "price", "market", "trend", "yield", "rent", "statistic", "cost", "fee"), "chart"),

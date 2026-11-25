@@ -65,3 +65,26 @@ vary inside the area. No invented prices: quote only sourced figures.
 - [ ] sell — Selling a holiday home in Antalya or Alanya from abroad — *sell property in Alanya*
 - [ ] land — Silivri and Çatalca: land and villa plots on Istanbul's western edge — *land for sale Silivri*
 - [ ] land — Sapanca and Kartepe: weekend-home land near Istanbul, zoning and limits for foreigners — *Sapanca land for sale*
+
+## Country guides
+
+Articles for buyers and owners from the site's target markets. Each must state the visa, dual-nationality and
+money-transfer facts for that nationality with sources, say which route usually makes sense, and link the matching
+country guide (`/buy-property-in-turkey/<country>/`, Arabic `/ar/` for saudi-arabia, uae, qatar, kuwait, iraq).
+If research shows a rule on a country guide has changed, update `lc_countries()` in `system/countries.php` the same day.
+
+- [x] apartment — Iraqis buying property in Turkey: visas by age, keeping Iraqi nationality, moving money, residence vs citizenship — *Iraqis buying property in Turkey* (2026-11-25)
+- [ ] citizenship — Turkish citizenship for Pakistani families: the dual-nationality question — *Turkish citizenship for Pakistani citizens*
+- [ ] apartment — Istanbul summer homes for Saudi families: areas, 90-day stays and residence — *Saudi buying property in Istanbul*
+- [ ] citizenship — Germans buying in Turkey after the 2024 dual-citizenship reform — *Germans buying property in Turkey*
+- [ ] apartment — British buyers in Turkey: the 90/180 rule, residence permits and UK tax — *British buying property in Turkey*
+- [ ] apartment — Kuwaiti families buying in Istanbul and Trabzon: what to check — *Kuwaiti buying property in Turkey*
+- [ ] apartment — Qatari buyers in Istanbul: second homes, title checks and renting out — *Qatari buying property in Istanbul*
+- [ ] citizenship — UAE residents buying in Turkey: why your passport, not Dubai, sets the rules — *buy property in Turkey from Dubai*
+- [ ] sell — Selling property in Turkey from Iraq: power of attorney, tax and getting the money out — *sell property in Turkey from Iraq*
+- [ ] sell — Selling property in Turkey from Germany: Turkish tax, German tax and the transfer — *sell property in Turkey from Germany*
+- [ ] citizenship — Pakistani families: residence permit first, citizenship later — *Turkey residence permit for Pakistani citizens*
+- [ ] land — Gulf investors buying land in Turkey: zoning, area limits and permissions — *Gulf investors buying land in Turkey*
+- [ ] apartment — Saudi and Gulf buyers in Trabzon and Bursa: rules, areas and pitfalls — *Saudis buying property in Trabzon*
+- [ ] sell — Blue Card (Mavi Kart) holders in Europe: buying and selling in Turkey like a citizen — *Blue Card holders property Turkey*
+- [ ] citizenship — Dutch buyers in Turkey: dual-nationality limits, residence and tax — *Dutch buying property in Turkey*
