@@ -4,6 +4,10 @@
  * Built by system/install.php from data/tax-data.json (Yİ-ÜFE, exemptions, non-wage brackets).
  */
 
+function tc_logo() { return '<span class="li-logo-main">LAND ISTANBUL</span><span class="li-logo-by">by Math Investment</span>'; }
+function tc_footer_line() {
+    return '<p class="li-foot-line">© 2026 Land Istanbul by Math Investment · <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x14caa181dce03687:0xc7290e74b462666c" target="_blank" rel="noopener">Kavaklı, Olimpiyat Cd. No:58, 34520 Beylikdüzü / İstanbul</a></p>';
+}
 function tc_asset($name) {
     $f = __DIR__ . '/' . $name;
     return '/' . $name . (is_file($f) ? '?v=' . substr(md5_file($f), 0, 10) : '');
@@ -302,7 +306,7 @@ function build_taxcalc_page_html($lang, array $data) {
     $links = [['/', $t['nav'][0], ''], ['/#services', $t['nav'][1], ''], [$val, $t['nav'][2], 'nav-val'], [tc_path($lang), $t['nav'][3], 'active'], [$blog, $t['nav'][4], ''], ['/#contact', $t['nav'][5], 'nav-btn']];
     $o .= '<div id="mobile-menu">';
     foreach ($links as $l) $o .= '<a href="' . $h($l[0]) . '">' . $h($l[1]) . '</a>';
-    $o .= "</div>\n<nav class=\"top\"><a class=\"logo\" href=\"/\">LAND ISTANBUL</a><div class=\"nav-links\">";
+    $o .= "</div>\n<nav class=\"top\"><a class=\"logo\" href=\"/\" aria-label=\"Land Istanbul by Math Investment\">" . tc_logo() . "</a><div class=\"nav-links\">";
     foreach ($links as $l) $o .= '<a href="' . $h($l[0]) . '"' . ($l[2] ? ' class="' . $l[2] . '"' : '') . '>' . $h($l[1]) . '</a>';
     $o .= "</div><button class=\"menu-toggle\" onclick=\"document.getElementById('mobile-menu').classList.toggle('open')\" aria-label=\"Menu\"><span></span><span></span><span></span></button></nav>\n";
 
@@ -371,7 +375,7 @@ function build_taxcalc_page_html($lang, array $data) {
 
     // cta
     $o .= '<section class="cta"><h2>' . $h($t['cta_h']) . '</h2><p>' . $h($t['cta_p']) . '</p><div class="btns"><a class="btn btn-red" href="' . $val . '">' . $h($t['btn_val']) . '</a><a class="btn btn-line btn-ghost" href="' . $h($wa) . '" target="_blank" rel="noopener" data-track="whatsapp">' . $h($t['cta_wa']) . "</a></div></section>\n";
-    $o .= '<footer><a class="logo" href="/">LAND ISTANBUL</a><p>© 2026 LAND ISTANBUL. ALL RIGHTS RESERVED.</p></footer>' . "\n";
+    $o .= '<footer><a class="logo" href="/" aria-label="Land Istanbul by Math Investment">' . tc_logo() . '</a>' . tc_footer_line() . '</footer>' . "\n";
 
     $cfg = $sub + ['t' => $t['js'], 'dateLocale' => $t['date_locale'], 'numLocale' => $t['num_locale'], 'yours' => $t['yours'], 'copy' => $t['btn_copy'], 'copied' => $t['copied']];
     $o .= '<script>var TC=' . json_encode($cfg, $J) . ";</script>\n<script>" . tc_js() . "</script>\n";

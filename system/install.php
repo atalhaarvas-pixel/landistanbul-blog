@@ -237,6 +237,14 @@ try {
         $sortJs = "grid.insertBefore(frag, grid.firstChild);\n      /*LI-SORT*/ var all = Array.prototype.slice.call(grid.children); var dt = function(c){ var e = c.querySelector('.blog-date'); var d = e ? Date.parse(e.textContent) : NaN; return isNaN(d) ? 0 : d; }; all.sort(function(x, y){ return dt(y) - dt(x); }); all.forEach(function(c){ grid.appendChild(c); }); grid.style.scrollBehavior = 'auto'; grid.scrollLeft = 0; requestAnimationFrame(function(){ grid.scrollLeft = 0; grid.style.scrollBehavior = ''; });";
         if (strpos($html, '/*LI-SORT*/') === false) $html = str_replace('grid.insertBefore(frag, grid.firstChild);', $sortJs, $html);
         $html = str_replace('>Tüm Yazılar →</a>', '>All Articles →</a>', $html);
+        // Brand: Land Istanbul by Math Investment (logo lockup, address, schema).
+        if (strpos($html, 'li-logo-by') === false) {
+            $html = preg_replace('~(<a class="logo"[^>]*>)\s*LAND ISTANBUL\s*(</a>)~', '$1<span class="li-logo-main">LAND ISTANBUL</span><span class="li-logo-by">by Math Investment</span>$2', $html);
+        }
+        $html = preg_replace('~<span>Office</span>\s*<p>Istanbul, Turkey</p>~', '<span>Office</span> <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x14caa181dce03687:0xc7290e74b462666c" target="_blank" rel="noopener">Kavaklı, Olimpiyat Cd. No:58<br>34520 Beylikdüzü / İstanbul</a>', $html);
+        $html = str_replace('<p>© 2026 LAND ISTANBUL. ALL RIGHTS RESERVED.</p>', '<p class="li-foot-line">© 2026 Land Istanbul by Math Investment · <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x14caa181dce03687:0xc7290e74b462666c" target="_blank" rel="noopener">Kavaklı, Olimpiyat Cd. No:58, 34520 Beylikdüzü / İstanbul</a></p>', $html);
+        $html = str_replace('"alternateName": "LAND ISTANBUL",', '"alternateName": "Land Istanbul by Math Investment",', $html);
+        $html = preg_replace('~"address": \{\s*"@type": "PostalAddress",\s*"addressLocality": "Istanbul",\s*"addressCountry": "TR"\s*\},~', '"address": { "@type": "PostalAddress", "streetAddress": "Kavaklı, Olimpiyat Cd. No:58", "addressLocality": "Beylikdüzü", "addressRegion": "İstanbul", "postalCode": "34520", "addressCountry": "TR" }, "telephone": "+905468916349", "email": "info@landistanbul.com", "hasMap": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x14caa181dce03687:0xc7290e74b462666c", "parentOrganization": { "@type": "Organization", "name": "Math Investment" },', $html);
         foreach (['css', 'js'] as $ext) {
             $v = substr(md5_file($repo . '/system/site-boost.' . $ext), 0, 10);
             $html = preg_replace('~/site-boost\.' . $ext . '\?v=[A-Za-z0-9]+~', '/site-boost.' . $ext . '?v=' . $v, $html);

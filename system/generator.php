@@ -257,6 +257,19 @@ function blocks_to_html(array $blocks) {
  * Common <head> + nav markup shared by generated pages.
  * $opts: lang, alternates [lang => url], type, published, modified, robots, extra_head
  */
+const LI_ADDRESS = 'Kavaklı, Olimpiyat Cd. No:58, 34520 Beylikdüzü / İstanbul';
+const LI_MAPS_URL = 'https://www.google.com/maps/place//data=!4m2!3m1!1s0x14caa181dce03687:0xc7290e74b462666c';
+
+/** Logo lockup: Land Istanbul by Math Investment. */
+function li_logo_html() {
+    return '<span class="li-logo-main">LAND ISTANBUL</span><span class="li-logo-by">by Math Investment</span>';
+}
+
+/** Footer line with the company and office address. */
+function li_footer_line() {
+    return '<p class="li-foot-line">© 2026 Land Istanbul by Math Investment · <a href="' . LI_MAPS_URL . '" target="_blank" rel="noopener">' . htmlspecialchars(LI_ADDRESS) . '</a></p>';
+}
+
 /** Asset URL with a content hash, so browsers and caches fetch the new file after every change. */
 function li_asset($path) {
     $f = SITE_ROOT . $path;
@@ -334,7 +347,7 @@ function page_head($title, $description, $canonical, $ogImage, array $opts = [])
 <body class="lang-<?= htmlspecialchars($lang) ?>">
 <?php $nv = li_nav($lang); ?>
 <nav>
-  <a class="logo" href="/">LAND ISTANBUL</a>
+  <a class="logo" href="/" aria-label="Land Istanbul by Math Investment"><?= li_logo_html() ?></a>
   <div class="nav-links">
 <?php foreach ($nv as $i => $n): ?>    <a href="<?= htmlspecialchars($n[0]) ?>"<?= $i === 2 ? ' class="nav-val"' : ($i === 5 ? ' class="nav-btn"' : '') ?>><?= htmlspecialchars($n[1]) ?></a>
 <?php endforeach; ?>
@@ -352,7 +365,7 @@ function page_head($title, $description, $canonical, $ogImage, array $opts = [])
 }
 
 function page_footer() {
-    return '<footer><a class="logo" href="/">LAND ISTANBUL</a><p>© 2026 LAND ISTANBUL. ALL RIGHTS RESERVED.</p></footer><script src="' . li_asset('/blog-lead.js') . '" defer></script><script src="' . li_asset('/site-boost.js') . '" defer></script></body></html>';
+    return '<footer><a class="logo" href="/" aria-label="Land Istanbul by Math Investment">' . li_logo_html() . '</a>' . li_footer_line() . '</footer><script src="' . li_asset('/blog-lead.js') . '" defer></script><script src="' . li_asset('/site-boost.js') . '" defer></script></body></html>';
 }
 
 /** Lead capture box: segment-specific copy, short form posting to /mail.php, WhatsApp shortcut. */
