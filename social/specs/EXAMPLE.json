@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-26",
+  "slug": "turkish-citizenship-2026",
+  "pillar": "rules",
+  "topic": "Turkish citizenship by investment: what's true in 2026",
+  "slides": [
+    {"type": "cover", "theme": "dark", "kick": "Updated · November 2026", "title": "Turkish\ncitizenship\n*by investment*", "lead": "What's actually true in 2026, in 60 seconds.", "chips": ["$400K property", "3-year hold", "Family included"], "say": "Turkish citizenship by investment. What's actually true in 2026."},
+    {"type": "bignum", "kick": "Route 1 · Real estate", "big": "$400K", "lead": "Buy property worth at least **$400,000**.", "rows": [{"icon": "3", "style": "k", "text": "Keep it for 3 years", "sub": "A no-sale note is put on the title deed"}, {"icon": "⇄", "style": "k", "text": "Pay through a bank", "sub": "Traceable transfer"}], "note": "Citizenship is granted after security checks.", "say": "Buy property worth at least four hundred thousand dollars and keep it for three years."},
+    {"type": "grid", "kick": "No property?", "title": "$500K\nand hold 3 years", "cards": [{"title": "Bank deposit", "sub": "In a bank in Türkiye"}, {"title": "Government bonds", "sub": "Turkish debt instruments"}, {"title": "Fund units", "sub": "REIF or VCIF"}, {"title": "Private pension", "sub": "Kept in the system"}], "say": "Or five hundred thousand dollars in a deposit, bonds, funds or a pension."},
+    {"type": "statement", "theme": "red", "kick": "What you don't need", "title": "No living\nin Türkiye.\nNo language\ntest.", "huge": "0", "huge_label": "days you must\nlive here", "say": "You don't have to live here, and there's no language test."},
+    {"type": "bignum", "theme": "dark", "kick": "⚠ 2026: the crackdown", "big": "6,134", "lead": "**citizenship decisions cancelled or withdrawn.**", "rows": [{"icon": "!", "text": "Fake & inflated valuation reports"}], "stamp": "CANCELLED", "note": "Source: Ministry of Interior, Sept 2026.", "say": "In 2026, six thousand one hundred and thirty-four decisions were cancelled over fake valuations."},
+    {"type": "cta", "theme": "dark", "kick": "Not ready for $400K?", "title": "Residence\nfrom *$150K*", "rows": [{"icon": "3", "text": "$150,000 → 3-year permit"}], "cta": "Save this 📌\n*DM us \"CITIZEN\"*", "sources": ["Turkish Citizenship Regulation Art. 20", "Ministry of Interior, Sept 2026"], "say": "Not ready for four hundred K? Residence starts at one fifty. Save this."}
+  ],
+  "caption_instagram": "…",
+  "caption_tiktok": "…",
+  "youtube_title": "… #Shorts",
+  "youtube_description": "…",
+  "sources": [{"title": "…", "url": "https://…"}]
+}
