@@ -61,7 +61,7 @@ vary inside the area. No invented prices: quote only sourced figures.
 - [ ] apartment — Alanya for foreign buyers: Mahmutlar, Kestel, Avsallar and residence-permit checks — *buy property in Alanya*
 - [ ] apartment — Buying property in Bursa as a foreigner: Nilüfer, Mudanya and the Istanbul commute — *buy property in Bursa*
 - [ ] apartment — Buying property in Trabzon as a foreigner: rules, areas and pitfalls — *buy property in Trabzon*
-- [ ] sell — Selling an apartment in Esenyurt or Beylikdüzü: pricing in a crowded resale market — *sell apartment in Esenyurt*
+- [x] sell — Selling an apartment in Esenyurt or Beylikdüzü: pricing in a crowded resale market — *sell apartment in Esenyurt* (2026-11-26)
 - [ ] sell — Selling a holiday home in Antalya or Alanya from abroad — *sell property in Alanya*
 - [ ] land — Silivri and Çatalca: land and villa plots on Istanbul's western edge — *land for sale Silivri*
 - [ ] land — Sapanca and Kartepe: weekend-home land near Istanbul, zoning and limits for foreigners — *Sapanca land for sale*
