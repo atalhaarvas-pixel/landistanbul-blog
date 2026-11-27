@@ -18,6 +18,7 @@ Rules for picking the next topic:
 - [ ] apartment — Buying an apartment in Istanbul as a foreigner: 2026 step-by-step guide — *buy apartment in Istanbul as a foreigner*
 - [x] land — Buying land in Istanbul: zoning (imar), title types and red flags — *buy land in Istanbul* (2026-11-26)
 - [x] citizenship — Turkey's new $150,000 investor residence permit vs $200,000 property residence vs citizenship — *Turkey residence permit 150000* (2026-11-24)
+- [x] citizenship — (news) Turkish citizenship revoked: why 6,134 people lost it in 2026 and how to buy safely — *Turkish citizenship revoked* (2026-11-27)
 - [ ] sell — Capital gains tax when selling property in Turkey: the 5-year rule explained — *capital gains tax Turkey property*
 - [ ] apartment — Best Istanbul districts for foreign buyers in 2026 (by budget and goal) — *best areas to buy property in Istanbul*
 - [ ] land — Arnavutköy and the airport corridor: what land buyers should check — *Arnavutköy land for sale*
