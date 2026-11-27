@@ -76,7 +76,7 @@ If research shows a rule on a country guide has changed, update `lc_countries()`
 
 - [x] apartment — Iraqis buying property in Turkey: visas by age, keeping Iraqi nationality, moving money, residence vs citizenship — *Iraqis buying property in Turkey* (2026-11-25)
 - [ ] citizenship — Turkish citizenship for Pakistani families: the dual-nationality question — *Turkish citizenship for Pakistani citizens*
-- [ ] apartment — Istanbul summer homes for Saudi families: areas, 90-day stays and residence — *Saudi buying property in Istanbul*
+- [x] apartment — Istanbul summer homes for Saudi families: areas, 90-day stays and residence — *Saudis buying property in Istanbul* (2026-11-27)
 - [ ] citizenship — Germans buying in Turkey after the 2024 dual-citizenship reform — *Germans buying property in Turkey*
 - [ ] apartment — British buyers in Turkey: the 90/180 rule, residence permits and UK tax — *British buying property in Turkey*
 - [ ] apartment — Kuwaiti families buying in Istanbul and Trabzon: what to check — *Kuwaiti buying property in Turkey*
