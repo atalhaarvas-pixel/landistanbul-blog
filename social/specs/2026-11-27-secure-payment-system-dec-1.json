@@ -1,0 +1,189 @@
+{
+  "date": "2026-11-27",
+  "slug": "secure-payment-system-dec-1",
+  "pillar": "safety",
+  "topic": "Türkiye's Secure Payment System for property sales, mandatory from 1 December 2026: how the buyer's money is protected",
+  "slides": [
+    {
+      "type": "cover",
+      "theme": "dark",
+      "kick": "Türkiye · from 1 Dec 2026",
+      "title": "Your money\nwaits until\nthe *deed*\nis yours",
+      "lead": "The new Secure Payment System for property sales, in 30 seconds.",
+      "chips": [
+        "Starts 1 December",
+        "Held until transfer",
+        "Refund if it fails"
+      ],
+      "say": "From the first of December, in Türkiye, your money waits until the title deed is yours."
+    },
+    {
+      "type": "list",
+      "kick": "How it works",
+      "title": "Deed and money\nswap at once",
+      "rows": [
+        {
+          "icon": "1",
+          "style": "k",
+          "text": "Buyer pays into the system",
+          "sub": "Not straight to the seller"
+        },
+        {
+          "icon": "2",
+          "style": "k",
+          "text": "The money is held",
+          "sub": "The seller can't touch it yet"
+        },
+        {
+          "icon": "3",
+          "style": "k",
+          "text": "Deed registered to the buyer",
+          "sub": "Signing at the land registry"
+        },
+        {
+          "icon": "4",
+          "text": "Then it goes to the seller",
+          "sub": "Minus a usage fee"
+        }
+      ],
+      "say": "The buyer pays into a secure system. The money is held, and released to the seller only after the deed is registered."
+    },
+    {
+      "type": "statement",
+      "theme": "red",
+      "kick": "Sale falls through?",
+      "title": "The money\ngoes back\nto the buyer.",
+      "lead": "If the transfer doesn't happen, the payment is returned under the system's refund rules.",
+      "say": "If the sale falls through, the money goes back to the buyer.",
+      "huge": "↩",
+      "huge_label": "No deed,\nno payout."
+    },
+    {
+      "type": "grid",
+      "theme": "dark",
+      "kick": "The fine print",
+      "title": "4 details\nto know",
+      "cards": [
+        {
+          "title": "Mortgage?",
+          "sub": "The bank-financed part stays outside. The rest goes through."
+        },
+        {
+          "title": "Usage fee",
+          "sub": "Paid by the seller, deducted from the price"
+        },
+        {
+          "title": "Fee amount",
+          "sub": "Not announced yet (as of 20 Nov 2026)"
+        },
+        {
+          "title": "Who's covered",
+          "sub": "Sales by individuals and companies alike"
+        }
+      ],
+      "say": "A bank-financed part stays outside the system. The seller pays a usage fee, and the amount is not announced yet."
+    },
+    {
+      "type": "bignum",
+      "kick": "Already delayed twice",
+      "big": "1 Dec",
+      "lead": "**The third date.** Still on as of 20 Nov 2026.",
+      "rows": [
+        {
+          "icon": "✕",
+          "style": "no",
+          "text": "1 July 2026",
+          "sub": "First date, set on 29 April"
+        },
+        {
+          "icon": "✕",
+          "style": "no",
+          "text": "1 October 2026",
+          "sub": "Moved on 26 June"
+        },
+        {
+          "icon": "✓",
+          "style": "ok",
+          "text": "1 December 2026",
+          "sub": "Set on 28 September"
+        }
+      ],
+      "say": "The start date already moved twice. July, then October, now December."
+    },
+    {
+      "type": "list",
+      "kick": "Buying in December?",
+      "title": "Do this",
+      "rows": [
+        {
+          "icon": "✓",
+          "style": "ok",
+          "text": "Don't pay the seller directly",
+          "sub": "The price goes through the system"
+        },
+        {
+          "icon": "✓",
+          "style": "ok",
+          "text": "Put any deposit in writing",
+          "sub": "Say how it is credited to the price"
+        },
+        {
+          "icon": "✓",
+          "style": "ok",
+          "text": "Recheck the rules before signing",
+          "sub": "Fee and details are still pending"
+        },
+        {
+          "icon": "✓",
+          "style": "ok",
+          "text": "Use a licensed broker",
+          "sub": "Ask for the licence number"
+        }
+      ],
+      "say": "Buying in December? Don't pay the seller directly, put any deposit in writing, and recheck the rules before your appointment."
+    },
+    {
+      "type": "cta",
+      "theme": "dark",
+      "kick": "Buying in Istanbul?",
+      "title": "We walk you\nthrough\n*tapu day*",
+      "rows": [
+        {
+          "icon": "✓",
+          "text": "Licensed broker · no. 3408945"
+        }
+      ],
+      "cta": "Save this 📌\n*DM us \"TAPU\"*",
+      "sources": [
+        "Hürriyet Daily News, 29 Apr 2026",
+        "Referans Gazetesi, 18 Nov 2026",
+        "Haberler.com, 19 Nov 2026",
+        "ShiftDelete.net, 20 Nov 2026"
+      ],
+      "say": "Save this, and send us a DM with the word tapu for help on title deed day."
+    }
+  ],
+  "caption_instagram": "From 1 December, your money waits until the title deed is yours 🔐🇹🇷\n\nTürkiye's Secure Payment System for property sales becomes mandatory on 1 December 2026:\n✅ The buyer pays into the system, not straight to the seller\n✅ The money goes to the seller only after the deed is registered to the buyer\n✅ If the sale falls through, the payment goes back to the buyer\n✅ A bank-financed (mortgage) part stays outside the system; the rest goes through\n⚠️ The seller pays a usage fee, deducted from the price. The amount had not been announced as of 20 Nov 2026\n⚠️ The start date already moved twice (1 Jul → 1 Oct → 1 Dec), so recheck the rules before your appointment\n\nSave this 📌 Send it to someone buying property in Türkiye this winter.\n\nBuying in Istanbul? DM us \"TAPU\" and we'll walk you through title deed day.\nLand Istanbul by Math Investment · licensed broker, licence no. 3408945 · landistanbul.com\n\nSource: Hürriyet Daily News (29 Apr 2026); Referans Gazetesi (18 Nov 2026); Haberler.com (19 Nov 2026); ShiftDelete.net (20 Nov 2026).\nGeneral information, not legal advice.\n\n#Istanbul #InvestInTurkey #MoveToTurkey #ExpatLife #RealEstate #IstanbulRealEstate #BuyPropertyInTurkey #TurkeyRealEstate #PropertyInTurkey #TitleDeed #Tapu #ForeignBuyers #PropertyTips #TurkishCitizenship",
+  "caption_tiktok": "From 1 December, your money waits until the title deed is yours 🔐🇹🇷\n\n✅ Buyer pays into the Secure Payment System, not to the seller\n✅ Seller is paid only after the deed is registered\n✅ Sale falls through → money back to the buyer\n⚠️ Mortgage part stays outside; seller's fee not announced yet (20 Nov 2026)\n\nSave this 📌 Send it to someone buying in Türkiye.\nDM us \"TAPU\" for help on title deed day. Land Istanbul · licensed broker no. 3408945\n\nSource: Hürriyet Daily News (29 Apr 2026); Referans Gazetesi (18 Nov 2026); Haberler.com (19 Nov 2026); ShiftDelete.net (20 Nov 2026). General information, not legal advice.\n\n#Istanbul #InvestInTurkey #MoveToTurkey #IstanbulRealEstate #BuyPropertyInTurkey #Tapu #fyp",
+  "tiktok_title": "From 1 Dec: your money waits until the deed is yours",
+  "youtube_title": "Buying property in Türkiye from 1 Dec: your money waits for the deed #Shorts",
+  "youtube_description": "From 1 December 2026, property sales in Türkiye go through the Secure Payment System: your money waits until the title deed is yours. 🔐\n\n✅ The buyer pays into the system, not straight to the seller\n✅ The seller is paid only after the deed is registered to the buyer\n✅ If the sale falls through, the payment goes back to the buyer\n✅ A bank-financed (mortgage) part stays outside the system\n⚠️ The seller pays a usage fee; the amount had not been announced as of 20 Nov 2026\n⚠️ The date already moved twice (1 Jul → 1 Oct → 1 Dec), so recheck before your appointment\n\nSave this and send it to someone buying in Türkiye.\nComment \"TAPU\" or message us for help on title deed day: https://landistanbul.com\nFull guide: https://landistanbul.com/blog/turkey-secure-payment-system-property-sales/\nLand Istanbul by Math Investment · licensed broker, licence no. 3408945 · WhatsApp +90 546 891 63 49\n\nSource: Hürriyet Daily News (29 Apr 2026); Referans Gazetesi (18 Nov 2026); Haberler.com (19 Nov 2026); ShiftDelete.net (20 Nov 2026).\nGeneral information, not legal advice.\n\n#Shorts #Istanbul #InvestInTurkey #BuyPropertyInTurkey #IstanbulRealEstate #MoveToTurkey",
+  "sources": [
+    {
+      "title": "Hürriyet Daily News: New rule brings secure payment system to real estate sales (29 April 2026)",
+      "url": "https://www.hurriyetdailynews.com/new-rule-brings-secure-payment-system-to-real-estate-sales-221616"
+    },
+    {
+      "title": "Referans Gazetesi: Ev alıp satacaklar dikkat! 1 Aralık'ta tapuda sistem değişiyor (18 November 2026)",
+      "url": "https://www.referansgazetesi.com.tr/ev-alip-satacaklar-dikkat-1-aralikta-tapuda-sistem-degisiyor"
+    },
+    {
+      "title": "Haberler.com: Tapuda güvenli ödeme sistemi nedir? Ertelendi mi, ne zaman başlıyor? (19 November 2026)",
+      "url": "https://www.haberler.com/haber/tapuda-guvenli-odeme-sistemi-nedir-ertelendi-mi-20442562-haberi/"
+    },
+    {
+      "title": "ShiftDelete.net: Tapuda güvenli ödeme 1 Aralık'ta zorunlu oluyor (20 November 2026)",
+      "url": "https://shiftdelete.net/tapu-guvenli-odeme-sistemi-1-aralik"
+    }
+  ]
+}
