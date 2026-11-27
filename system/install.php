@@ -313,6 +313,7 @@ try {
         $repo . '/system/valuation.php' => $site . '/admin/includes/valuation.php',
         $repo . '/system/eligibility.php' => $site . '/admin/includes/eligibility.php',
         $repo . '/system/countries.php' => $site . '/admin/includes/countries.php',
+        $repo . '/system/proptax.php' => $site . '/admin/includes/proptax.php',
         $repo . '/system/mail.php' => $site . '/mail.php',
         $repo . '/system/blog-extra.css' => $site . '/blog-extra.css',
         $repo . '/system/blog-lead.js' => $site . '/blog-lead.js',
