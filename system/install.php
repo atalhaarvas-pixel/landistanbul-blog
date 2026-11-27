@@ -262,14 +262,25 @@ try {
             $html = preg_replace('~(<div class="nav-links">.*?)(<a href="#contact" class="nav-btn")~s', '$1' . $langs . "\n    " . '$2', $html, 1);
             $html = preg_replace('~(<div id="mobile-menu">.*?)(</div>)~s', '$1  <div class="li-langs li-langs-m"><a href="/">EN</a><a href="/buy-property-in-turkey/ar/" lang="ar">عربي</a><a href="/blog/ru/" lang="ru">RU</a></div>' . "\n" . '$2', $html, 1);
         }
-        // How we work + FAQ, before the contact section (replaced on every run so edits ship).
-        $rev = @file_get_contents($repo . '/system/home-reviews.html');
-        $html = preg_replace('~<!--LI-REVIEWS-->.*?<!--/LI-REVIEWS-->\s*~s', '', $html);
+        // Homepage order: Google reviews take the old "Our Services" slot (right after the hero/ticker);
+        // Our Services moves down, followed by How we work + FAQ, before the contact section.
+        // Re-run safe: blocks are removed and rebuilt every time; <!--LI-SVC-SLOT--> remembers the slot.
+        $rev  = @file_get_contents($repo . '/system/home-reviews.html');
         $proc = @file_get_contents($repo . '/system/home-process.html');
-        if ($rev && $proc) $proc = trim($rev) . "\n\n" . $proc;
-        if ($proc) {
-            $html = preg_replace('~<!--LI-PROCESS-->.*?<!--/LI-PROCESS-->\s*~s', '', $html);
-            $html = preg_replace_callback('~(?:<!-- [^>]*-->\s*)?<section id="contact">~', function ($m) use ($proc) { return trim($proc) . "\n\n  " . $m[0]; }, $html, 1);
+        $html = preg_replace('~<!--LI-REVIEWS-->.*?<!--/LI-REVIEWS-->\s*~s', '', $html);
+        $html = preg_replace('~<!--LI-PROCESS-->.*?<!--/LI-PROCESS-->\s*~s', '', $html);
+        $svc = '';
+        if (preg_match('~(?:<!-- SERVICES -->\s*)?<section id="services">.*?</section>\s*~s', $html, $m)) {
+            $svc = trim($m[0]);
+            $repl = strpos($html, '<!--LI-SVC-SLOT-->') === false ? "<!--LI-SVC-SLOT-->\n\n  " : '';
+            $html = str_replace($m[0], $repl, $html);
+        }
+        if ($rev && strpos($html, '<!--LI-SVC-SLOT-->') !== false) {
+            $html = str_replace('<!--LI-SVC-SLOT-->', "<!--LI-SVC-SLOT-->\n  " . trim($rev), $html);
+        }
+        $before = trim(($svc ? $svc . "\n\n  " : '') . ($proc ? trim($proc) : ''));
+        if ($before !== '') {
+            $html = preg_replace_callback('~(?:<!-- [^>]*-->\s*)?<section id="contact">~', function ($m) use ($before) { return $before . "\n\n  " . $m[0]; }, $html, 1);
         }
         foreach (['css', 'js'] as $ext) {
             $v = substr(md5_file($repo . '/system/site-boost.' . $ext), 0, 10);
