@@ -101,6 +101,11 @@ Captions (English, honest, viral but never clickbait-false):
   (#Istanbul #MoveToTurkey #InvestInTurkey #ExpatLife #RealEstate) with niche (#TurkishCitizenship
   #TurkeyResidencePermit #IstanbulRealEstate #BuyPropertyInTurkey #SecondPassport…). Never unrelated trending tags.
 
+YouTube limit: a new/unverified YouTube channel accepts only a few API uploads per 24 h. Never schedule more than
+one YouTube Short per day. At the start of every run, `list_posts` with status `error` for the last 2 days: if a
+YouTube post failed with "daily posting limit", re-send it with `edit_post` `mode: "customScheduled"` at least 24 h
+after the previous YouTube upload (and today's Short 24 h after that), then mention it in the report.
+
 Then `get_post` each post id once to confirm status `scheduled`; write the ids into `social/log.json` and push again.
 
 ## 7. Report
