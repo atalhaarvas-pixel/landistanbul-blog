@@ -266,9 +266,9 @@ const LI_TAX_ID = '0850564655';
 /** Trust strings per language. */
 function li_trust_t($lang) {
     $all = [
-        'en' => ['Licensed real estate broker', 'Real estate trade licence (Taşınmaz Ticareti Yetki Belgesi) No. 3408945, Turkish Ministry of Trade', 'Registered company', 'Math Investment (Mat Yatırım) · Tax ID 0850564655', 'Office in Istanbul'],
-        'ar' => ['وسيط عقاري مرخّص', 'رخصة تجارة العقارات (Taşınmaz Ticareti Yetki Belgesi) رقم 3408945، وزارة التجارة التركية', 'شركة مسجّلة', 'Math Investment (Mat Yatırım) · الرقم الضريبي 0850564655', 'مكتبنا في إسطنبول'],
-        'ru' => ['Лицензированный агент по недвижимости', 'Лицензия на торговлю недвижимостью (Taşınmaz Ticareti Yetki Belgesi) № 3408945, Министерство торговли Турции', 'Зарегистрированная компания', 'Math Investment (Mat Yatırım) · налоговый номер 0850564655', 'Офис в Стамбуле'],
+        'en' => ['Licensed real estate broker', 'Real estate trade licence (Taşınmaz Ticareti Yetki Belgesi) No. 3408945, Turkish Ministry of Trade', 'Registered company', 'Math Investment (Mat Yatırım) · Tax ID 0850564655', 'Office in Istanbul', 'Rated 5.0 on Google', '22 client reviews · read them on Google'],
+        'ar' => ['وسيط عقاري مرخّص', 'رخصة تجارة العقارات (Taşınmaz Ticareti Yetki Belgesi) رقم 3408945، وزارة التجارة التركية', 'شركة مسجّلة', 'Math Investment (Mat Yatırım) · الرقم الضريبي 0850564655', 'مكتبنا في إسطنبول', 'تقييم 5.0 على Google', '22 تقييماً من العملاء على Google'],
+        'ru' => ['Лицензированный агент по недвижимости', 'Лицензия на торговлю недвижимостью (Taşınmaz Ticareti Yetki Belgesi) № 3408945, Министерство торговли Турции', 'Зарегистрированная компания', 'Math Investment (Mat Yatırım) · налоговый номер 0850564655', 'Офис в Стамбуле', 'Оценка 5.0 в Google', '22 отзыва клиентов в Google'],
     ];
     return $all[$lang] ?? $all['en'];
 }
@@ -281,6 +281,7 @@ function li_trust_html($lang = 'en') {
         . '<div class="li-trust-item"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></i><div><b>' . $h($t[0]) . '</b><span>' . $h($t[1]) . '</span></div></div>'
         . '<div class="li-trust-item"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 13h6M10 17h6"/></svg></i><div><b>' . $h($t[2]) . '</b><span>' . $h($t[3]) . '</span></div></div>'
         . '<div class="li-trust-item"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></i><div><b>' . $h($t[4]) . '</b><span><a href="' . LI_MAPS_URL . '" target="_blank" rel="noopener">' . $h(LI_ADDRESS) . '</a></span></div></div>'
+        . '<div class="li-trust-item"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></i><div><b>' . $h($t[5]) . ' <em class="li-stars">★★★★★</em></b><span><a href="' . LI_MAPS_URL . '" target="_blank" rel="noopener">' . $h($t[6]) . '</a></span></div></div>'
         . '</div></section>';
 }
 

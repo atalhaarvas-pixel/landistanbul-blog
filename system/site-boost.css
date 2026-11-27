@@ -73,7 +73,8 @@ footer a.logo .li-logo-by { color: #fff; }
 /* Licence / tax ID / office strip */
 .li-trust { background: #fff; border-top: 1px solid #e6e1d6; border-bottom: 1px solid #e6e1d6; padding: 28px 24px; min-height: 0; }
 .li-trust-home { background: #fffdef; }
-.li-trust-in { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.li-trust-in { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+@media (max-width: 1100px) and (min-width: 861px) { .li-trust-in { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .li-trust-item { display: flex; gap: 14px; align-items: flex-start; }
 .li-trust-item i { flex: none; width: 46px; height: 46px; background: #c50000; color: #fff; display: flex; align-items: center; justify-content: center; }
 .li-trust-item b { display: block; font-family: 'Roboto Condensed', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 1.02rem; letter-spacing: .02em; color: #171717; margin-bottom: 4px; }
@@ -119,3 +120,25 @@ footer a.logo .li-logo-by { color: #fff; }
 .lp-cta .lp-val { background: #171717; color: #fff; }
 @media (max-width: 900px) { .lp-steps { grid-template-columns: 1fr 1fr; } .lp-faq { grid-template-columns: 1fr; } #li-process { padding: 64px 6%; } }
 @media (max-width: 520px) { .lp-steps { grid-template-columns: 1fr; } }
+
+/* Google reviews (homepage) */
+#li-reviews { background: #fff; color: #171717; padding: 90px 0 70px; }
+#li-reviews .lr-in { max-width: 1200px; margin: 0 auto; }
+.lr-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; padding: 0 6%; margin-bottom: 30px; flex-wrap: wrap; }
+#li-reviews .lp-kick { color: #e70000; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; font-size: .8rem; }
+#li-reviews h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); margin: 10px 0 0; text-transform: uppercase; line-height: 1.05; }
+.lr-score { display: flex; align-items: center; gap: 14px; text-decoration: none; color: #171717; background: #f6f5f2; padding: 14px 22px; border-radius: 14px; }
+.lr-score b { font-size: 2rem; font-weight: 900; }
+.lr-score i { font-style: normal; color: #fbbc04; font-size: 1.3rem; letter-spacing: 2px; margin-left: 4px; }
+.lr-score small { display: block; font-size: .85rem; color: #555; }
+.lr-track { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(300px, 360px); gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 6px 6% 18px; scrollbar-width: thin; }
+.lr-card { scroll-snap-align: start; background: #f6f5f2; border-top: 4px solid #e70000; padding: 24px 24px 20px; margin: 0; display: flex; flex-direction: column; }
+.lr-card > i { font-style: normal; color: #fbbc04; letter-spacing: 2px; font-size: 1.1rem; }
+.lr-card blockquote { margin: 12px 0 16px; font-size: 1rem; line-height: 1.55; color: #2a2a2a; flex: 1; quotes: "“" "”"; }
+.lr-card blockquote:before { content: open-quote; } .lr-card blockquote:after { content: close-quote; }
+.lr-card figcaption { font-size: .85rem; color: #666; }
+.lr-card figcaption b { color: #171717; }
+.lr-note { padding: 6px 6% 0; font-size: .8rem; color: #777; }
+.lr-note a { color: #e70000; }
+@media (max-width: 600px) { .lr-track { grid-auto-columns: 84%; } #li-reviews { padding: 64px 0 50px; } }
+.li-stars { font-style: normal; color: #fbbc04; letter-spacing: 1px; }

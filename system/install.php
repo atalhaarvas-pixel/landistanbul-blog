@@ -263,7 +263,10 @@ try {
             $html = preg_replace('~(<div id="mobile-menu">.*?)(</div>)~s', '$1  <div class="li-langs li-langs-m"><a href="/">EN</a><a href="/buy-property-in-turkey/ar/" lang="ar">عربي</a><a href="/blog/ru/" lang="ru">RU</a></div>' . "\n" . '$2', $html, 1);
         }
         // How we work + FAQ, before the contact section (replaced on every run so edits ship).
+        $rev = @file_get_contents($repo . '/system/home-reviews.html');
+        $html = preg_replace('~<!--LI-REVIEWS-->.*?<!--/LI-REVIEWS-->\s*~s', '', $html);
         $proc = @file_get_contents($repo . '/system/home-process.html');
+        if ($rev && $proc) $proc = trim($rev) . "\n\n" . $proc;
         if ($proc) {
             $html = preg_replace('~<!--LI-PROCESS-->.*?<!--/LI-PROCESS-->\s*~s', '', $html);
             $html = preg_replace_callback('~(?:<!-- [^>]*-->\s*)?<section id="contact">~', function ($m) use ($proc) { return trim($proc) . "\n\n  " . $m[0]; }, $html, 1);

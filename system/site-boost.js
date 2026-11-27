@@ -107,9 +107,9 @@
 
   /* Licence and tax ID: strip on the homepage, one line under every lead form. */
   var TRUST = {
-    en: ['Licensed real estate broker', 'Real estate trade licence (Taşınmaz Ticareti Yetki Belgesi) No. 3408945, Turkish Ministry of Trade', 'Registered company', 'Math Investment (Mat Yatırım) · Tax ID 0850564655', 'Office in Istanbul', 'Licensed broker · Licence No. 3408945 · Tax ID 0850564655'],
-    ar: ['وسيط عقاري مرخّص', 'رخصة تجارة العقارات (Taşınmaz Ticareti Yetki Belgesi) رقم 3408945، وزارة التجارة التركية', 'شركة مسجّلة', 'Math Investment (Mat Yatırım) · الرقم الضريبي 0850564655', 'مكتبنا في إسطنبول', 'وسيط مرخّص · رخصة رقم 3408945 · الرقم الضريبي 0850564655'],
-    ru: ['Лицензированный агент по недвижимости', 'Лицензия на торговлю недвижимостью (Taşınmaz Ticareti Yetki Belgesi) № 3408945, Министерство торговли Турции', 'Зарегистрированная компания', 'Math Investment (Mat Yatırım) · налоговый номер 0850564655', 'Офис в Стамбуле', 'Лицензированный агент · Лицензия № 3408945 · Налоговый номер 0850564655']
+    en: ['Licensed real estate broker', 'Real estate trade licence (Taşınmaz Ticareti Yetki Belgesi) No. 3408945, Turkish Ministry of Trade', 'Registered company', 'Math Investment (Mat Yatırım) · Tax ID 0850564655', 'Office in Istanbul', 'Licensed broker · Licence No. 3408945 · Tax ID 0850564655', 'Rated 5.0 on Google', '22 client reviews · read them on Google'],
+    ar: ['وسيط عقاري مرخّص', 'رخصة تجارة العقارات (Taşınmaz Ticareti Yetki Belgesi) رقم 3408945، وزارة التجارة التركية', 'شركة مسجّلة', 'Math Investment (Mat Yatırım) · الرقم الضريبي 0850564655', 'مكتبنا في إسطنبول', 'وسيط مرخّص · رخصة رقم 3408945 · الرقم الضريبي 0850564655', 'تقييم 5.0 على Google', '22 تقييماً من العملاء على Google'],
+    ru: ['Лицензированный агент по недвижимости', 'Лицензия на торговлю недвижимостью (Taşınmaz Ticareti Yetki Belgesi) № 3408945, Министерство торговли Турции', 'Зарегистрированная компания', 'Math Investment (Mat Yatırım) · налоговый номер 0850564655', 'Офис в Стамбуле', 'Лицензированный агент · Лицензия № 3408945 · Налоговый номер 0850564655', 'Оценка 5.0 в Google', '22 отзыва клиентов в Google']
   };
   var tr = TRUST[lang] || TRUST.en;
   var SHIELD = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>';
@@ -119,7 +119,8 @@
     ts.innerHTML = '<div class="li-trust-in">' +
       '<div class="li-trust-item"><i>' + SHIELD + '</i><div><b>' + tr[0] + '</b><span>' + tr[1] + '</span></div></div>' +
       '<div class="li-trust-item"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 13h6M10 17h6"/></svg></i><div><b>' + tr[2] + '</b><span>' + tr[3] + '</span></div></div>' +
-      '<div class="li-trust-item"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></i><div><b>' + tr[4] + '</b><span><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x14caa181dce03687:0xc7290e74b462666c" target="_blank" rel="noopener">Kavaklı, Olimpiyat Cd. No:58, 34520 Beylikdüzü / İstanbul</a></span></div></div></div>';
+      '<div class="li-trust-item"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></i><div><b>' + tr[4] + '</b><span><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x14caa181dce03687:0xc7290e74b462666c" target="_blank" rel="noopener">Kavaklı, Olimpiyat Cd. No:58, 34520 Beylikdüzü / İstanbul</a></span></div></div>' +
+      '<div class="li-trust-item"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></i><div><b>' + tr[6] + ' <em class="li-stars">★★★★★</em></b><span><a href="' + (isHome ? '#li-reviews' : 'https://www.google.com/maps/place//data=!4m2!3m1!1s0x14caa181dce03687:0xc7290e74b462666c') + '"' + (isHome ? '' : ' target="_blank" rel="noopener"') + '>' + tr[7] + '</a></span></div></div></div>';
     var hero = document.getElementById('home');
     var bandEl = document.querySelector('.lb-band');
     if (bandEl && bandEl.parentNode) bandEl.parentNode.insertBefore(ts, bandEl);
@@ -129,7 +130,7 @@
     if (f.querySelector('.li-trust-mini')) return;
     var m = document.createElement('p');
     m.className = 'li-trust-mini';
-    m.innerHTML = SHIELD + '<span>' + tr[5] + '</span>';
+    m.innerHTML = SHIELD + '<span>' + tr[5] + ' · ★ 5.0 Google (22)' + '</span>';
     f.appendChild(m);
   });
 
