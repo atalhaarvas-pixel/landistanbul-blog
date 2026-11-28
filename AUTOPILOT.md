@@ -61,8 +61,8 @@ python3 tools/make_cover.py posts/<file>.json
 python3 tools/validate.py posts/<file>.json      # must end with 0 errors
 ```
 **Every post must have a different cover (owner's rule).** `make_cover.py` picks an illustration style that fits the
-topic and that none of the last 4 posts used (passport, facade, isometric, aerial_land, chart, window, coast, keys, route,
-skyline), with a palette never used before with that style, and stores it as `"cover"` in the post JSON.
+topic and that none of the last 4 posts used (passport, facade, isometric, aerial_land, farmland, chart, window, coast, keys,
+route, skyline), with a palette never used before with that style, and stores it as `"cover"` in the post JSON.
 `validate.py` fails if the style/palette pair was used before or the style matches one of the 2 previous posts.
 To change it: `python3 tools/make_cover.py posts/<file>.json --style coast --palette teal` (styles and palettes are
 listed in `tools/scenes.py`). New styles can be added to `tools/scenes.py` (register them in `STYLES` and in

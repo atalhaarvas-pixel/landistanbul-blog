@@ -2,7 +2,7 @@
 Cover illustration styles for Land Istanbul posts (used by tools/make_cover.py).
 
 Each style draws an original flat illustration at 1600x900 (rendered at 2x and downscaled for smooth edges).
-Styles: passport, facade, isometric, aerial_land, chart, window, coast, keys, route (plus the Bosphorus "skyline" scene
+Styles: passport, facade, isometric, aerial_land, chart, window, coast, keys, route, farmland (plus the Bosphorus "skyline" scene
 that lives in make_cover.py). Every style accepts any palette from PAL.
 """
 import math
@@ -735,6 +735,96 @@ def style_route(p, rng, W=1600, H=900):
     return finish(base.convert("RGB"), W, H)
 
 
+# ───────────────────────── 10. farmland & vineyard house ─────────────────────────
+
+def style_farmland(p, rng, W=1600, H=900):
+    """Rural scene: crop rows in perspective, a vineyard with posts, a small vineyard house and a survey stake."""
+    img = new(W, H, p["bg"])
+    d = ImageDraw.Draw(img)
+    hz = 430
+    vgrad(d, [0, 0, W * S, hz * S], mix(p["bg2"], (140, 186, 226), 0.55), mix(p["light"], (250, 226, 190), 0.45))
+    sx, sr = rng.uniform(0.15, 0.4) * W, 64
+    d.ellipse([(sx - sr) * S, 110 * S, (sx + sr) * S, (110 + 2 * sr) * S], fill=(255, 238, 196))
+    # distant hills
+    for layer, (col, amp, base) in enumerate([(mix((128, 150, 170), p["bg2"], 0.35), 120, hz - 8),
+                                              (mix((96, 134, 92), p["b"], 0.35), 70, hz + 4)]):
+        pts = [(0, (hz + 10) * S)]
+        ph = rng.uniform(0, 6)
+        for x in range(0, W + 20, 20):
+            y = base - amp * (0.55 + 0.45 * math.sin(x / (260 + layer * 90) + ph)) * (0.75 + 0.25 * math.sin(x / 110 + ph))
+            pts.append((x * S, y * S))
+        pts.append((W * S, (hz + 10) * S))
+        d.polygon(pts, fill=col)
+    # ground
+    vgrad(d, [0, hz * S, W * S, H * S], mix((150, 172, 96), p["b"], 0.2), mix((96, 126, 64), p["ink"], 0.12))
+    # crop rows in perspective (left parcel: wheat / green stripes)
+    vx, vy = W * 0.36, hz - 260
+    cols = [mix((214, 186, 104), p["a"], 0.3), mix((176, 160, 86), p["a"], 0.15), mix((132, 164, 84), p["b"], 0.2), mix((112, 146, 74), p["b"], 0.2)]
+    n = 34
+    xs = [-900 + k * (W * 0.78 + 900) / n for k in range(n + 1)]
+    def at_h(xb, y):
+        return vx + (xb - vx) * (y - vy) / (H - vy)
+    for k in range(n):
+        xa, xb = xs[k], xs[k + 1]
+        col = cols[(k // 2) % 2] if k % 2 == 0 else shade(cols[(k // 2) % 2], 0.9)
+        poly = [(at_h(xa, hz + 6) * S, (hz + 6) * S), (at_h(xb, hz + 6) * S, (hz + 6) * S), (xb * S, H * S), (xa * S, H * S)]
+        d.polygon(poly, fill=col)
+    # right parcel: vineyard rows (posts + leaves), drawn back to front
+    gx0 = W * 0.62
+    for r in range(9):
+        t = r / 8
+        y = hz + 30 + (t ** 1.6) * (H - hz - 40)
+        sc = 0.35 + 0.95 * (t ** 1.4)
+        x_start = gx0 - 260 * (t ** 1.2)
+        step = 38 * sc + 6
+        d.line([(x_start * S, (y - 22 * sc) * S), (W * S, (y - 22 * sc) * S)], fill=(90, 80, 70), width=max(1, int(2 * sc)) * S)
+        x = x_start
+        while x < W + 40:
+            d.line([(x * S, y * S), (x * S, (y - 34 * sc) * S)], fill=(110, 86, 62), width=max(2, int(4 * sc)) * S)
+            for j in range(3):
+                ox = x + rng.uniform(-10, 24) * sc
+                oy = y - 28 * sc + rng.uniform(-10, 6) * sc
+                rr = rng.uniform(8, 13) * sc
+                d.ellipse([(ox - rr) * S, (oy - rr) * S, (ox + rr) * S, (oy + rr) * S],
+                          fill=rng.choice([(70, 118, 58), (88, 136, 66), mix((70, 118, 58), p["b"], 0.3)]))
+            x += step
+    # fence along the field edge
+    fy = hz + 92
+    for x in range(-10, int(W * 0.58), 46):
+        d.line([(x * S, fy * S), (x * S, (fy - 34) * S)], fill=(124, 96, 70), width=5 * S)
+    for off in (10, 24):
+        d.line([(0, (fy - off) * S), (W * 0.58 * S, (fy - off) * S)], fill=(150, 118, 86), width=3 * S)
+    # vineyard house
+    hx, hy, hw, hh = 1120, hz + 118, 230, 118
+    layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    ld = ImageDraw.Draw(layer)
+    wall = mix((246, 236, 216), p["light"], 0.3)
+    ld.rectangle([hx * S, (hy - hh) * S, (hx + hw) * S, hy * S], fill=wall + (255,))
+    ld.polygon([((hx + hw) * S, (hy - hh) * S), ((hx + hw + 70) * S, (hy - hh - 12) * S), ((hx + hw + 70) * S, (hy - 12) * S), ((hx + hw) * S, hy * S)], fill=shade(wall, 0.82) + (255,))
+    roof = mix(RED, (150, 40, 30), 0.35)
+    ld.polygon([((hx + hw / 2) * S, (hy - hh - 86) * S), ((hx + hw / 2 + 70) * S, (hy - hh - 98) * S), ((hx + hw + 92) * S, (hy - hh - 12) * S), ((hx + hw + 22) * S, (hy - hh) * S)], fill=shade(roof, 0.78) + (255,))
+    ld.polygon([((hx - 22) * S, (hy - hh) * S), ((hx + hw / 2) * S, (hy - hh - 86) * S), ((hx + hw + 22) * S, (hy - hh) * S)], fill=roof + (255,))
+    ld.rectangle([(hx + 92) * S, (hy - 70) * S, (hx + 138) * S, hy * S], fill=mix((110, 80, 60), p["ink"], 0.2) + (255,))
+    for wx in (hx + 26, hx + 166):
+        ld.rectangle([wx * S, (hy - 84) * S, (wx + 40) * S, (hy - 46) * S], fill=mix((90, 130, 160), p["glass"], 0.4) + (255,))
+        ld.line([((wx + 20) * S, (hy - 84) * S), ((wx + 20) * S, (hy - 46) * S)], fill=wall + (255,), width=3 * S)
+    soft_shadow(img, layer, offset=(14, 10), blur=14, alpha=90)
+    d = ImageDraw.Draw(img)
+    # trees
+    for tx, ty, tr in ((1040, hz + 112, 46), (1420, hz + 100, 38), (220, hz + 40, 30)):
+        d.rectangle([(tx - 6) * S, (ty - 10) * S, (tx + 6) * S, (ty + 30) * S], fill=(96, 72, 52))
+        d.ellipse([(tx - tr) * S, (ty - 2 * tr - 6) * S, (tx + tr) * S, (ty - 6) * S], fill=(62, 104, 56))
+        d.ellipse([(tx - tr * 0.7) * S, (ty - 2 * tr) * S, (tx + tr * 0.2) * S, (ty - tr * 0.8) * S], fill=(84, 128, 66))
+    # survey stake with red flag in the foreground
+    kx, ky = 880, 820
+    d.line([(kx * S, ky * S), (kx * S, (ky - 190) * S)], fill=(238, 232, 220), width=10 * S)
+    for k in range(4):
+        d.line([(kx * S, (ky - 40 - k * 40) * S), (kx * S, (ky - 60 - k * 40) * S)], fill=RED, width=10 * S)
+    d.polygon([(kx * S, (ky - 190) * S), ((kx + 96) * S, (ky - 164) * S), (kx * S, (ky - 136) * S)], fill=RED)
+    d.ellipse([(kx - 34) * S, (ky - 6) * S, (kx + 34) * S, (ky + 8) * S], fill=shade(mix((150, 172, 96), p["b"], 0.2), 0.7))
+    return finish(img, W, H)
+
+
 STYLES = {
     "passport": style_passport,
     "facade": style_facade,
@@ -745,4 +835,5 @@ STYLES = {
     "coast": style_coast,
     "keys": style_keys,
     "route": style_route,
+    "farmland": style_farmland,
 }

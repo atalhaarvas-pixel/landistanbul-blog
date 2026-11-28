@@ -26,6 +26,7 @@ Rules for picking the next topic:
 - [ ] sell — How to price your Istanbul apartment for a fast sale — *sell my apartment in Istanbul*
 - [ ] apartment — Turkish title deeds (tapu) explained: kat mülkiyeti vs kat irtifakı — *tapu title deed Turkey*
 - [ ] land — Can foreigners buy land in Turkey? Limits, zoning and permissions — *can foreigners buy land in Turkey*
+- [x] land — (news) Buying agricultural land in Turkey in 2026: hobby-garden law (No. 7584), new farmland regulation, bağ evi from 2 ha — *buy agricultural land in Turkey* (2026-11-28)
 - [ ] citizenship — What Turkish citizenship gives your family (education, business, travel, healthcare) — *benefits of Turkish citizenship*
 - [ ] sell — Selling inherited property in Turkey from abroad (power of attorney, inheritance certificate) — *sell inherited property in Turkey*
 - [ ] apartment — Earthquake-safe buildings in Istanbul: how to check before you buy — *earthquake resistant apartment Istanbul*

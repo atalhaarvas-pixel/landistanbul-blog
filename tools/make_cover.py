@@ -7,7 +7,7 @@ Usage:
     python3 tools/make_cover.py posts/x.json --style coast --palette teal   # force a style / palette
 
 Every post gets a DIFFERENT cover. The tool picks an illustration style that fits the topic (passport,
-facade, isometric, aerial_land, chart, window, coast, keys, skyline) and that none of the last 4 posts
+facade, isometric, aerial_land, farmland, chart, window, coast, keys, skyline) and that none of the last 4 posts
 used, plus a palette never used before with that style, and records the choice in the post JSON
 ("cover": {"style", "palette"}). Re-running keeps the recorded choice. Then it writes:
     images/<group>-hero.jpg          1600x900, no text  (hero + blog cards)
@@ -436,12 +436,13 @@ SEGMENT_STYLES = {
     "citizenship": ["passport", "window", "isometric", "skyline", "chart", "keys"],
     "apartment": ["facade", "window", "isometric", "keys", "skyline", "coast"],
     "sell": ["keys", "facade", "chart", "window", "isometric", "skyline"],
-    "land": ["aerial_land", "isometric", "chart", "coast", "skyline"],
+    "land": ["aerial_land", "farmland", "isometric", "chart", "coast", "skyline"],
     "general": ["chart", "skyline", "isometric", "coast", "facade"],
 }
 KEYWORD_STYLES = [
     (("iraq", "pakistan", "saudi", "emirat", "uae", "qatar", "kuwait", "german", "british", "-uk-", "nationals", "expat", "from-abroad", "gulf"), "route"),
     (("antalya", "alanya", "bodrum", "fethiye", "mersin", "kas-", "kalkan", "coast", "beach", "seaside", "mediterranean", "aegean"), "coast"),
+    (("agricultural", "farmland", "vineyard", "hobby-garden", "tarla", "bag-evi"), "farmland"),
     (("land", "plot", "zoning", "imar", "field", "farm"), "aerial_land"),
     (("tax", "price", "market", "trend", "yield", "rent", "statistic", "cost", "fee"), "chart"),
     (("residence", "passport", "citizenship", "permit", "visa"), "passport"),
