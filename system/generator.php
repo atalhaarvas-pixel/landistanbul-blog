@@ -396,6 +396,21 @@ function page_footer() {
 }
 
 /** Lead capture box: segment-specific copy, short form posting to /mail.php, WhatsApp shortcut. */
+/** Internal links to the free tools, shown under every article (helps Google find and rank the tool pages). */
+function li_tools_html($lang) {
+    $sfx = $lang === 'en' ? '' : $lang . '/';
+    $L = [
+        'en' => ['Free tools for buyers and sellers', ['Turkey property tax & title deed cost calculator', 'Annual property tax, 4% title deed fee and buying costs, 2026 rates'], ['Capital gains tax calculator', 'How much tax you pay when you sell property in Turkey'], ['Citizenship & residence eligibility check', 'Which route fits your budget, in 60 seconds'], ['Free property valuation', 'What your property in Turkey is worth, within 24 hours']],
+        'ar' => ['أدوات مجانية للمشترين والبائعين', ['حاسبة ضريبة العقار ورسوم الطابو في تركيا', 'الضريبة السنوية ورسوم الطابو 4% وتكاليف الشراء بأسعار 2026'], ['حاسبة ضريبة أرباح بيع العقار', 'كم تدفع من ضريبة عند بيع عقار في تركيا'], ['اختبار أهلية الجنسية والإقامة', 'أي مسار يناسب ميزانيتك خلال 60 ثانية'], ['تقييم مجاني للعقار', 'كم يساوي عقارك في تركيا خلال 24 ساعة']],
+        'ru' => ['Бесплатные инструменты для покупателей и продавцов', ['Калькулятор налога на недвижимость и сбора ТАПУ', 'Ежегодный налог, сбор 4% и расходы на покупку по ставкам 2026'], ['Калькулятор налога с продажи', 'Сколько налога вы заплатите при продаже недвижимости в Турции'], ['Проверка права на гражданство и ВНЖ', 'Какой путь подходит вашему бюджету — за 60 секунд'], ['Бесплатная оценка недвижимости', 'Сколько стоит ваша недвижимость в Турции — за 24 часа']],
+    ];
+    $t = $L[$lang] ?? $L['en'];
+    $urls = ['/turkey-property-tax-calculator/' . $sfx, '/tax-calculator/' . $sfx, '/turkish-citizenship-eligibility/' . $sfx, '/free-property-valuation/' . $sfx];
+    $h = '<section class="li-tools"><h2>' . htmlspecialchars($t[0]) . '</h2><div class="li-tools-grid">';
+    foreach ($urls as $i => $u) $h .= '<a href="' . $u . '"><b>' . htmlspecialchars($t[$i + 1][0]) . '</b><span>' . htmlspecialchars($t[$i + 1][1]) . '</span></a>';
+    return $h . '</div></section>';
+}
+
 function lead_box_html($lang, $segment, $postTitle, $postUrl) {
     $t = li_t($lang);
     $en = li_t('en');
@@ -632,6 +647,7 @@ function build_auto_post_page_html(array $post) {
         $html .= '</section>';
     }
     $html .= lead_box_html($lang, $segment, $post['title'], $url);
+    $html .= li_tools_html($lang);
     if (!empty($post['sources'])) {
         $html .= '<section class="li-sources"><h2>' . htmlspecialchars($t['sources']) . '</h2><ol>';
         foreach ($post['sources'] as $s) {
