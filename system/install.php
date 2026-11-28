@@ -286,6 +286,13 @@ try {
             $v = substr(md5_file($repo . '/system/site-boost.' . $ext), 0, 10);
             $html = preg_replace('~/site-boost\.' . $ext . '\?v=[A-Za-z0-9]+~', '/site-boost.' . $ext . '?v=' . $v, $html);
         }
+        // SEO: keyword title + exactly one H1 (hero slides 2-3 become H2, same class so the design is unchanged).
+        $html = preg_replace('~<title>[^<]*</title>~', '<title>Land Istanbul | Real Estate Agency in Istanbul for Foreign Buyers</title>', $html, 1);
+        $n = 0;
+        $html = preg_replace_callback('~<h1 class="slide-title">(.*?)</h1>~s', function ($m) use (&$n) { $n++; return $n === 1 ? $m[0] : '<h2 class="slide-title">' . $m[1] . '</h2>'; }, $html);
+        $html = str_replace('<h1 id="blog-title"></h1>', '<h2 id="blog-title"></h2>', $html);
+        $html = preg_replace('~\.blog-hero-text h1 \{~', '.blog-hero-text h1, .blog-hero-text h2 {', $html);
+        $html = preg_replace('~<meta property="og:title" content="[^"]*"~', '<meta property="og:title" content="Land Istanbul | Real Estate Agency in Istanbul for Foreign Buyers"', $html, 1);
         if ($html !== $orig) { li_write_atomic($indexFile, $html); li_log('homepage patched'); }
     }
 

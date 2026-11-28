@@ -378,3 +378,5 @@
 .li-tools-grid span { font-size: .88rem; color: #666; }
 [dir="rtl"] .li-tools-grid a { border-left: 1px solid #e4e0d8; border-right: 4px solid #c50000; }
 @media (max-width: 700px) { .li-tools-grid { grid-template-columns: 1fr; } }
+
+.li-byline { font-size: .85rem; color: #666; margin: -6px 0 22px; }

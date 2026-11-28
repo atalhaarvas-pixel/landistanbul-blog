@@ -638,6 +638,10 @@ function build_auto_post_page_html(array $post) {
     if ($updated !== $published) {
         $html .= '<p class="li-updated">' . htmlspecialchars($t['updated']) . ': <time datetime="' . htmlspecialchars($updated) . '">' . htmlspecialchars(li_format_date($updated, $lang)) . '</time></p>';
     }
+    $by = ['en' => 'By Land Istanbul (Math Investment), licensed real estate broker, licence no. 3408945 · Beylikdüzü, Istanbul',
+           'ar' => 'بقلم Land Istanbul (Math Investment)، وسيط عقاري مرخّص، رقم الترخيص 3408945 · بيليك دوزو، إسطنبول',
+           'ru' => 'Автор: Land Istanbul (Math Investment), лицензированный агент по недвижимости, лицензия № 3408945 · Бейликдюзю, Стамбул'];
+    $html .= '<p class="li-byline">' . htmlspecialchars($by[$lang] ?? $by['en']) . '</p>';
     $html .= '<div class="blog-body">' . $body . '</div>';
     if (!empty($post['faq'])) {
         $html .= '<section class="li-faq"><h2>' . htmlspecialchars($t['faq']) . '</h2>';
